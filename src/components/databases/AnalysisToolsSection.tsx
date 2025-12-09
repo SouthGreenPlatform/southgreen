@@ -1,0 +1,137 @@
+import { ExternalLink, Sparkles, BarChart3, GitBranch, Database, Workflow, Layers, Eye, Dna, Globe } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const tools = [
+  {
+    name: "Galaxy",
+    category: "Workflow Platform",
+    description: "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
+    link: "http://galaxy.southgreen.fr/galaxy/",
+    icon: Sparkles,
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    name: "AgroLD",
+    category: "Knowledge Graph",
+    description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
+    link: "http://agrold.southgreen.fr/",
+    icon: Globe,
+    color: "from-green-600 to-teal-500",
+  },
+  {
+    name: "Gigwa",
+    category: "Variant Database",
+    description: "Gigantic Data explorer for high-density genotyping data management and analysis.",
+    link: "http://gigwa.southgreen.fr/",
+    icon: Database,
+    color: "from-indigo-500 to-purple-500",
+  },
+  {
+    name: "Panache",
+    category: "Pangenomics",
+    description: "Web-based interface designed for the visualization of linear pangenome graphs.",
+    link: "https://github.com/SouthGreenPlatform/panache",
+    icon: Layers,
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    name: "PanExplorer",
+    category: "Pangenomics",
+    description: "Interactive tool for exploring and analyzing pangenomic data across multiple genomes.",
+    link: "https://github.com/SouthGreenPlatform/PanExplorer",
+    icon: Eye,
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    name: "Toggle",
+    category: "Workflow",
+    description: "Toolbox for generic NGS analyses with comprehensive pipeline management capabilities.",
+    link: "https://toggle.southgreen.fr/",
+    icon: Workflow,
+    color: "from-emerald-500 to-green-500",
+  },
+  {
+    name: "Culebront",
+    category: "Assembly",
+    description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
+    link: "https://github.com/SouthGreenPlatform/culebront",
+    icon: Dna,
+    color: "from-yellow-500 to-amber-500",
+  },
+  {
+    name: "Tremolo",
+    category: "Analysis",
+    description: "Tool for the detection and analysis of transposable element polymorphisms.",
+    link: "https://github.com/SouthGreenPlatform/tremolo",
+    icon: BarChart3,
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    name: "GEMO",
+    category: "Visualization",
+    description: "Genome Evolution MOdeler for comparative genomics visualization and analysis.",
+    link: "http://gemo.southgreen.fr/",
+    icon: GitBranch,
+    color: "from-violet-500 to-purple-500",
+  },
+];
+
+export function AnalysisToolsSection() {
+  return (
+    <section id="analysis-tools" className="py-20 bg-secondary/30">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="mb-12">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent-foreground text-sm font-medium mb-4">
+            Analysis Tools
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
+            Powerful Bioinformatics Software
+          </h2>
+          <p className="text-muted-foreground max-w-2xl">
+            From workflow platforms to specialized pangenomic visualizers, our tools support 
+            the complete genomics analysis pipeline.
+          </p>
+        </div>
+
+        {/* Tools Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool, index) => (
+            <a
+              key={tool.name}
+              href={tool.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <Card className="h-full border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-2">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}>
+                      <tool.icon className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-md">
+                      {tool.category}
+                    </span>
+                  </div>
+                  <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
+                    {tool.name}
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground text-sm">
+                    {tool.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <span className="text-sm text-primary font-medium group-hover:underline">
+                    Access Tool →
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
