@@ -1,82 +1,101 @@
-import { CheckCircle, Globe, Microscope, GraduationCap } from "lucide-react";
+import { Building2, FlaskConical, Users, Network } from "lucide-react";
 
-const features = [
-  {
-    icon: Globe,
-    title: "Global Collaboration",
-    description: "Partnering with research institutions across the Mediterranean and tropical regions",
-  },
-  {
-    icon: Microscope,
-    title: "Cutting-Edge Research",
-    description: "Supporting genomic research with state-of-the-art bioinformatics tools",
-  },
-  {
-    icon: GraduationCap,
-    title: "Training Programs",
-    description: "Offering comprehensive training in bioinformatics and computational biology",
-  },
+const institutes = [
+  { name: "Alliance Bioversity & CIAT", type: "International" },
+  { name: "IRD", fullName: "Institut de Recherche pour le Développement" },
+  { name: "CIRAD", fullName: "Centre de coopération internationale en recherche agronomique" },
+  { name: "INRAE", fullName: "Institut national de recherche pour l'agriculture" },
 ];
 
-const highlights = [
-  "Open-source tools and databases",
-  "Collaborative research network",
-  "Focus on tropical and Mediterranean plants",
-  "Support for sustainable agriculture",
-  "Training and capacity building",
-  "Data sharing and reproducibility",
+const researchUnits = [
+  { name: "DIADE", description: "Diversité, Adaptation et Développement des plantes" },
+  { name: "PHIM", description: "Plant Health Institute of Montpellier" },
+  { name: "AGAP", description: "Amélioration Génétique et Adaptation des Plantes" },
 ];
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent-foreground text-sm font-medium mb-4">
-              About Us
-            </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">
-              Empowering Plant Science Through{" "}
-              <span className="text-gradient">Open Bioinformatics</span>
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              South Green is a collaborative bioinformatics platform dedicated to 
-              supporting research on tropical and Mediterranean plants. Founded by 
-              leading French research institutions, we provide open-access tools, 
-              databases, and training to the global scientific community.
-            </p>
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <Network className="w-4 h-4" />
+            About Us
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-4">
+            A Collaborative <span className="text-gradient">Research Network</span>
+          </h2>
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            South Green is a bioinformatics platform born from the collaboration of leading French research 
+            institutions, dedicated to supporting genomic research on tropical and Mediterranean plants.
+          </p>
+        </div>
 
-            {/* Highlights Grid */}
-            <div className="grid sm:grid-cols-2 gap-3 mb-8">
-              {highlights.map((highlight) => (
-                <div key={highlight} className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm text-foreground">{highlight}</span>
+        {/* Network Structure */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Institutes Card */}
+          <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Building2 className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-heading text-xl font-semibold text-foreground">4 Institutes</h3>
+                <p className="text-sm text-muted-foreground">Founding Partners</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {institutes.map((institute) => (
+                <div key={institute.name} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                  <Users className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-foreground">{institute.name}</p>
+                    {institute.fullName && (
+                      <p className="text-xs text-muted-foreground">{institute.fullName}</p>
+                    )}
+                    {institute.type && (
+                      <span className="text-xs text-primary">{institute.type}</span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right Content - Feature Cards */}
-          <div className="space-y-6">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="flex gap-5 p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-md transition-all"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-14 h-14 rounded-xl gradient-hero flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <feature.icon className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
+          {/* Research Units Card */}
+          <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                <FlaskConical className="w-6 h-6 text-accent-foreground" />
               </div>
-            ))}
+              <div>
+                <h3 className="font-heading text-xl font-semibold text-foreground">3 Research Units</h3>
+                <p className="text-sm text-muted-foreground">UMR Partners</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {researchUnits.map((unit) => (
+                <div key={unit.name} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                  <FlaskConical className="w-5 h-5 text-accent-foreground mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-foreground">{unit.name}</p>
+                    <p className="text-xs text-muted-foreground">{unit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
+
+        {/* Mission Statement */}
+        <div className="mt-12 text-center max-w-3xl mx-auto">
+          <p className="text-muted-foreground">
+            Together, our network provides <span className="text-foreground font-medium">open-source tools</span>, 
+            {" "}<span className="text-foreground font-medium">genomic databases</span>, and 
+            {" "}<span className="text-foreground font-medium">training programs</span> to support 
+            sustainable agriculture and biodiversity conservation in the Global South and Mediterranean regions.
+          </p>
         </div>
       </div>
     </section>
