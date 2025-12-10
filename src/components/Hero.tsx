@@ -38,8 +38,8 @@ export function Hero() {
 
           {/* Heading */}
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-up-delayed">
-            Advancing Plant Genomics in the{" "}
-            <span className="text-gradient">Global South</span>
+            Advancing Plant Genomics for the{" "}
+            <span className="text-gradient">Global South & Mediterranean</span>
           </h1>
 
           {/* Subheading */}
