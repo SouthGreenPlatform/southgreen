@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Dna } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import southGreenLogo from "@/assets/south-green-logo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -21,17 +22,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg gradient-hero flex items-center justify-center shadow-sm group-hover:shadow-glow transition-shadow duration-300">
-              <Dna className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-xl font-semibold text-foreground">
-                South<span className="text-primary">Green</span>
-              </span>
-              <span className="text-xs text-muted-foreground -mt-1 hidden sm:block">
-                Bioinformatics Platform
-              </span>
-            </div>
+            <img src={southGreenLogo} alt="South Green" className="h-10 md:h-12" />
           </Link>
 
           {/* Desktop Navigation */}
