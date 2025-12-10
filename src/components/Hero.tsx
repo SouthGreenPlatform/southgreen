@@ -1,6 +1,7 @@
 import { ArrowRight, Database, FlaskConical, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.png";
+import southGreenLogo from "@/assets/south-green-logo.png";
 
 export function Hero() {
   return (
@@ -22,6 +23,11 @@ export function Hero() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
+          {/* South Green Logo */}
+          <div className="mb-6 animate-fade-up">
+            <img src={southGreenLogo} alt="South Green" className="h-16 md:h-20" />
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
