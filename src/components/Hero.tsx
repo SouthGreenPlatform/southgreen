@@ -1,4 +1,4 @@
-import { ArrowRight, Database, FlaskConical, Users } from "lucide-react";
+import { ArrowRight, Database, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.png";
 
@@ -55,14 +55,14 @@ export function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 md:gap-12 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+          <div className="grid grid-cols-2 gap-6 md:gap-12 animate-fade-up" style={{ animationDelay: '0.5s' }}>
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
                 <Database className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold text-foreground">15+</p>
-                <p className="text-sm text-muted-foreground">Databases</p>
+                <p className="text-2xl font-semibold text-foreground">5+</p>
+                <p className="text-sm text-muted-foreground">Genome Hubs</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -70,17 +70,8 @@ export function Hero() {
                 <FlaskConical className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold text-foreground">50+</p>
-                <p className="text-sm text-muted-foreground">Tools</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <p className="text-2xl font-semibold text-foreground">5</p>
-                <p className="text-sm text-muted-foreground">Partners</p>
+                <p className="text-2xl font-semibold text-foreground">9+</p>
+                <p className="text-sm text-muted-foreground">Analysis Tools</p>
               </div>
             </div>
           </div>
