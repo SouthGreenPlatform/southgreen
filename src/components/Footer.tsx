@@ -39,7 +39,7 @@ export function Footer() {
                 <Dna className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <span className="font-heading text-xl font-semibold">South Green<span className="text-primary">Green</span>
+                <span className="font-heading text-xl font-semibold">South <span className="text-primary">Green</span>
                 </span>
               </div>
             </div>
@@ -48,7 +48,8 @@ export function Footer() {
               resource analysis of southern and Mediterranean plants.
             </p>
             <div className="space-y-3">
-              <a href="mailto:contact@southgreen.fr" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors">​
+              <a href="mailto:contact@southgreen.fr" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors">
+
 pf-southgreen@groupes.france-bioinformatique.fr<Mail className="w-4 h-4" />
                 contact@southgreen.fr
               </a>
