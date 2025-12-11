@@ -26,14 +26,14 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground">
-              Open Science Platform
+              IFB-ELIXIR Member Platform
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 animate-fade-up-delayed">
-            Advancing Plant Genomics for the{" "}
-            <span className="text-gradient">Global South & Mediterranean</span>
+            Advancing Plant & Pathogen Genomics for the{" "}
+            <span className="text-gradient">Global South & Mediterranean regions</span>
           </h1>
 
           {/* Subheading */}
