@@ -1,41 +1,27 @@
 import { Server, HardDrive, Cpu, Zap } from "lucide-react";
-
-const hpcClusters = [
-  {
-    name: "Meso@LR",
-    location: "CINES",
-    type: "RENT",
-    partner: "CIRAD",
-    specs: {
-      cores: "2104 cores",
-      nodes: [
-        "70 standard nodes",
-        "2 bigmem nodes",
-        "1 GPU node"
-      ],
-      storage: "700 To replicated storage"
-    }
-  },
-  {
-    name: "CINES",
-    location: "IRD",
-    type: "HOSTEL",
-    partner: "IRD",
-    specs: {
-      cores: "1148 cores",
-      nodes: [
-        "32 standard nodes",
-        "1 supermem node",
-        "1 GPU node"
-      ],
-      storage: "800 To (SAN) + 210 To scratch"
-    }
+const hpcClusters = [{
+  name: "Meso@LR",
+  location: "CINES",
+  type: "RENT",
+  partner: "CIRAD",
+  specs: {
+    cores: "2104 cores",
+    nodes: ["70 standard nodes", "2 bigmem nodes", "1 GPU node"],
+    storage: "700 To replicated storage"
   }
-];
-
+}, {
+  name: "CINES",
+  location: "IRD",
+  type: "HOSTEL",
+  partner: "IRD",
+  specs: {
+    cores: "1148 cores",
+    nodes: ["32 standard nodes", "1 supermem node", "1 GPU node"],
+    storage: "800 To (SAN) + 210 To scratch"
+  }
+}];
 export function HPCSection() {
-  return (
-    <section id="hpc" className="py-20 bg-secondary/30">
+  return <section id="hpc" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -53,20 +39,10 @@ export function HPCSection() {
 
         {/* HPC Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {hpcClusters.map((cluster, index) => (
-            <div
-              key={cluster.name}
-              className="relative bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group"
-            >
+          {hpcClusters.map((cluster, index) => <div key={cluster.name} className="relative bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group">
               {/* Type Badge */}
               <div className="absolute -top-3 left-6">
-                <span className={`px-4 py-1 rounded-full text-sm font-semibold ${
-                  cluster.type === "RENT" 
-                    ? "bg-amber-500/20 text-amber-600 border border-amber-500/30" 
-                    : "bg-rose-500/20 text-rose-600 border border-rose-500/30"
-                }`}>
-                  {cluster.type}
-                </span>
+                
               </div>
 
               {/* Partner Badge */}
@@ -97,12 +73,10 @@ export function HPCSection() {
 
                   {/* Nodes */}
                   <div className="pl-13 space-y-2">
-                    {cluster.specs.nodes.map((node, i) => (
-                      <div key={i} className="flex items-center gap-2 text-muted-foreground">
+                    {cluster.specs.nodes.map((node, i) => <div key={i} className="flex items-center gap-2 text-muted-foreground">
                         <Zap className="w-4 h-4 text-primary/60" />
                         <span>{node}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   {/* Storage */}
@@ -114,8 +88,7 @@ export function HPCSection() {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Bottom Stats */}
@@ -134,6 +107,5 @@ export function HPCSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
