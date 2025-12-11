@@ -89,7 +89,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} South Green Bioinformatics Platform. Open Science Initiative.
+            © {new Date().getFullYear()} South Green Bioinformatics Platform.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary transition-colors">
