@@ -80,12 +80,7 @@ export function HPCSection() {
                   </div>
 
                   {/* Storage */}
-                  <div className="flex items-center gap-3 pt-2 border-t border-border">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <HardDrive className="w-5 h-5 text-accent-foreground" />
-                    </div>
-                    <span className="text-muted-foreground">{cluster.specs.storage}</span>
-                  </div>
+                  
                 </div>
               </div>
             </div>)}
