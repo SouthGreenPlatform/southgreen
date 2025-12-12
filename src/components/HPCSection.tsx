@@ -1,5 +1,6 @@
 import { Server, HardDrive, Cpu, Zap, ExternalLink } from "lucide-react";
 import itropLogo from "@/assets/itrop-logo.png";
+import iso9001Logo from "@/assets/iso9001-logo.png";
 
 const hpcClusters = [{
   name: "Meso@LR",
@@ -52,7 +53,10 @@ export function HPCSection() {
               {/* Partner Badge */}
               <div className="absolute -top-3 right-6 flex items-center gap-2">
                 {cluster.showItrop && (
-                  <img src={itropLogo} alt="i-Trop" className="h-8 w-auto" />
+                  <>
+                    <img src={iso9001Logo} alt="ISO 9001" className="h-8 w-auto" />
+                    <img src={itropLogo} alt="i-Trop" className="h-8 w-auto" />
+                  </>
                 )}
                 <span className="px-4 py-1 rounded-full text-sm font-medium bg-secondary text-muted-foreground border border-border">
                   {cluster.partner}
