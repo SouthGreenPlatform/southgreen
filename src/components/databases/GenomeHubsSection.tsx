@@ -84,6 +84,15 @@ const genomeHubs = [
     tags: ["Assembly", "Genes", "Expression"],
     status: "Active",
   },
+  {
+    name: "Palm Genome Hub",
+    species: "Arecaceae family",
+    description: "Genomic resources for palm species including oil palm, date palm, and coconut research.",
+    link: "https://palm-genome-hub.southgreen.fr/",
+    image: "🌴",
+    tags: ["JBrowse", "Annotation", "BLAST"],
+    status: "Active",
+  },
 ];
 
 export function GenomeHubsSection() {
