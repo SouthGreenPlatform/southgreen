@@ -1,4 +1,4 @@
-import { ExternalLink, Sparkles, BarChart3, GitBranch, Database, Workflow, Layers, Eye, Dna, Globe } from "lucide-react";
+import { ExternalLink, Sparkles, GitBranch, Database, Layers, Eye, Dna, Globe, Cherry, Citrus } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 const tools = [{
   name: "Galaxy",
@@ -36,26 +36,26 @@ const tools = [{
   icon: Eye,
   color: "from-pink-500 to-rose-500"
 }, {
-  name: "Toggle",
-  category: "Workflow",
-  description: "Toolbox for generic NGS analyses with comprehensive pipeline management capabilities.",
-  link: "https://toggle.southgreen.fr/",
-  icon: Workflow,
-  color: "from-emerald-500 to-green-500"
+  name: "Banana Genome Hub",
+  category: "Genome Hub",
+  description: "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
+  link: "https://banana-genome-hub.southgreen.fr/",
+  icon: Cherry,
+  color: "from-yellow-500 to-amber-500"
 }, {
   name: "Culebront",
   category: "Assembly",
   description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
   link: "https://github.com/SouthGreenPlatform/culebront",
   icon: Dna,
-  color: "from-yellow-500 to-amber-500"
+  color: "from-emerald-500 to-green-500"
 }, {
-  name: "Tremolo",
-  category: "Analysis",
-  description: "Tool for the detection and analysis of transposable element polymorphisms.",
-  link: "https://github.com/SouthGreenPlatform/tremolo",
-  icon: BarChart3,
-  color: "from-cyan-500 to-blue-500"
+  name: "Citrus Genome Hub",
+  category: "Genome Hub",
+  description: "Genomic portal for citrus species with reference genomes, variant data, and analysis tools.",
+  link: "https://citrus-genome-hub.southgreen.fr/",
+  icon: Citrus,
+  color: "from-orange-500 to-yellow-500"
 }, {
   name: "GEMO",
   category: "Visualization",
