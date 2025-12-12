@@ -48,6 +48,42 @@ const genomeHubs = [
     tags: ["Polyploid", "Haplotypes", "Expression"],
     status: "Beta",
   },
+  {
+    name: "Vanilla Genome Hub",
+    species: "Vanilla planifolia",
+    description: "Genomic resources for vanilla research, breeding, and flavor compound studies.",
+    link: "https://vanilla-genome-hub.cirad.fr/",
+    image: "🌸",
+    tags: ["Annotation", "BLAST", "Expression"],
+    status: "Active",
+  },
+  {
+    name: "Citrus Genome Hub",
+    species: "Citrus spp.",
+    description: "Comprehensive platform for citrus genomics, comparative analysis, and breeding tools.",
+    link: "https://citrus-genome-hub.southgreen.fr/",
+    image: "🍊",
+    tags: ["JBrowse", "Synteny", "Variants"],
+    status: "Active",
+  },
+  {
+    name: "Grass Genome Hub",
+    species: "Poaceae family",
+    description: "Multi-species genome browser for grass family comparative genomics research.",
+    link: "https://grass-genome-hub.southgreen.fr/",
+    image: "🌱",
+    tags: ["Pangenome", "Annotation", "BLAST"],
+    status: "Active",
+  },
+  {
+    name: "Olive Genome Hub",
+    species: "Olea europaea",
+    description: "Integrated genomic resources for olive research and Mediterranean crop improvement.",
+    link: "https://olive-genome-hub.climolivemed.com/",
+    image: "🫒",
+    tags: ["Assembly", "Genes", "Expression"],
+    status: "Active",
+  },
 ];
 
 export function GenomeHubsSection() {
