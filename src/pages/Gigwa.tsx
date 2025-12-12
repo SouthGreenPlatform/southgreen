@@ -259,39 +259,145 @@ export default function Gigwa() {
               </CardContent>
             </Card>
 
-            {/* Platform Bundles */}
-            <Card className="bg-card border-border/50 lg:col-span-2">
+            {/* Windows Bundle */}
+            <Card className="bg-card border-border/50">
               <CardHeader>
-                <CardTitle>Platform Bundles</CardTitle>
-                <CardDescription>Contains JRE, Apache Tomcat and MongoDB</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <Monitor className="w-8 h-8 text-blue-400" />
-                    <div>
-                      <p className="font-medium">Windows 7+</p>
-                      <p className="text-sm text-muted-foreground">64-bit</p>
-                    </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                    <Monitor className="w-6 h-6 text-blue-400" />
                   </div>
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <Apple className="w-8 h-8 text-gray-400" />
-                    <div>
-                      <p className="font-medium">macOS 10.11+</p>
-                      <p className="text-sm text-muted-foreground">Intel & Apple Silicon</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <Terminal className="w-8 h-8 text-orange-400" />
-                    <div>
-                      <p className="font-medium">Ubuntu 18+</p>
-                      <p className="text-sm text-muted-foreground">Linux</p>
-                    </div>
+                  <div>
+                    <CardTitle>Windows 7+ 64bit</CardTitle>
+                    <CardDescription>Contains JRE, Apache Tomcat and MongoDB</CardDescription>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  <strong>Note:</strong> Log in as gigwadmin / nimda after install. Remember to change the administrator password.
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {["v2.9-RELEASE", "v2.8-RELEASE", "v2.7-RELEASE", "v2.6.1-RELEASE", "v2.6-RELEASE", "v2.5.1-RELEASE", "v2.5-RELEASE", "v2.4.1-RELEASE", "v2.3-RELEASE", "v2.2-RELEASE", "v2.1-RELEASE", "v2.0-RELEASE", "v2.0-RC2", "v2.0beta", "v2.0alpha", "v1.1", "v1.0beta"].map((version, index) => (
+                    <Badge 
+                      key={index} 
+                      variant={index === 0 ? "default" : "secondary"}
+                      className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
+                    >
+                      <a 
+                        href={`https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/gigwa-run_${version.replace('v', '')}_win64.zip`}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        {version}
+                      </a>
+                    </Badge>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mt-3">Log in as gigwadmin / nimda after install</p>
+              </CardContent>
+            </Card>
+
+            {/* macOS Bundle */}
+            <Card className="bg-card border-border/50">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-gray-500/10 flex items-center justify-center">
+                    <Apple className="w-6 h-6 text-gray-400" />
+                  </div>
+                  <div>
+                    <CardTitle>OSX 10.11+</CardTitle>
+                    <CardDescription>Contains JRE, Apache Tomcat and MongoDB</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {["v2.9-RELEASE", "v2.8-RELEASE", "v2.7-RELEASE", "v2.6.1-RELEASE", "v2.6-RELEASE", "v2.5.1-RELEASE", "v2.5-RELEASE", "v2.4.1-RELEASE", "v2.3-RELEASE", "v2.2-RELEASE", "v2.1-RELEASE", "v2.0-RELEASE", "v2.0-RC2", "v2.0beta", "v2.0alpha", "v1.1", "v1.0beta"].map((version, index) => (
+                    <Badge 
+                      key={index} 
+                      variant={index === 0 ? "default" : "secondary"}
+                      className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
+                    >
+                      <a 
+                        href={`https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/gigwa-run_${version.replace('v', '')}_osx.zip`}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        {version}
+                      </a>
+                    </Badge>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mt-3">
+                  Log in as gigwadmin / nimda after install. <a href="https://www.southgreen.fr/content/gigwa" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">OSX users must be aware of this</a>
                 </p>
+              </CardContent>
+            </Card>
+
+            {/* Ubuntu 18+ Bundle */}
+            <Card className="bg-card border-border/50">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
+                    <Terminal className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <CardTitle>Ubuntu 18+</CardTitle>
+                    <CardDescription>Contains JRE, Apache Tomcat and MongoDB</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {["v2.9-RELEASE", "v2.8-RELEASE", "v2.7-RELEASE", "v2.6.1-RELEASE", "v2.6-RELEASE", "v2.5.1-RELEASE", "v2.5-RELEASE", "v2.4.1-RELEASE", "v2.3-RELEASE", "v2.2-RELEASE"].map((version, index) => (
+                    <Badge 
+                      key={index} 
+                      variant={index === 0 ? "default" : "secondary"}
+                      className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
+                    >
+                      <a 
+                        href={`https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/gigwa-run_${version.replace('v', '')}_ubuntu18.tar.gz`}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        {version}
+                      </a>
+                    </Badge>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mt-3">Log in as gigwadmin / nimda after install</p>
+              </CardContent>
+            </Card>
+
+            {/* Ubuntu 16+ Bundle */}
+            <Card className="bg-card border-border/50">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
+                    <Terminal className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <CardTitle>Ubuntu 16+</CardTitle>
+                    <CardDescription>Contains JRE, Apache Tomcat and MongoDB</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {["v2.1-RELEASE", "v2.0-RELEASE", "v2.0-RC2", "v2.0beta"].map((version, index) => (
+                    <Badge 
+                      key={index} 
+                      variant={index === 0 ? "default" : "secondary"}
+                      className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
+                    >
+                      <a 
+                        href={`https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/gigwa-run_${version.replace('v', '')}_ubuntu16.tar.gz`}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        {version}
+                      </a>
+                    </Badge>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mt-3">Log in as gigwadmin / nimda after install</p>
               </CardContent>
             </Card>
           </div>
