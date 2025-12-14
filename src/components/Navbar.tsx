@@ -9,6 +9,7 @@ const navItems = [
   { label: "Databases", href: "/databases" },
   { label: "Tools", href: "/#tools" },
   { label: "Training", href: "/training" },
+  { label: "Projects", href: "/projects" },
   { label: "Members", href: "/members" },
   { label: "Publications", href: "/publications" },
   { label: "About", href: "/#about" },

@@ -9,6 +9,7 @@ import Training from "./pages/Training";
 import Gigwa from "./pages/Gigwa";
 import Members from "./pages/Members";
 import Publications from "./pages/Publications";
+import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/gigwa" element={<Gigwa />} />
           <Route path="/members" element={<Members />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/projects" element={<Projects />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
