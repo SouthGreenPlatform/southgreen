@@ -41,6 +41,7 @@ const toolsPublications: Publication[] = [
 ];
 
 const contributionsPublications: Publication[] = [
+  { authors: "Bocs, S., Carrette, C., Confais, J., Dubois, S., Duvaux, L., Klopp, C., et al.", year: 2025, title: "A roadmap for the adoption of pangenomics in agronomy", journal: "HAL INRAE", doi: "" },
   { authors: "Rouard, M., Scholz, A. H., and Halewood, M.", year: 2025, title: "Genetic databases in the era of 'DSI' benefit-sharing", journal: "Trends in Genetics 41, 451–455", doi: "10.1016/j.tig.2025.03.004" },
   { authors: "Sardos, J., Cenci, A., Martin, G., Breton, C., Guignon, V., Van den Houwe, I., et al.", year: 2025, title: "Painting the diversity of a world's favorite fruit: A next generation catalog of cultivated bananas", journal: "PLANTS, PEOPLE, PLANET 7, 263–283", doi: "10.1002/ppp3.10581" },
   { authors: "Tibiri, E. B., Boua, P. R., Soulama, I., Dubreuil-Tranchant, C., Tando, N., Tollenaere, C., et al.", year: 2025, title: "Challenges and opportunities of developing bioinformatics platforms in Africa: the case of BurkinaBioinfo at Joseph Ki-Zerbo University, Burkina Faso", journal: "Brief Bioinform 26, bbaf040", doi: "10.1093/bib/bbaf040" },
