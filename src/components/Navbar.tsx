@@ -6,8 +6,7 @@ import southGreenLogo from "@/assets/south-green-logo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Databases", href: "/databases" },
-  { label: "Tools", href: "/#tools" },
+  { label: "Databases & Tools", href: "/databases" },
   { label: "Training", href: "/training" },
   { label: "Projects", href: "/projects" },
   { label: "Members", href: "/members" },
