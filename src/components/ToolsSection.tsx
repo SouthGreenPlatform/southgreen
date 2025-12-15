@@ -72,9 +72,7 @@ export function ToolsSection() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Our Tools
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            Bioinformatics Solutions
-          </h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">Featured Bioinformatics Solutions</h2>
           <p className="text-muted-foreground">
             From workflow platforms to specialized pangenomic visualizers, our tools support 
             the complete genomics analysis pipeline.
