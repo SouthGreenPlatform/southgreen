@@ -1,6 +1,34 @@
 import { ExternalLink, Sparkles, GitBranch, Database, Layers, Eye, Dna, Globe, Cherry, Citrus } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 const tools = [{
+  name: "AgroLD",
+  category: "Knowledge Graph",
+  description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
+  link: "http://agrold.southgreen.fr/",
+  icon: Globe,
+  color: "from-green-600 to-teal-500"
+}, {
+  name: "Banana Genome Hub",
+  category: "Genome Hub",
+  description: "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
+  link: "https://banana-genome-hub.southgreen.fr/",
+  icon: Cherry,
+  color: "from-yellow-500 to-amber-500"
+}, {
+  name: "Citrus Genome Hub",
+  category: "Genome Hub",
+  description: "Genomic portal for citrus species with reference genomes, variant data, and analysis tools.",
+  link: "https://citrus-genome-hub.southgreen.fr/",
+  icon: Citrus,
+  color: "from-orange-500 to-yellow-500"
+}, {
+  name: "Culebront",
+  category: "Assembly",
+  description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
+  link: "https://github.com/SouthGreenPlatform/culebront",
+  icon: Dna,
+  color: "from-emerald-500 to-green-500"
+}, {
   name: "Galaxy",
   category: "Workflow Platform",
   description: "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
@@ -8,12 +36,12 @@ const tools = [{
   icon: Sparkles,
   color: "from-blue-500 to-cyan-500"
 }, {
-  name: "AgroLD",
-  category: "Knowledge Graph",
-  description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
-  link: "http://agrold.southgreen.fr/",
-  icon: Globe,
-  color: "from-green-600 to-teal-500"
+  name: "GenoRing",
+  category: "Visualization",
+  description: "Tool for circular genome visualization and comparative genomics analysis.",
+  link: "https://github.com/SouthGreenPlatform/genoring",
+  icon: GitBranch,
+  color: "from-violet-500 to-purple-500"
 }, {
   name: "Gigwa",
   category: "Variant Database",
@@ -35,34 +63,6 @@ const tools = [{
   link: "https://github.com/SouthGreenPlatform/PanExplorer",
   icon: Eye,
   color: "from-pink-500 to-rose-500"
-}, {
-  name: "Banana Genome Hub",
-  category: "Genome Hub",
-  description: "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
-  link: "https://banana-genome-hub.southgreen.fr/",
-  icon: Cherry,
-  color: "from-yellow-500 to-amber-500"
-}, {
-  name: "Culebront",
-  category: "Assembly",
-  description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
-  link: "https://github.com/SouthGreenPlatform/culebront",
-  icon: Dna,
-  color: "from-emerald-500 to-green-500"
-}, {
-  name: "Citrus Genome Hub",
-  category: "Genome Hub",
-  description: "Genomic portal for citrus species with reference genomes, variant data, and analysis tools.",
-  link: "https://citrus-genome-hub.southgreen.fr/",
-  icon: Citrus,
-  color: "from-orange-500 to-yellow-500"
-}, {
-  name: "GEMO",
-  category: "Visualization",
-  description: "Genome Evolution MOdeler for comparative genomics visualization and analysis.",
-  link: "http://gemo.southgreen.fr/",
-  icon: GitBranch,
-  color: "from-violet-500 to-purple-500"
 }];
 export function ToolsSection() {
   return <section id="tools" className="py-24 bg-secondary/30">
