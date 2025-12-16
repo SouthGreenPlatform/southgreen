@@ -54,15 +54,6 @@ export function Navbar() {
             })}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
-            <Button size="sm" className="gradient-hero border-0 shadow-sm hover:shadow-glow transition-shadow">
-              Get Started
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -87,14 +78,6 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <div className="flex gap-2 mt-4 px-4">
-                <Button variant="outline" size="sm" className="flex-1">
-                  Login
-                </Button>
-                <Button size="sm" className="flex-1 gradient-hero border-0">
-                  Get Started
-                </Button>
-              </div>
             </div>
           </div>
         )}
