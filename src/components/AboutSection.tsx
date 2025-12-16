@@ -35,8 +35,8 @@ export function AboutSection() {
             A Collaborative <span className="text-gradient">Research Network</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            South Green is a bioinformatics platform born from the collaboration of leading French research 
-            institutions, dedicated to supporting genomic research on tropical and Mediterranean plants.
+            South Green is a bioinformatics platform born from the collaboration of French 
+            and international research institutions, dedicated to supporting genomic research on tropical and Mediterranean plants.
           </p>
         </div>
 

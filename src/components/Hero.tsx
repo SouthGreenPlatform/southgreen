@@ -36,8 +36,8 @@ export function Hero() {
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl animate-fade-up" style={{
           animationDelay: '0.3s'
         }}>
-            South Green is a bioinformatics platform dedicated to the genomic resource 
-            analysis of southern and Mediterranean plants. We provide tools, databases, 
+            South Green is a bioinformatics platform born from the collaboration of French 
+            and international research institutions. We provide tools, databases, 
             and training for the scientific community.
           </p>
 
