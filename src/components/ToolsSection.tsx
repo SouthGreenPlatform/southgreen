@@ -1,68 +1,79 @@
 import { ExternalLink, Sparkles, GitBranch, Database, Layers, Eye, Dna, Globe, Cherry, Citrus } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+
 const tools = [{
   name: "AgroLD",
   category: "Knowledge Graph",
   description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
   link: "http://agrold.southgreen.fr/",
   icon: Globe,
-  color: "from-green-600 to-teal-500"
+  color: "from-green-600 to-teal-500",
+  internal: false
 }, {
   name: "Banana Genome Hub",
   category: "Genome Hub",
   description: "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
   link: "https://banana-genome-hub.southgreen.fr/",
   icon: Cherry,
-  color: "from-yellow-500 to-amber-500"
+  color: "from-yellow-500 to-amber-500",
+  internal: false
 }, {
   name: "Citrus Genome Hub",
   category: "Genome Hub",
   description: "Genomic portal for citrus species with reference genomes, variant data, and analysis tools.",
   link: "https://citrus-genome-hub.southgreen.fr/",
   icon: Citrus,
-  color: "from-orange-500 to-yellow-500"
+  color: "from-orange-500 to-yellow-500",
+  internal: false
 }, {
   name: "Culebront",
   category: "Assembly",
   description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
   link: "https://github.com/SouthGreenPlatform/culebront",
   icon: Dna,
-  color: "from-emerald-500 to-green-500"
+  color: "from-emerald-500 to-green-500",
+  internal: false
 }, {
   name: "Galaxy",
   category: "Workflow Platform",
   description: "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
   link: "http://galaxy.southgreen.fr/galaxy/",
   icon: Sparkles,
-  color: "from-blue-500 to-cyan-500"
+  color: "from-blue-500 to-cyan-500",
+  internal: false
 }, {
   name: "GenoRing",
   category: "Visualization",
   description: "Tool for circular genome visualization and comparative genomics analysis.",
   link: "https://github.com/SouthGreenPlatform/genoring",
   icon: GitBranch,
-  color: "from-violet-500 to-purple-500"
+  color: "from-violet-500 to-purple-500",
+  internal: false
 }, {
   name: "Gigwa",
   category: "Variant Database",
   description: "Gigantic Data explorer for high-density genotyping data management and analysis.",
-  link: "http://gigwa.southgreen.fr/",
+  link: "/gigwa",
   icon: Database,
-  color: "from-indigo-500 to-purple-500"
+  color: "from-indigo-500 to-purple-500",
+  internal: true
 }, {
   name: "Panache",
   category: "Pangenomics",
   description: "Web-based interface designed for the visualization of linear pangenome graphs.",
   link: "https://github.com/SouthGreenPlatform/panache",
   icon: Layers,
-  color: "from-orange-500 to-red-500"
+  color: "from-orange-500 to-red-500",
+  internal: false
 }, {
   name: "PanExplorer",
   category: "Pangenomics",
   description: "Interactive tool for exploring and analyzing pangenomic data across multiple genomes.",
   link: "https://github.com/SouthGreenPlatform/PanExplorer",
   icon: Eye,
-  color: "from-pink-500 to-rose-500"
+  color: "from-pink-500 to-rose-500",
+  internal: false
 }];
 export function ToolsSection() {
   return <section id="tools" className="py-24 bg-secondary/30">
@@ -81,9 +92,8 @@ export function ToolsSection() {
 
         {/* Tools Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tools.map((tool, index) => <a key={tool.name} href={tool.link} target="_blank" rel="noopener noreferrer" className="group block" style={{
-          animationDelay: `${index * 0.1}s`
-        }}>
+          {tools.map((tool, index) => {
+            const cardContent = (
               <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
@@ -96,7 +106,7 @@ export function ToolsSection() {
                   </div>
                   <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
                     {tool.name}
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {!tool.internal && <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />}
                   </CardTitle>
                   <CardDescription className="text-muted-foreground text-sm">
                     {tool.description}
@@ -104,11 +114,26 @@ export function ToolsSection() {
                 </CardHeader>
                 <CardContent>
                   <span className="text-sm text-primary font-medium group-hover:underline">
-                    Access Tool →
+                    {tool.internal ? "Learn More →" : "Access Tool →"}
                   </span>
                 </CardContent>
               </Card>
-            </a>)}
+            );
+
+            if (tool.internal) {
+              return (
+                <Link key={tool.name} to={tool.link} className="group block" style={{ animationDelay: `${index * 0.1}s` }}>
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <a key={tool.name} href={tool.link} target="_blank" rel="noopener noreferrer" className="group block" style={{ animationDelay: `${index * 0.1}s` }}>
+                {cardContent}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>;
