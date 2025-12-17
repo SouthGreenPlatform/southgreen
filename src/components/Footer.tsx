@@ -35,6 +35,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
+          /*
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg gradient-hero flex items-center justify-center">
@@ -45,6 +46,12 @@ export function Footer() {
                   South <span className="text-primary">Green</span>
                 </span>
               </div>
+              */
+              <img
+                src={ifbElixirLogos}
+                alt="IFB and Elixir France logos"
+                className="h-12 bg-white/90 rounded px-3 py-1"
+              />
             </div>
             <p className="text-primary-foreground/70 mb-4 max-w-md">
               South Green is a bioinformatics platform dedicated to the genomic resource analysis of southern and
@@ -55,13 +62,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mb-6 hover:opacity-80 transition-opacity"
-            >
-              <img
-                src={ifbElixirLogos}
-                alt="IFB and Elixir France logos"
-                className="h-12 bg-white/90 rounded px-3 py-1"
-              />
-            </a>
+            ></a>
             <div className="space-y-3">
               <a
                 href="mailto:pf-southgreen@groupes.france-bioinformatique.fr"
@@ -76,7 +77,6 @@ export function Footer() {
               </div>
             </div>
           </div>
-
           {/* Quick Links */}
           <div>
             <h4 className="font-heading font-semibold mb-4">Quick Links</h4>
@@ -90,7 +90,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Resources */}
           <div>
             <h4 className="font-heading font-semibold mb-4">Resources</h4>
