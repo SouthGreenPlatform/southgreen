@@ -6,7 +6,7 @@ const tools = [{
   name: "AgroLD",
   category: "Knowledge Graph",
   description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
-  link: "http://agrold.southgreen.fr/",
+  link: "https://agrold.southgreen.fr/aldp/index.jsp",
   icon: Globe,
   color: "from-green-600 to-teal-500",
   internal: false
@@ -38,7 +38,7 @@ const tools = [{
   name: "Galaxy",
   category: "Workflow Platform",
   description: "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
-  link: "http://galaxy.southgreen.fr/galaxy/",
+  link: "https://plants.usegalaxy.fr/",
   icon: Sparkles,
   color: "from-blue-500 to-cyan-500",
   internal: false

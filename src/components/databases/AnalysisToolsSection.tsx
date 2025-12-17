@@ -50,14 +50,14 @@ const toolCategories = [
       {
         name: "Galaxy",
         description: "Web-based platform for accessible, reproducible, and transparent computational research.",
-        link: "http://galaxy.southgreen.fr/galaxy/",
+        link: "https://plants.usegalaxy.fr/",
         icon: Sparkles,
         color: "from-blue-500 to-cyan-500",
       },
       {
         name: "Toggle",
         description: "Toolbox for generic NGS analyses with comprehensive pipeline management capabilities.",
-        link: "https://toggle.southgreen.fr/",
+        link: "https://github.com/SouthGreenPlatform/TOGGLE",
         icon: Workflow,
         color: "from-emerald-500 to-green-500",
       },
@@ -104,7 +104,7 @@ const toolCategories = [
       {
         name: "RAP-Green",
         description: "Reconciled gene trees for comprehensive phylogenomic analysis of green plants.",
-        link: "http://rapgreen.southgreen.fr/",
+        link: "https://github.com/SouthGreenPlatform/rap-green/",
         icon: GitBranch,
         color: "from-lime-500 to-green-500",
       },
