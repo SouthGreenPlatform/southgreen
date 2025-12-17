@@ -132,6 +132,8 @@ const toolCategories = [
   },
 ];
 
+export { toolCategories };
+
 interface AnalysisToolsSectionProps {
   searchQuery?: string;
 }
