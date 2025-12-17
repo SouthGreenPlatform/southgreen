@@ -4,46 +4,41 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Users, Building2 } from "lucide-react";
 
 const scientificLeaders = [
-  { name: "Alexis Dereeper", institute: "" },
-  { name: "Gaetan Droc", institute: "" },
-  { name: "Pierre Larmande", institute: "" },
-  { name: "Mathieu Rouard", institute: "" },
+  { name: "Alexis Dereeper", institute: "IRD, UMR PHIM" },
+  { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP" },
+  { name: "Pierre Larmande", institute: "IRD, UMR DIADE" },
+  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
 ];
 
 const technicalLeaders = [
-  { name: "Bertrand Pitollat", institute: "" },
-  { name: "Ndomassi Tando", institute: "" },
+  { name: "Bertrand Pitollat", institute: "CIRAD, UMR AGAP" },
+  { name: "Ndomassi Tando", institute: "IRD, UMR DIADE" },
 ];
 
 const teamMembers = [
-  { name: "Boizet Alice", institute: "" },
-  { name: "Breton Cathrine", institute: "" },
-  { name: "Orjuela Julie", institute: "" },
-  { name: "Dereeper Alexis", institute: "" },
-  { name: "Dainat Jacques", institute: "" },
-  { name: "Ruiz Manuel", institute: "" },
-  { name: "Sarah Gautier", institute: "" },
-  { name: "Tranchant-Dubreuil Christine", institute: "" },
-  { name: "Soriano Alexandre", institute: "" },
-  { name: "Paul Julien", institute: "" },
-  { name: "Guignon Valentin", institute: "" },
-  { name: "Sidibe-Bocs Stéphanie", institute: "" },
-  { name: "Droc Gaetan", institute: "" },
-  { name: "Dufayard Jean-François", institute: "" },
-  { name: "Larmande Pierre", institute: "" },
-  { name: "Ravel Sébastien", institute: "" },
-  { name: "Sabot François", institute: "" },
-  { name: "Rouard Mathieu", institute: "" },
-  { name: "Sempéré Guilhem", institute: "" },
-  { name: "Summo Marilyne", institute: "" },
-  { name: "Tando Ndomassi", institute: "" },
+  { name: "Boizet Alice", institute: "CIRAD, UMR AGAP" },
+  { name: "Breton Cathrine", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
+  { name: "Orjuela Julie", institute: "IRD, UMR DIADE" },
+  { name: "Dainat Jacques", institute: "IRD" },
+  { name: "Ruiz Manuel", institute: "CIRAD, UMR AGAP" },
+  { name: "Sarah Gautier", institute: "INRAE, UMR AGAP" },
+  { name: "Tranchant-Dubreuil Christine", institute: "IRD, UMR DIADE" },
+  { name: "Soriano Alexandre", institute: "CIRAD, UMR AGAP" },
+  { name: "Paul Julien", institute: "CIRAD, UMR AGAP" },
+  { name: "Guignon Valentin", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
+  { name: "Sidibe-Bocs Stéphanie", institute: "CIRAD, UMR AGAP" },
+  { name: "Dufayard Jean-François", institute: "CIRAD, UMR AGAP" },
+  { name: "Ravel Sébastien", institute: "CIRAD, UMR PHIM" },
+  { name: "Sabot François", institute: "IRD, UMR DIADE" },
+  { name: "Sempéré Guilhem", institute: "CIRAD" },
+  { name: "Summo Marilyne", institute: "CIRAD, UMR AGAP" },
 ];
 
 export default function Members() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
@@ -56,8 +51,8 @@ export default function Members() {
               Meet Our <span className="text-primary">Members</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              The South Green Bioinformatics Platform brings together experts from multiple research institutes, 
-              working collaboratively to advance plant and pathogen genomics.
+              The South Green Bioinformatics Platform brings together experts from multiple research institutes, working
+              collaboratively to advance plant and pathogen genomics.
             </p>
           </div>
         </div>
@@ -78,9 +73,7 @@ export default function Members() {
                   <p className="text-sm text-primary mb-3">Scientific Leader</p>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
-                    <span className="text-sm italic">
-                      {leader.institute || "Institute placeholder"}
-                    </span>
+                    <span className="text-sm italic">{leader.institute || "Institute placeholder"}</span>
                   </div>
                 </CardContent>
               </Card>
@@ -104,9 +97,7 @@ export default function Members() {
                   <p className="text-sm text-primary mb-3">Technical Leader</p>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
-                    <span className="text-sm italic">
-                      {leader.institute || "Institute placeholder"}
-                    </span>
+                    <span className="text-sm italic">{leader.institute || "Institute placeholder"}</span>
                   </div>
                 </CardContent>
               </Card>
@@ -126,15 +117,16 @@ export default function Members() {
             <CardContent className="p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {teamMembers.map((member) => (
-                  <div key={member.name} className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                  <div
+                    key={member.name}
+                    className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
+                  >
                     <span className="text-primary mt-1">•</span>
                     <div>
                       <span className="text-foreground font-medium">{member.name}</span>
                       <div className="flex items-center gap-2 text-muted-foreground mt-1">
                         <Building2 className="w-3 h-3" />
-                        <span className="text-xs italic">
-                          {member.institute || "Institute placeholder"}
-                        </span>
+                        <span className="text-xs italic">{member.institute || "Institute placeholder"}</span>
                       </div>
                     </div>
                   </div>
