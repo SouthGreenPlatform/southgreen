@@ -13,7 +13,6 @@ const Databases = () => {
         <DatabaseHero />
         <GenomeHubsSection />
         <AnalysisToolsSection />
-        <ExpertiseSection />
       </main>
       <Footer />
     </div>
