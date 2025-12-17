@@ -9,7 +9,17 @@ const genomeHubs = [
     description: "Integrated platform for banana genome information, annotation, and comparative genomics analysis.",
     link: "http://banana-genome.cirad.fr/",
     image: "🍌",
-    tags: ["JBrowse", "BLAST", "Expression", "Synteny", "Markers", "Pangenome"],
+    tags: [
+      "Assemblies",
+      "JBrowse",
+      "BLAST",
+      "Expression",
+      "Synteny",
+      "Markers",
+      "Pangenome",
+      "Mosaics",
+      "Structural variation",
+    ],
     status: "Active",
   },
   {
@@ -18,7 +28,7 @@ const genomeHubs = [
     description: "Comprehensive genome browser and analysis tools for coffee genomics research.",
     link: "http://coffee-genome.org/",
     image: "☕",
-    tags: ["Annotation", "Synteny", "Markers"],
+    tags: ["Annotation"],
     status: "Archive",
   },
   {
@@ -34,9 +44,9 @@ const genomeHubs = [
     name: "Rice Genome Hub",
     species: "Oryza spp.",
     description: "Rice genomics platform with multi-species comparative analysis capabilities.",
-    link: "http://rice-genome.cirad.fr/",
+    link: "https://rice-genome-hub.southgreen.fr/",
     image: "🌾",
-    tags: ["Pangenome", "GWAS", "QTL"],
+    tags: ["Assemblies", "JBrowse", "BLAST", "Variants", "Expression", "Repeat Elements"],
     status: "Active",
   },
   {
@@ -63,7 +73,7 @@ const genomeHubs = [
     description: "Comprehensive platform for citrus genomics, comparative analysis, and breeding tools.",
     link: "https://citrus-genome-hub.southgreen.fr/",
     image: "🍊",
-    tags: ["JBrowse", "Synteny", "Pangenome"],
+    tags: ["Assemblies", "JBrowse", "Synteny", "Variants", "Repeat Elements"],
     status: "Active",
   },
   {
