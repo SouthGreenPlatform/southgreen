@@ -27,7 +27,7 @@ const liveInstances = [
     description: "Various species data",
   },
   {
-    name: "Bioversity Intl Instance",
+    name: "Alliance Bioversity and CIAT Instance",
     url: "https://www.crop-diversity.org/gigwa/",
     description: "Musa data",
   },
