@@ -74,6 +74,14 @@ const tools = [{
   icon: Eye,
   color: "from-pink-500 to-rose-500",
   internal: false
+}, {
+  name: "SynFlow",
+  category: "Structural Variation",
+  description: "Interactive web application for exploring and visualizing synteny and structural variations across genomes.",
+  link: "https://synflow.southgreen.fr/",
+  icon: GitBranch,
+  color: "from-cyan-500 to-blue-500",
+  internal: false
 }];
 export function ToolsSection() {
   return <section id="tools" className="py-24 bg-secondary/30">
