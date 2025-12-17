@@ -6,8 +6,8 @@ import { Users, Building2 } from "lucide-react";
 const scientificLeaders = [
   { name: "Alexis Dereeper", institute: "IRD, UMR PHIM" },
   { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP" },
-  { name: "Pierre Larmande", institute: "IRD, UMR DIADE" },
   { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
+  { name: "Pierre Larmande", institute: "IRD, UMR DIADE" },
 ];
 
 const technicalLeaders = [
@@ -18,21 +18,21 @@ const technicalLeaders = [
 const teamMembers = [
   { name: "Boizet Alice", institute: "CIRAD, UMR AGAP" },
   { name: "Breton Cathrine", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
-  { name: "Orjuela Julie", institute: "IRD, UMR DIADE" },
   { name: "Dainat Jacques", institute: "IRD" },
-  { name: "Ruiz Manuel", institute: "CIRAD, UMR AGAP" },
-  { name: "Sarah Gautier", institute: "INRAE, UMR AGAP" },
-  { name: "Tranchant-Dubreuil Christine", institute: "IRD, UMR DIADE" },
-  { name: "Soriano Alexandre", institute: "CIRAD, UMR AGAP" },
-  { name: "Paul Julien", institute: "CIRAD, UMR AGAP" },
-  { name: "Guignon Valentin", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
-  { name: "Sidibe-Bocs Stéphanie", institute: "CIRAD, UMR AGAP" },
   { name: "Dufayard Jean-François", institute: "CIRAD, UMR AGAP" },
-  { name: "Ravel Sébastien", institute: "CIRAD, UMR PHIM" },
-  { name: "Sabot François", institute: "IRD, UMR DIADE" },
-  { name: "Sempéré Guilhem", institute: "CIRAD" },
-  { name: "Summo Marilyne", institute: "CIRAD, UMR AGAP" },
+  { name: "Guignon Valentin", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
   { name: "Lopez David", institute: "CIRAD, UMR AGAP" },
+  { name: "Orjuela Julie", institute: "IRD, UMR DIADE" },
+  { name: "Paul Julien", institute: "CIRAD, UMR AGAP" },
+  { name: "Ravel Sébastien", institute: "CIRAD, UMR PHIM" },
+  { name: "Ruiz Manuel", institute: "CIRAD, UMR AGAP" },
+  { name: "Sabot François", institute: "IRD, UMR DIADE" },
+  { name: "Sarah Gautier", institute: "INRAE, UMR AGAP" },
+  { name: "Sempéré Guilhem", institute: "CIRAD" },
+  { name: "Sidibe-Bocs Stéphanie", institute: "CIRAD, UMR AGAP" },
+  { name: "Soriano Alexandre", institute: "CIRAD, UMR AGAP" },
+  { name: "Summo Marilyne", institute: "CIRAD, UMR AGAP" },
+  { name: "Tranchant-Dubreuil Christine", institute: "IRD, UMR DIADE" },
 ];
 
 export default function Members() {
