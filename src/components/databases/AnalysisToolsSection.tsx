@@ -132,7 +132,26 @@ const toolCategories = [
   },
 ];
 
-export function AnalysisToolsSection() {
+interface AnalysisToolsSectionProps {
+  searchQuery?: string;
+}
+
+export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionProps) {
+  const filteredCategories = searchQuery
+    ? toolCategories
+        .map((category) => ({
+          ...category,
+          tools: category.tools.filter((tool) =>
+            tool.name.toLowerCase().includes(searchQuery.toLowerCase())
+          ),
+        }))
+        .filter((category) => category.tools.length > 0)
+    : toolCategories;
+
+  if (searchQuery && filteredCategories.length === 0) {
+    return null;
+  }
+
   return (
     <section id="analysis-tools" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -151,7 +170,7 @@ export function AnalysisToolsSection() {
 
         {/* Categories */}
         <div className="space-y-12">
-          {toolCategories.map((category) => (
+          {filteredCategories.map((category) => (
             <div key={category.name}>
               <div className="mb-6">
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-1">
@@ -162,7 +181,6 @@ export function AnalysisToolsSection() {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {category.tools.map((tool) => {
-                  const LinkComponent = tool.internal ? 'a' : 'a';
                   const linkProps = tool.internal 
                     ? { href: tool.link }
                     : { href: tool.link, target: "_blank", rel: "noopener noreferrer" };

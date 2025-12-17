@@ -1,7 +1,21 @@
-import { Database, Search, ArrowRight } from "lucide-react";
+import { Database, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-export function DatabaseHero() {
-  return <section className="relative pt-32 pb-20 overflow-hidden">
+
+interface DatabaseHeroProps {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+  onSearch: () => void;
+}
+
+export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: DatabaseHeroProps) {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onSearch();
+    }
+  };
+
+  return (
+    <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-secondary/50" />
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
@@ -18,8 +32,8 @@ export function DatabaseHero() {
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl animate-pulse-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full bg-accent/10 blur-3xl animate-pulse-slow" style={{
-      animationDelay: "2s"
-    }} />
+        animationDelay: "2s"
+      }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -44,9 +58,18 @@ export function DatabaseHero() {
           <div className="flex gap-3 max-w-lg mx-auto mb-8">
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <input type="text" placeholder="Search databases and tools..." className="w-full pl-12 pr-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+              <input
+                type="text"
+                placeholder="Search databases and tools..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="w-full pl-12 pr-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+              />
             </div>
-            <Button className="gradient-hero border-0 px-6">Search</Button>
+            <Button className="gradient-hero border-0 px-6" onClick={onSearch}>
+              Search
+            </Button>
           </div>
 
           {/* Quick Stats */}
@@ -65,5 +88,6 @@ export function DatabaseHero() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
