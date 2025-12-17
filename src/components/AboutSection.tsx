@@ -3,14 +3,14 @@ const institutes = [{
   name: "Alliance Bioversity & CIAT",
   type: "International Organisation (CGIAR)"
 }, {
-  name: "IRD",
-  fullName: "Institut de Recherche pour le Développement"
-}, {
   name: "CIRAD",
   fullName: "Centre de coopération internationale en recherche agronomique"
 }, {
   name: "INRAE",
   fullName: "Institut national de recherche pour l'agriculture"
+}, {
+  name: "IRD",
+  fullName: "Institut de Recherche pour le Développement"
 }];
 const researchUnits = [{
   name: "AGAP",
