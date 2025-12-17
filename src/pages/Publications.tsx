@@ -59,6 +59,8 @@ const contributionsPublications: Publication[] = [
   { authors: "Argout, X., Martin, G., Droc, G., Fouet, O., Labadie, K., Rivals, E., et al.", year: 2017, title: "The cacao Criollo genome v2.0: an improved version of the genome for genetic and functional genomic studies", journal: "BMC Genomics 18, 730", doi: "10.1186/s12864-017-4120-9" },
   { authors: "Cohen-Boulakia, S., Belhajjame, K., Collin, O., Chopard, J., Froidevaux, C., Gaignard, A., et al.", year: 2017, title: "Scientific workflows for computational reproducibility in the life sciences: Status, challenges and opportunities", journal: "Future Generation Computer Systems 75, 284–298", doi: "10.1016/j.future.2017.01.012" },
   { authors: "Sarah, G., Homa, F., Pointet, S., Contreras, S., Sabot, F., Nabholz, B., et al.", year: 2017, title: "A large set of 26 new reference transcriptomes dedicated to comparative population genomics in crops and wild relatives", journal: "Molecular Ecology Resources 17, 565–580", doi: "10.1111/1755-0998.12587" },
+  { authors: "Denoeud, F., Carretero-Paulet, L., Dereeper, A., Droc, G., Guyot, R., Pietrella, M., et al.", year: 2014, title: "The coffee genome provides insight into the convergent evolution of caffeine biosynthesis", journal: "Science 345, 1181–1184", doi: "10.1126/science.1255274" },
+  { authors: "D'Hont, A., Denoeud, F., Aury, J.-M., Baurens, F.-C., Carreel, F., Garsmeur, O., et al.", year: 2012, title: "The banana (Musa acuminata) genome and the evolution of monocotyledonous plants", journal: "Nature 488, 213", doi: "" },
   { authors: "Argout, X., Salse, J., Aury, J.-M., Guiltinan, M. J., Droc, G., Gouzy, J., et al.", year: 2011, title: "The genome of Theobroma cacao", journal: "Nat Genet 43, 101–108", doi: "10.1038/ng.736" },
 ];
 
