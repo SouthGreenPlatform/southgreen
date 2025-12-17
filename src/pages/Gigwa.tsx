@@ -380,7 +380,10 @@ export default function Gigwa() {
                     </Badge>
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground mt-3">Log in as gigwadmin / nimda after install.</a>
+                <p className="text-xs text-muted-foreground mt-3">
+                  Log in as gigwadmin / nimda after install. Please be{" "}
+                  <a href="https://support.apple.com/en-us/102445" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">aware of this</a>{" "}
+                  if using a recent version of macOS.
                 </p>
               </CardContent>
             </Card>
