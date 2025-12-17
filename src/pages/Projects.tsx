@@ -18,28 +18,39 @@ const projects: Project[] = [
     url: "https://anr.fr/ProjetIA-21-ESRE-0048",
     donor: "ANR",
   },
-  { acronym: "BReIF", title: "Infrastructure to boost the use of diversified biological resources", url: "" },
-  { acronym: "CGIAR Genebank initiative", title: "CGIAR Genebank initiative" },
+  {
+    acronym: "BReIF",
+    title: "Infrastructure to boost the use of diversified biological resources",
+    url: "https://www.pepr-agroeconum.fr/les-projets-finances/traitement-de-donnees-et-modelisation/infrastructures/breif",
+    donor: "PEPR",
+  },
+  {
+    acronym: "Genebank accelarator",
+    title: "The Genebanks Accelerator will enable smarter, more widespread use of crop diversity",
+    url: "https://www.cgiar.org/cgiar-research-portfolio-2025-2030/genebanks",
+    donor: "CGIAR",
+  },
   {
     acronym: "AgroDiv",
     title:
-      "Caractérisation génomique de la diversité des plantes et animaux domestiques pour la transition agroécologique",
+      "Genomic and Functional Characterization of the Diversity of Crop Plants and Domestic Animals as a Cornerstone of Agroecology: From Genome to Phenotype",
+    url: "https://www.pepr-agroeconum.fr/les-projets-finances/ressources-genetiques/projets-cibles/agrodiv",
+    donor: "PEPR",
   },
   {
     acronym: "DIG-AI",
-    title: "Découverte des interactions génotype-phénotype à l'aide de graphe de connaissance et d'IA",
+    title: "Deciphering plant genotype-phenotype Interactions using knowledge Graphs and AI",
+    url: "https://anr-dig-ai.github.io/content/",
+    donor: "ANR",
   },
-  { acronym: "AFRIXOO", title: "African Xoo evolution" },
-  { acronym: "GWASPemiladapt", title: "GWASPemiladapt" },
-  { acronym: "wathealth_MH", title: "wathealth" },
-  { acronym: "CURLY", title: "CURLY" },
-  { acronym: "LoaGen", title: "LoaGen" },
   {
     acronym: "ClimOliveMed",
     title:
       "Diversity of varieties and farming systems as an asset of Mediterranean oleiculture in a global change setting",
+
+    url: "https://www.climolivemed.com/",
+    donor: "Multi",
   },
-  { acronym: "Greener", title: "Greener" },
   {
     acronym: "Bolero",
     title: "Breeding for cOffee and cocoa root resiLiEnce in low input farming systems based on improved ROotstock",
