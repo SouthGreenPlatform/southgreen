@@ -62,7 +62,7 @@ const features = [
   {
     icon: FileSearch,
     title: "Data Exploration",
-    description: "Embedded Flapjack-Bytes and IGV.js viewers",
+    description: "Filter variants by position, missing data, MAF, Quality and many others",
   },
   {
     icon: Database,
@@ -72,7 +72,7 @@ const features = [
   {
     icon: Share2,
     title: "Multiple Standards",
-    description: "BrAPI, GA4GH, SNiPlay, Galaxy & Flapjack connectivity",
+    description: "BrAPI, GA4GH, Galaxy, IGV, Jbrowse & Flapjack connectivity",
   },
 ];
 
@@ -380,16 +380,7 @@ export default function Gigwa() {
                     </Badge>
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground mt-3">
-                  Log in as gigwadmin / nimda after install.{" "}
-                  <a
-                    href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    OSX users must be aware of this
-                  </a>
+                <p className="text-xs text-muted-foreground mt-3">Log in as gigwadmin / nimda after install.</a>
                 </p>
               </CardContent>
             </Card>
