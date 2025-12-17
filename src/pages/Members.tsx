@@ -70,8 +70,7 @@ export default function Members() {
             {scientificLeaders.map((leader) => (
               <Card key={leader.name} className="border-border hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground mb-1">{leader.name}</h3>
-                  <p className="text-sm text-primary mb-3">Scientific Leader</p>
+                  <h3 className="font-semibold text-foreground mb-3">{leader.name}</h3>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
                     <span className="text-sm italic">{leader.institute || "Institute placeholder"}</span>
@@ -94,8 +93,7 @@ export default function Members() {
             {technicalLeaders.map((leader) => (
               <Card key={leader.name} className="border-border hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground mb-1">{leader.name}</h3>
-                  <p className="text-sm text-primary mb-3">Technical Leader</p>
+                  <h3 className="font-semibold text-foreground mb-3">{leader.name}</h3>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
                     <span className="text-sm italic">{leader.institute || "Institute placeholder"}</span>
