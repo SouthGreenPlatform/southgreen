@@ -13,14 +13,14 @@ const institutes = [{
   fullName: "Institut national de recherche pour l'agriculture"
 }];
 const researchUnits = [{
+  name: "AGAP",
+  description: "Amélioration Génétique et Adaptation des Plantes"
+}, {
   name: "DIADE",
   description: "Diversité, Adaptation et Développement des plantes"
 }, {
   name: "PHIM",
   description: "Plant Health Institute of Montpellier"
-}, {
-  name: "AGAP",
-  description: "Amélioration Génétique et Adaptation des Plantes"
 }];
 export function AboutSection() {
   return <section id="about" className="py-24 bg-secondary/30">
