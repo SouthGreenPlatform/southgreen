@@ -93,7 +93,7 @@ const genomeHubs = [
     description: "Integrated genomic resources for olive research and Mediterranean crop improvement.",
     link: "https://olive-genome-hub.climolivemed.com/",
     image: "🫒",
-    tags: ["Assemblies", "JBrowse", "BLAST", "Synteny],
+    tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
   {
