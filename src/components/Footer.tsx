@@ -1,37 +1,49 @@
 import { Dna, Mail, MapPin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import ifbElixirLogos from "@/assets/ifb-elixir-logos.png";
-const quickLinks = [{
-  label: "Home",
-  href: "#home"
-}, {
-  label: "Tools",
-  href: "#tools"
-}, {
-  label: "Databases",
-  href: "#databases"
-}, {
-  label: "Training",
-  href: "#training"
-}, {
-  label: "About",
-  href: "#about"
-}];
-const resources = [{
-  label: "Documentation",
-  href: "#"
-}, {
-  label: "GitHub",
-  href: "https://github.com/SouthGreenPlatform"
-}, {
-  label: "Publications",
-  href: "#"
-}, {
-  label: "News",
-  href: "#"
-}];
+const quickLinks = [
+  {
+    label: "Home",
+    href: "#home",
+  },
+  {
+    label: "Tools",
+    href: "#tools",
+  },
+  {
+    label: "Databases",
+    href: "#databases",
+  },
+  {
+    label: "Training",
+    href: "#training",
+  },
+  {
+    label: "About",
+    href: "#about",
+  },
+];
+const resources = [
+  {
+    label: "Documentation",
+    href: "#",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/SouthGreenPlatform",
+  },
+  {
+    label: "Publications",
+    href: "#",
+  },
+  {
+    label: "News",
+    href: "#",
+  },
+];
 export function Footer() {
-  return <footer id="contact" className="bg-foreground text-primary-foreground">
+  return (
+    <footer id="contact" className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -41,31 +53,34 @@ export function Footer() {
                 <Dna className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <span className="font-heading text-xl font-semibold">South <span className="text-primary">Green</span>
+                <span className="font-heading text-xl font-semibold">
+                  South <span className="text-primary">Green</span>
                 </span>
               </div>
             </div>
             <p className="text-primary-foreground/70 mb-4 max-w-md">
-              South Green is a bioinformatics platform dedicated to the genomic 
-              resource analysis of southern and Mediterranean plants. South Green is a member platform of IFB-ELIXIR.
+              South Green is a bioinformatics platform dedicated to the genomic resource analysis of southern and
+              Mediterranean plants. South Green is a member platform of IFB-ELIXIR.
             </p>
-            <a 
-              href="https://www.ifb-elixir.fr/ifb-elixir-fr/" 
-              target="_blank" 
+            <a
+              href="https://www.ifb-elixir.fr/ifb-elixir-fr/"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-block mb-6 hover:opacity-80 transition-opacity"
             >
-              <img 
-                src={ifbElixirLogos} 
-                alt="IFB and Elixir France logos" 
+              <img
+                src={ifbElixirLogos}
+                alt="IFB and Elixir France logos"
                 className="h-12 bg-white/90 rounded px-3 py-1"
               />
             </a>
             <div className="space-y-3">
-              <a href="mailto:contact@southgreen.fr" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors">
-
-pf-southgreen@groupes.france-bioinformatique.fr<Mail className="w-4 h-4" />
-                contact@southgreen.fr
+              <a
+                href="mailto:pf-southgreen@groupes.france-bioinformatique.fr"
+                className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                Contact the Platform
               </a>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <MapPin className="w-4 h-4" />
@@ -78,11 +93,13 @@ pf-southgreen@groupes.france-bioinformatique.fr<Mail className="w-4 h-4" />
           <div>
             <h4 className="font-heading font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map(link => <li key={link.label}>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
                   <a href={link.href} className="text-primary-foreground/70 hover:text-primary transition-colors">
                     {link.label}
                   </a>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -90,12 +107,19 @@ pf-southgreen@groupes.france-bioinformatique.fr<Mail className="w-4 h-4" />
           <div>
             <h4 className="font-heading font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              {resources.map(link => <li key={link.label}>
-                  <a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-primary-foreground/70 hover:text-primary transition-colors inline-flex items-center gap-1">
+              {resources.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="text-primary-foreground/70 hover:text-primary transition-colors inline-flex items-center gap-1"
+                  >
                     {link.label}
-                    {link.href.startsWith('http') && <ExternalLink className="w-3 h-3" />}
+                    {link.href.startsWith("http") && <ExternalLink className="w-3 h-3" />}
                   </a>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -106,11 +130,15 @@ pf-southgreen@groupes.france-bioinformatique.fr<Mail className="w-4 h-4" />
             © {new Date().getFullYear()} South Green Bioinformatics Platform.
           </p>
           <div className="flex gap-6">
-            <Link to="/terms-of-use" className="text-sm text-primary-foreground/50 hover:text-primary transition-colors">
+            <Link
+              to="/terms-of-use"
+              className="text-sm text-primary-foreground/50 hover:text-primary transition-colors"
+            >
               Terms of Use
             </Link>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 }
