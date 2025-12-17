@@ -2,17 +2,17 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, FolderOpen } from "lucide-react";
+import { FolderOpen, ExternalLink, Building2 } from "lucide-react";
 
 interface Project {
   acronym: string;
   title: string;
-  startYear?: number;
-  endYear?: number;
+  url?: string;
+  donor?: string;
 }
 
 const projects: Project[] = [
-  { acronym: "Mudis4LS", title: "Mutualized Digital Spaces for FAIR Life Sciences" },
+  { acronym: "Mudis4LS", title: "Mutualized Digital Spaces for FAIR Life Sciences", url: "https://anr.fr/ProjetIA-21-ESRE-0048" },
   { acronym: "Brief", title: "Infrastructure to boost the use of diversified biological resources" },
   { acronym: "CGIAR Genebank initiative", title: "CGIAR Genebank initiative" },
   { acronym: "AgroDiv", title: "Caractérisation génomique de la diversité des plantes et animaux domestiques pour la transition agroécologique" },
@@ -62,13 +62,27 @@ const Projects = () => {
               >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-2">
-                    <CardTitle className="text-lg font-bold text-primary group-hover:text-primary/80 transition-colors">
-                      {project.acronym}
-                    </CardTitle>
-                    {(project.startYear || project.endYear) && (
+                    {project.url ? (
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 hover:underline"
+                      >
+                        <CardTitle className="text-lg font-bold text-primary group-hover:text-primary/80 transition-colors">
+                          {project.acronym}
+                        </CardTitle>
+                        <ExternalLink className="w-3 h-3 text-primary" />
+                      </a>
+                    ) : (
+                      <CardTitle className="text-lg font-bold text-primary group-hover:text-primary/80 transition-colors">
+                        {project.acronym}
+                      </CardTitle>
+                    )}
+                    {project.donor && (
                       <Badge variant="secondary" className="text-xs shrink-0">
-                        <Calendar className="w-3 h-3 mr-1" />
-                        {project.startYear || "—"} - {project.endYear || "ongoing"}
+                        <Building2 className="w-3 h-3 mr-1" />
+                        {project.donor}
                       </Badge>
                     )}
                   </div>
@@ -77,10 +91,10 @@ const Projects = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {project.title}
                   </p>
-                  {!project.startYear && !project.endYear && (
+                  {!project.donor && (
                     <div className="mt-3 flex items-center text-xs text-muted-foreground/60">
-                      <Calendar className="w-3 h-3 mr-1" />
-                      <span>Duration TBD</span>
+                      <Building2 className="w-3 h-3 mr-1" />
+                      <span>Donor TBD</span>
                     </div>
                   )}
                 </CardContent>
