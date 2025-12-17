@@ -59,6 +59,14 @@ const tools = [{
   color: "from-indigo-500 to-purple-500",
   internal: true
 }, {
+  name: "FrangiPANe",
+  category: "Pangenomics",
+  description: "A tool for building and analyzing pangenome graphs from multiple genome assemblies.",
+  link: "https://github.com/tranchant/frangiPANe",
+  icon: Layers,
+  color: "from-amber-500 to-orange-500",
+  internal: false
+}, {
   name: "Panache",
   category: "Pangenomics",
   description: "Web-based interface designed for the visualization of linear pangenome graphs.",
