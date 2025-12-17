@@ -34,12 +34,13 @@ export function Footer() {
     <footer id="contact" className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-              <img
-                src={ifbElixirLogos}
-                alt="IFB and Elixir France logos"
-                className="h-12 bg-white/90 rounded px-3 py-1"
-              />
-            </div>
+          {/* Platform Info */}
+          <div>
+            <img
+              src={ifbElixirLogos}
+              alt="IFB and Elixir France logos"
+              className="h-12 bg-white/90 rounded px-3 py-1 mb-4"
+            />
             <p className="text-primary-foreground/70 mb-4 max-w-md">
               South Green is a bioinformatics platform dedicated to the genomic resource analysis of southern and
               Mediterranean plants. South Green is a member platform of IFB-ELIXIR.
