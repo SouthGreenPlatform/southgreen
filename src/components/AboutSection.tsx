@@ -1,7 +1,7 @@
 import { Building2, FlaskConical, Users, Network } from "lucide-react";
 const institutes = [{
   name: "Alliance Bioversity & CIAT",
-  type: "International"
+  type: "International Organisation (CGIAR)"
 }, {
   name: "IRD",
   fullName: "Institut de Recherche pour le Développement"
