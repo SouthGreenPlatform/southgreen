@@ -20,8 +20,8 @@ const keywords = [
 const scientificLeaders = [
   { name: "Alexis Dereeper", institute: "IRD, UMR PHIM" },
   { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP" },
-  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
   { name: "Pierre Larmande", institute: "IRD, UMR DIADE" },
+  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
 ];
 
 const technicalLeaders = [
