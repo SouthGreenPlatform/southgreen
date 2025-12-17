@@ -1,5 +1,6 @@
 import { ArrowRight, Database, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
 export function Hero() {
   return <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
@@ -45,12 +46,14 @@ export function Hero() {
           <div className="flex flex-wrap gap-4 mb-12 animate-fade-up" style={{
           animationDelay: '0.4s'
         }}>
-            <Button size="lg" className="gradient-hero border-0 shadow-md hover:shadow-glow transition-all group">
-              Explore Our Tools
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="gradient-hero border-0 shadow-md hover:shadow-glow transition-all group" asChild>
+              <a href="#tools">
+                Explore Our Tools
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="shadow-sm">
-              View Databases
+            <Button size="lg" variant="outline" className="shadow-sm" asChild>
+              <Link to="/databases">View Databases</Link>
             </Button>
           </div>
 
