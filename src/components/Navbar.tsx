@@ -12,7 +12,6 @@ const navItems = [
   { label: "Members", href: "/members" },
   { label: "Publications", href: "/publications" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
