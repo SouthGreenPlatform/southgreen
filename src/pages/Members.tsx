@@ -32,6 +32,7 @@ const teamMembers = [
   { name: "Sabot François", institute: "IRD, UMR DIADE" },
   { name: "Sempéré Guilhem", institute: "CIRAD" },
   { name: "Summo Marilyne", institute: "CIRAD, UMR AGAP" },
+  { name: "Lopez David", institute: "CIRAD, UMR AGAP" },
 ];
 
 export default function Members() {
