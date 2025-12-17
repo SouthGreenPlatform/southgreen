@@ -7,11 +7,7 @@ const quickLinks = [
     href: "#home",
   },
   {
-    label: "Tools",
-    href: "#tools",
-  },
-  {
-    label: "Databases",
+    label: "Databases & Tools",
     href: "#databases",
   },
   {
@@ -25,20 +21,12 @@ const quickLinks = [
 ];
 const resources = [
   {
-    label: "Documentation",
-    href: "#",
-  },
-  {
     label: "GitHub",
     href: "https://github.com/SouthGreenPlatform",
   },
   {
     label: "Publications",
-    href: "#",
-  },
-  {
-    label: "News",
-    href: "#",
+    href: "#Publications",
   },
 ];
 export function Footer() {
