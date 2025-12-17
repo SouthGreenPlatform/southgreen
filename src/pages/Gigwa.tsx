@@ -36,6 +36,21 @@ const liveInstances = [
     url: "https://gigwa.plantinformatics.io/gigwa/",
     description: "Cereals data",
   },
+  {
+    name: "GDR Rosaceae",
+    url: "https://gigwa.rosaceae.org/gigwa/",
+    description: "Rosaceae data",
+  },
+  {
+    name: "CGIAR Genebanks",
+    url: "https://gigwa.cgiar.org/",
+    description: "Multicrop data",
+  },
+  {
+    name: "PeanutBase",
+    url: "https://www.peanutbase.org/gigwa/",
+    description: "Peanut data",
+  },
 ];
 
 const features = [
@@ -162,7 +177,7 @@ export default function Gigwa() {
             Try the latest version online with public datasets or upload your own data
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {liveInstances.map((instance, index) => (
               <Card
                 key={index}
