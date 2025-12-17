@@ -13,12 +13,14 @@ const genomeHubs = [
       "Assemblies",
       "JBrowse",
       "BLAST",
-      "Expression",
       "Synteny",
+      "Expression",
+      "GO Enrichment",
       "Markers",
       "Pangenome",
       "Mosaics",
       "Structural variation",
+      "Pathways"
     ],
     status: "Active",
   },
@@ -64,7 +66,7 @@ const genomeHubs = [
     description: "Genomic resources for vanilla research, breeding, and flavor compound studies.",
     link: "https://vanilla-genome-hub.cirad.fr/",
     image: "🌸",
-    tags: ["Annotation", "BLAST", "Expression"],
+    tags: ["JBrowse", "BLAST", "Synteny", "Expression", "GO Enrichment"],
     status: "Active",
   },
   {
@@ -82,8 +84,8 @@ const genomeHubs = [
     description: "Multi-species genome browser for grass family comparative genomics research.",
     link: "https://grass-genome-hub.southgreen.fr/",
     image: "🌱",
-    tags: ["Annotation", "BLAST"],
-    status: "Active",
+    tags: ["JBrowse", "Synteny", "Variants",],
+    status: "Archive",
   },
   {
     name: "Olive Genome Hub",
@@ -91,7 +93,7 @@ const genomeHubs = [
     description: "Integrated genomic resources for olive research and Mediterranean crop improvement.",
     link: "https://olive-genome-hub.climolivemed.com/",
     image: "🫒",
-    tags: ["Assembly", "Genes", "Expression"],
+    tags: ["Assemblies", "JBrowse", "BLAST", "Synteny],
     status: "Active",
   },
   {
@@ -100,7 +102,7 @@ const genomeHubs = [
     description: "Genomic resources for palm species including oil palm, date palm, and coconut research.",
     link: "https://palm-genome-hub.southgreen.fr/",
     image: "🌴",
-    tags: ["JBrowse", "Annotation", "BLAST"],
+    tags: ["JBrowse",  "BLAST", "Pathways", "Genetic maps"],
     status: "Active",
   },
 ];
