@@ -52,7 +52,7 @@ export function DatabaseHero() {
           {/* Quick Stats */}
           <div className="flex justify-center gap-8 text-center">
             <div>
-              <p className="text-3xl font-semibold text-foreground">10</p>
+              <p className="text-3xl font-semibold text-foreground">8</p>
               <p className="text-sm text-muted-foreground">Genome Hubs</p>
             </div>
             <div className="w-px bg-border" />
