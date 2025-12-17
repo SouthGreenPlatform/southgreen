@@ -9,7 +9,7 @@ const genomeHubs = [
     description: "Integrated platform for banana genome information, annotation, and comparative genomics analysis.",
     link: "http://banana-genome.cirad.fr/",
     image: "🍌",
-    tags: ["JBrowse", "BLAST", "Expression"],
+    tags: ["JBrowse", "BLAST", "Expression", "Synteny", "Markers", "Pangenome"],
     status: "Active",
   },
   {
@@ -19,7 +19,7 @@ const genomeHubs = [
     link: "http://coffee-genome.org/",
     image: "☕",
     tags: ["Annotation", "Synteny", "Markers"],
-    status: "Active",
+    status: "Archive",
   },
   {
     name: "Cocoa Genome Hub",
@@ -28,7 +28,7 @@ const genomeHubs = [
     link: "http://cocoagendb.cirad.fr/",
     image: "🍫",
     tags: ["Assembly", "Genes", "Variants"],
-    status: "Active",
+    status: "Archive",
   },
   {
     name: "Rice Genome Hub",
@@ -46,7 +46,7 @@ const genomeHubs = [
     link: "http://sugarcane-genome.cirad.fr/",
     image: "🌿",
     tags: ["Polyploid", "Haplotypes", "Expression"],
-    status: "Beta",
+    status: "Active",
   },
   {
     name: "Vanilla Genome Hub",
@@ -63,7 +63,7 @@ const genomeHubs = [
     description: "Comprehensive platform for citrus genomics, comparative analysis, and breeding tools.",
     link: "https://citrus-genome-hub.southgreen.fr/",
     image: "🍊",
-    tags: ["JBrowse", "Synteny", "Variants"],
+    tags: ["JBrowse", "Synteny", "Pangenome"],
     status: "Active",
   },
   {
@@ -72,7 +72,7 @@ const genomeHubs = [
     description: "Multi-species genome browser for grass family comparative genomics research.",
     link: "https://grass-genome-hub.southgreen.fr/",
     image: "🌱",
-    tags: ["Pangenome", "Annotation", "BLAST"],
+    tags: ["Annotation", "BLAST"],
     status: "Active",
   },
   {
@@ -104,31 +104,23 @@ export function GenomeHubsSection() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Genome Hubs
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            Integrated Information Systems
-          </h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">Integrated Information Systems</h2>
           <p className="text-muted-foreground max-w-2xl">
-            Our Genome Hubs provide comprehensive genomic resources including genome browsers, 
-            BLAST servers, expression atlases, and comparative genomics tools for tropical crops.
+            Our Genome Hubs provide comprehensive genomic resources including genome browsers, BLAST servers, expression
+            atlases, and comparative genomics tools for tropical crops.
           </p>
         </div>
 
         {/* Genome Hubs Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {genomeHubs.map((hub) => (
-            <a
-              key={hub.name}
-              href={hub.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-            >
+            <a key={hub.name} href={hub.link} target="_blank" rel="noopener noreferrer" className="group block">
               <Card className="h-full border-border/50 bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                 {/* Header with emoji and status */}
                 <div className="relative p-6 pb-0">
                   <div className="flex items-start justify-between">
                     <div className="text-5xl mb-4">{hub.image}</div>
-                    <Badge 
+                    <Badge
                       variant={hub.status === "Active" ? "default" : "secondary"}
                       className={hub.status === "Active" ? "gradient-hero border-0" : ""}
                     >
@@ -143,9 +135,7 @@ export function GenomeHubsSection() {
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </CardTitle>
                   <p className="text-sm text-primary italic">{hub.species}</p>
-                  <CardDescription className="text-muted-foreground mt-2">
-                    {hub.description}
-                  </CardDescription>
+                  <CardDescription className="text-muted-foreground mt-2">{hub.description}</CardDescription>
                 </CardHeader>
 
                 <CardContent>
