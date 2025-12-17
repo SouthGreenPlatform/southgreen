@@ -473,14 +473,6 @@ export default function Gigwa() {
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
                 >
                   <ExternalLink className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span>Tutorial: Neighbor-joining Trees</span>
-                </a>
-                <a
-                  href="https://github.com/SouthGreenPlatform/Gigwa2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
-                >
                   <Github className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
                   <span>Gigwa v2 Source Code</span>
                 </a>
