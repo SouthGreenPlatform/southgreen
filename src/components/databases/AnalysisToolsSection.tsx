@@ -28,6 +28,13 @@ const toolCategories = [
     description: "Tools for pangenome visualization and exploration",
     tools: [
       {
+        name: "FrangiPANe",
+        description: "A tool for building and analyzing pangenome graphs from multiple genome assemblies.",
+        link: "https://github.com/tranchant/frangiPANe",
+        icon: Layers,
+        color: "from-amber-500 to-orange-500",
+      },
+      {
         name: "Panache",
         description: "Web-based interface designed for the visualization of linear pangenome graphs.",
         link: "https://github.com/SouthGreenPlatform/panache",
