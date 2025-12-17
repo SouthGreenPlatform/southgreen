@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import southGreenLogo from "@/assets/south-green-logo.png";
+import southGreenLogo from "@/assets/south-green-logo-header.png";
 
 const navItems = [
   { label: "Home", href: "/" },
