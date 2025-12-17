@@ -110,6 +110,19 @@ const toolCategories = [
       },
     ],
   },
+  {
+    name: "Structural Variation",
+    description: "Tools for analyzing synteny and structural variations across genomes",
+    tools: [
+      {
+        name: "SynFlow",
+        description: "Interactive web application for exploring and visualizing synteny and structural variations across genomes.",
+        link: "https://synflow.southgreen.fr/",
+        icon: GitBranch,
+        color: "from-cyan-500 to-blue-500",
+      },
+    ],
+  },
 ];
 
 export function AnalysisToolsSection() {
