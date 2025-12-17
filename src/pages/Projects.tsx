@@ -47,13 +47,14 @@ const projects: Project[] = [
     acronym: "ClimOliveMed",
     title:
       "Diversity of varieties and farming systems as an asset of Mediterranean oleiculture in a global change setting",
-
     url: "https://www.climolivemed.com/",
     donor: "Multi",
   },
   {
     acronym: "Bolero",
     title: "Breeding for cOffee and cocoa root resiLiEnce in low input farming systems based on improved ROotstock",
+    url: "https://www.bolero-project.eu/project/bolero-project",
+    donor: "EU",
   },
 ];
 
