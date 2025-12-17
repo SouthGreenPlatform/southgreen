@@ -107,7 +107,21 @@ const genomeHubs = [
   },
 ];
 
-export function GenomeHubsSection() {
+interface GenomeHubsSectionProps {
+  searchQuery?: string;
+}
+
+export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) {
+  const filteredHubs = searchQuery
+    ? genomeHubs.filter((hub) =>
+        hub.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : genomeHubs;
+
+  if (searchQuery && filteredHubs.length === 0) {
+    return null;
+  }
+
   return (
     <section id="genome-hubs" className="py-20">
       <div className="container mx-auto px-4">
@@ -125,7 +139,7 @@ export function GenomeHubsSection() {
 
         {/* Genome Hubs Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {genomeHubs.map((hub) => (
+          {filteredHubs.map((hub) => (
             <a key={hub.name} href={hub.link} target="_blank" rel="noopener noreferrer" className="group block">
               <Card className="h-full border-border/50 bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                 {/* Header with emoji and status */}
