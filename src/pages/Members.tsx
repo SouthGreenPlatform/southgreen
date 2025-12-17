@@ -78,7 +78,7 @@ export default function Members() {
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 mb-8">
             <Tag className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Keywords</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Scientific and Technical Expertise</h2>
           </div>
           <div className="flex flex-wrap gap-3">
             {keywords.map((keyword) => (
