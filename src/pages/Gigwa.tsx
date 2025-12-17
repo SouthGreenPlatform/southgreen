@@ -62,7 +62,7 @@ const features = [
   {
     icon: FileSearch,
     title: "Data Exploration",
-    description: "Filter variants by position, missing data, MAF, Quality and many others",
+    description: "Embedded Flapjack-Bytes and IGV.js viewers",
   },
   {
     icon: Database,
@@ -72,7 +72,7 @@ const features = [
   {
     icon: Share2,
     title: "Multiple Standards",
-    description: "BrAPI, GA4GH, Galaxy, IGV, Jbrowse & Flapjack connectivity",
+    description: "BrAPI, GA4GH, SNiPlay, Galaxy & Flapjack connectivity",
   },
 ];
 
@@ -296,34 +296,30 @@ export default function Gigwa() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { version: "v2.9-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_windows.ps1", isScript: true },
-                    { version: "v2.8-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_windows.ps1", isScript: true },
-                    { version: "v2.7-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_windows.ps1", isScript: true },
-                    { version: "v2.6.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.6.1-RELEASE-Windows.zip" },
-                    { version: "v2.6-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.6-RELEASE-Windows.zip" },
-                    { version: "v2.5.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.5.1-RELEASE-Windows.zip" },
-                    { version: "v2.5-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.5-RELEASE-Windows.zip" },
-                    { version: "v2.4.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.4.1-RELEASE-Windows.zip" },
-                    { version: "v2.3-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.3-RELEASE-Windows.zip" },
-                    { version: "v2.2-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.2-RELEASE_Windows.zip" },
-                    { version: "v2.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.1-RELEASE_Windows.zip" },
-                    { version: "v2.0-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0-RELEASE_Windows.zip" },
-                    { version: "v2.0-RC2", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0-RC2_Windows.zip" },
-                    { version: "v2.0beta", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0b_Windows.zip" },
-                    { version: "v2.0alpha", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0a_Windows_Bundle.zip" },
-                    { version: "v1.1", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V1.1_Windows_Bundle.zip" },
+                    {
+                      version: "v2.9-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_windows.ps1",
+                      isScript: true,
+                    },
+                    {
+                      version: "v2.8-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_windows.ps1",
+                      isScript: true,
+                    },
+                    {
+                      version: "v2.7-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_windows.ps1",
+                      isScript: true,
+                    },
                   ].map((item, index) => (
                     <Badge
                       key={index}
                       variant={index === 0 ? "default" : "secondary"}
                       className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
                     >
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.version}{item.isScript ? " (script)" : ""}
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.version}
+                        {item.isScript ? " (script)" : ""}
                       </a>
                     </Badge>
                   ))}
@@ -348,42 +344,44 @@ export default function Gigwa() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { version: "v2.9-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_osx.command", isScript: true },
-                    { version: "v2.8-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_osx.command", isScript: true },
-                    { version: "v2.7-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_osx.command", isScript: true },
-                    { version: "v2.6.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.6.1-RELEASE-OSX.zip" },
-                    { version: "v2.6-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.6-RELEASE-OSX.zip" },
-                    { version: "v2.5.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.5.1-RELEASE-OSX.zip" },
-                    { version: "v2.5-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.5-RELEASE-OSX.zip" },
-                    { version: "v2.4.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.4.1-RELEASE-OSX.zip" },
-                    { version: "v2.3-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.3-RELEASE-OSX.zip" },
-                    { version: "v2.2-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.2-RELEASE_OSX.zip" },
-                    { version: "v2.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.1-RELEASE_OSX.zip" },
-                    { version: "v2.0-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0-RELEASE_OSX.zip" },
-                    { version: "v2.0-RC2", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0-RC2_OSX.zip" },
-                    { version: "v2.0beta", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0b_OSX.zip" },
-                    { version: "v2.0alpha", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.0a_OSX_Bundle.zip" },
-                    { version: "v1.1", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V1.1_OSX_Bundle.zip" },
+                    {
+                      version: "v2.9-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_osx.command",
+                      isScript: true,
+                    },
+                    {
+                      version: "v2.8-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_osx.command",
+                      isScript: true,
+                    },
+                    {
+                      version: "v2.7-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_osx.command",
+                      isScript: true,
+                    },
                   ].map((item, index) => (
                     <Badge
                       key={index}
                       variant={index === 0 ? "default" : "secondary"}
                       className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
                     >
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.version}{item.isScript ? " (script)" : ""}
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.version}
+                        {item.isScript ? " (script)" : ""}
                       </a>
                     </Badge>
                   ))}
                 </div>
                 <p className="text-xs text-muted-foreground mt-3">
-                  Log in as gigwadmin / nimda after install. Please be{" "}
-                  <a href="https://support.apple.com/en-us/102445" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">aware of this</a>{" "}
-                  if using a recent version of macOS.
+                  Log in as gigwadmin / nimda after install.{" "}
+                  <a
+                    href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    OSX users must be aware of this
+                  </a>
                 </p>
               </CardContent>
             </Card>
@@ -404,63 +402,30 @@ export default function Gigwa() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { version: "v2.9-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_ubuntu.sh", isScript: true },
-                    { version: "v2.8-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_ubuntu.sh", isScript: true },
-                    { version: "v2.7-RELEASE", url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_ubuntu.sh", isScript: true },
-                    { version: "v2.6.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.6.1-RELEASE-Ubuntu.zip" },
-                    { version: "v2.6-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.6-RELEASE-Ubuntu.zip" },
-                    { version: "v2.5.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.5.1-RELEASE-Ubuntu.zip" },
-                    { version: "v2.5-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.5-RELEASE-Ubuntu.zip" },
-                    { version: "v2.4.1-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.4.1-RELEASE-Ubuntu.zip" },
-                    { version: "v2.3-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.3-RELEASE-Ubuntu.zip" },
-                    { version: "v2.2-RELEASE", url: "https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/Gigwa_V2.2-RELEASE_Ubuntu18.zip" },
+                    {
+                      version: "v2.9-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_ubuntu.sh",
+                      isScript: true,
+                    },
+                    {
+                      version: "v2.8-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_ubuntu.sh",
+                      isScript: true,
+                    },
+                    {
+                      version: "v2.7-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_ubuntu.sh",
+                      isScript: true,
+                    },
                   ].map((item, index) => (
                     <Badge
                       key={index}
                       variant={index === 0 ? "default" : "secondary"}
                       className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
                     >
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.version}{item.isScript ? " (script)" : ""}
-                      </a>
-                    </Badge>
-                  ))}
-                </div>
-                <p className="text-xs text-muted-foreground mt-3">Log in as gigwadmin / nimda after install</p>
-              </CardContent>
-            </Card>
-
-            {/* Ubuntu 16+ Bundle */}
-            <Card className="bg-card border-border/50">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
-                    <Terminal className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <CardTitle>Ubuntu 16+</CardTitle>
-                    <CardDescription>Contains JRE, Apache Tomcat and MongoDB</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {["v2.1-RELEASE", "v2.0-RELEASE", "v2.0-RC2", "v2.0beta"].map((version, index) => (
-                    <Badge
-                      key={index}
-                      variant={index === 0 ? "default" : "secondary"}
-                      className="cursor-pointer hover:bg-primary/80 transition-colors text-xs"
-                    >
-                      <a
-                        href={`https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/gigwa-run_${version.replace("v", "")}_ubuntu16.tar.gz`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {version}
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.version}
+                        {item.isScript ? " (script)" : ""}
                       </a>
                     </Badge>
                   ))}
