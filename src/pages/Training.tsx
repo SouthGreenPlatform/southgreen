@@ -47,21 +47,21 @@ const Training = () => {
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-card p-6 rounded-xl border border-border text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-6 h-6 text-primary" />
+                  <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Tutorials</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">University Courses</h3>
                 <p className="text-muted-foreground text-sm">
-                  Step-by-step guides for all our bioinformatics tools and pipelines.
+                  Modules in Masters programs.
                 </p>
               </div>
 
               <div className="bg-card p-6 rounded-xl border border-border text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="w-6 h-6 text-primary" />
+                  <BookOpen className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Workshops</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Local and National Courses</h3>
                 <p className="text-muted-foreground text-sm">
-                  Hands-on workshops and practical sessions for researchers.
+                  Hands-on courses and practical sessions for researchers in French research organisations.
                 </p>
               </div>
 
@@ -69,9 +69,9 @@ const Training = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Community</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Capacity Building in the South</h3>
                 <p className="text-muted-foreground text-sm">
-                  Join our community of researchers and bioinformaticians.
+                  Hands-on courses and practical sessions for researchers and students from the Global South.
                 </p>
               </div>
             </div>
