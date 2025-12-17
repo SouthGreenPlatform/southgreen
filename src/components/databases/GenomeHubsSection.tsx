@@ -22,7 +22,7 @@ const genomeHubs = [
     ],
     status: "Active",
   },
-  {
+  /*{
     name: "Coffee Genome Hub",
     species: "Coffea spp.",
     description: "Comprehensive genome browser and analysis tools for coffee genomics research.",
@@ -39,7 +39,7 @@ const genomeHubs = [
     image: "🍫",
     tags: ["Assembly", "Genes", "Variants"],
     status: "Archive",
-  },
+  },*/
   {
     name: "Rice Genome Hub",
     species: "Oryza spp.",
@@ -55,7 +55,7 @@ const genomeHubs = [
     description: "Specialized hub for complex sugarcane genome analysis and visualization.",
     link: "http://sugarcane-genome.cirad.fr/",
     image: "🌿",
-    tags: ["Polyploid", "Haplotypes", "Expression"],
+    tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
   {
