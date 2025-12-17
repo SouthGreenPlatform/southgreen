@@ -24,17 +24,17 @@ const liveInstances = [
   {
     name: "CIRAD Instance",
     url: "https://gigwa.southgreen.fr/",
-    description: "Multiple crops",
+    description: "Various species data",
   },
   {
-    name: "CGIAR Genebanks",
-    url: "https://gigwa.cgiar.org/",
-    description: "Multiple crops",
+    name: "Bioversity Intl Instance",
+    url: "https://www.crop-diversity.org/gigwa/",
+    description: "Musa data",
   },
   {
-    name: "IRD Instance",
-    url: "https://gigwa.ird.fr/",
-    description: "Rice and Human data",
+    name: "Australian Grains Genebank Instance",
+    url: "https://gigwa.plantinformatics.io/gigwa/",
+    description: "Cereals data",
   },
 ];
 
@@ -549,7 +549,7 @@ export default function Gigwa() {
                   </div>
                   <div className="pt-4 border-t border-border/50">
                     <p className="text-sm text-muted-foreground">
-                      <strong>Funding:</strong> This project was initiated by Agropolis Fondation under the reference ID
+                      <strong>Funding:</strong> This project was funded by Agropolis Fondation under the reference ID
                       ARCAD 0900-001.
                     </p>
                   </div>
