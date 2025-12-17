@@ -107,6 +107,8 @@ const genomeHubs = [
   },
 ];
 
+export { genomeHubs };
+
 interface GenomeHubsSectionProps {
   searchQuery?: string;
 }
