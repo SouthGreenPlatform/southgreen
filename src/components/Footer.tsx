@@ -35,7 +35,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Platform Info */}
-          <div>
+          <div className="lg:col-span-2">
             <img
               src={ifbElixirLogos}
               alt="IFB and Elixir France logos"
