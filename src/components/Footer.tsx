@@ -34,19 +34,6 @@ export function Footer() {
     <footer id="contact" className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          /*
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg gradient-hero flex items-center justify-center">
-                <Dna className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <div>
-                <span className="font-heading text-xl font-semibold">
-                  South <span className="text-primary">Green</span>
-                </span>
-              </div>
-              */
               <img
                 src={ifbElixirLogos}
                 alt="IFB and Elixir France logos"
