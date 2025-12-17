@@ -1,4 +1,5 @@
 import { Dna, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 const quickLinks = [{
   label: "Home",
   href: "#home"
@@ -92,12 +93,9 @@ pf-southgreen@groupes.france-bioinformatique.fr<Mail className="w-4 h-4" />
             © {new Date().getFullYear()} South Green Bioinformatics Platform.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary transition-colors">
+            <Link to="/terms-of-use" className="text-sm text-primary-foreground/50 hover:text-primary transition-colors">
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
       </div>

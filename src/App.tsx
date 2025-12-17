@@ -10,6 +10,7 @@ import Gigwa from "./pages/Gigwa";
 import Members from "./pages/Members";
 import Publications from "./pages/Publications";
 import Projects from "./pages/Projects";
+import TermsOfUse from "./pages/TermsOfUse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/members" element={<Members />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
