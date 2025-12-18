@@ -13,6 +13,7 @@ interface Publication {
 }
 
 const toolsPublications: Publication[] = [
+  { authors: "Summo, M., Droc, G., Rouard, M., and Sarah, G.", year: 2025, title: "SynFlow: an interactive online genome structural variants viewer", journal: "HAL hal-05399031", doi: "" },
   { authors: "Pierre, L., Bertrand, P., Ndomassi, T., Yann, P., Bill Gates, H. H., Valentin, G., et al.", year: 2025, title: "AgroLD: a knowledge graph for the plant sciences", journal: "BMC Genom Data 26, 73", doi: "10.1186/s12863-025-01359-6" },
   { authors: "Christine, T.-D., Clothilde, C., Mathieu, B., Laurence, A., Valentin, K., Cédric, M., et al.", year: 2023, title: "FrangiPANe, a tool for creating a panreference using left behind reads", journal: "NAR Genom Bioinform 5, lqad013", doi: "10.1093/nargab/lqad013" },
   { authors: "Mohamed, M., Sabot, F., Varoqui, M., Mugat, B., Audouin, K., Pélisson, A., et al.", year: 2023, title: "TrEMOLO: accurate transposable element allele frequency estimation using long-read sequencing data combining assembly and mapping-based approaches", journal: "Genome Biol 24, 63", doi: "10.1186/s13059-023-02911-2" },
