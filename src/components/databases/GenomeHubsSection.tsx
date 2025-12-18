@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { GiVanillaFlower, GiBamboo, GiPotato } from "react-icons/gi";
 
 const genomeHubs = [
   {
@@ -56,7 +57,8 @@ const genomeHubs = [
     species: "Saccharum spp.",
     description: "Specialized hub for complex sugarcane genome analysis and visualization.",
     link: "http://sugarcane-genome.cirad.fr/",
-    image: "🌿",
+    image: "icon",
+    icon: GiBamboo,
     tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
@@ -65,7 +67,8 @@ const genomeHubs = [
     species: "Vanilla planifolia",
     description: "Genomic resources for vanilla research, breeding, and flavor compound studies.",
     link: "https://vanilla-genome-hub.cirad.fr/",
-    image: "🌸",
+    image: "icon",
+    icon: GiVanillaFlower,
     tags: ["JBrowse", "BLAST", "Synteny", "Expression", "GO Enrichment"],
     status: "Active",
   },
@@ -110,7 +113,8 @@ const genomeHubs = [
     species: "Dioscorea family",
     description: "Genomic resources for Dioscorea species",
     link: "https://yam-genome-hub.southgreen.fr",
-    image: "🌴",
+    image: "icon",
+    icon: GiPotato,
     tags: ["Assemblies", "JBrowse", "BLAST"],
     status: "Active",
   },
@@ -154,7 +158,13 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                 {/* Header with emoji and status */}
                 <div className="relative p-6 pb-0">
                   <div className="flex items-start justify-between">
-                    <div className="text-5xl mb-4">{hub.image}</div>
+                    <div className="text-5xl mb-4">
+                      {hub.image === "icon" && hub.icon ? (
+                        <hub.icon className="w-12 h-12 text-primary" />
+                      ) : (
+                        hub.image
+                      )}
+                    </div>
                     <Badge
                       variant={hub.status === "Active" ? "default" : "secondary"}
                       className={hub.status === "Active" ? "gradient-hero border-0" : ""}
