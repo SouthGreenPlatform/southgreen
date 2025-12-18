@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building2, Tag } from "lucide-react";
+import { Users, Building2, Tag, GraduationCap, UserMinus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const keywords = [
@@ -55,6 +55,27 @@ const teamMembers = [
   { name: "Alexandre Soriano ", institute: "CIRAD, UMR AGAP" },
   { name: "Marilyne Summo ", institute: "CIRAD, UMR AGAP" },
   { name: "Christine Tranchant-Dubreuil ", institute: "IRD, UMR DIADE" },
+];
+
+const students = [
+  { name: "Michel Gomez", degree: "PhD", dates: "2019-2021" },
+  { name: "Eloi Durant", degree: "MSc", dates: "2019-2021" },
+  { name: "Delphine Lariviere", degree: "PhD", dates: "2019-2021" },
+  { name: "Cecile Monat", degree: "PhD", dates: "2019-2021" },
+];
+
+const previousMembers = [
+  "Cecile Fleury",
+  "Yann Hueber",
+  "Chantal Hamelin",
+  "Felix Homa",
+  "Dominique This",
+  "Stéphanie Pointet",
+  "Xavier Argout",
+  "Enrique Ortega",
+  "Nordine El Hassouni",
+  "David Couvin",
+  "Cédric Farcy",
 ];
 
 export default function Members() {
@@ -171,6 +192,55 @@ export default function Members() {
                         <span className="text-xs italic">{member.institute || "Institute placeholder"}</span>
                       </div>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Students */}
+      <section className="py-12 md:py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-3 mb-8">
+            <GraduationCap className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Students</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {students.map((student) => (
+              <Card key={student.name} className="border-border hover:border-primary/30 transition-colors">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-foreground mb-3">{student.name}</h3>
+                  <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                    <GraduationCap className="w-4 h-4" />
+                    <span className="text-sm">{student.degree}</span>
+                  </div>
+                  <span className="text-xs text-muted-foreground">{student.dates}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Previous Members */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-3 mb-8">
+            <UserMinus className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Previous Members</h2>
+          </div>
+          <Card className="border-border">
+            <CardContent className="p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {previousMembers.map((member) => (
+                  <div
+                    key={member}
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
+                  >
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-foreground">{member}</span>
                   </div>
                 ))}
               </div>
