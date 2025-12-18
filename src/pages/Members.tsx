@@ -58,10 +58,10 @@ const teamMembers = [
 ];
 
 const students = [
-  { name: "Michel Gomez", degree: "PhD", dates: "2019-2021" },
-  { name: "Eloi Durant", degree: "MSc", dates: "2019-2021" },
-  { name: "Delphine Lariviere", degree: "PhD", dates: "2019-2021" },
-  { name: "Cecile Monat", degree: "PhD", dates: "2019-2021" },
+  { name: "Michel Gomez", degree: "PhD", dates: "2023-" },
+  { name: "Eloi Durant", degree: "PhD", dates: "2019-2022" },
+  { name: "Cecile Monat", degree: "PhD", dates: "2013-2016" },
+  { name: "Delphine Lariviere", degree: "PhD", dates: "2012-2015" },
 ];
 
 const previousMembers = [
