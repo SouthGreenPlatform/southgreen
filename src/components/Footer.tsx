@@ -2,10 +2,17 @@ import { Mail, MapPin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import ifbElixirLogos from "@/assets/ifb-elixir-logos.png";
 
-declare const __BUILD_DATE__: string;
+declare const __BUILD_DATE__: string | undefined;
 
 const formatBuildDate = () => {
   try {
+    if (typeof __BUILD_DATE__ === "undefined") {
+      return new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+    }
     const date = new Date(__BUILD_DATE__);
     return date.toLocaleDateString("en-US", {
       year: "numeric",
