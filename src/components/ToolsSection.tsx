@@ -1,4 +1,16 @@
-import { ExternalLink, Sparkles, GitBranch, Database, Layers, Eye, Dna, Globe, Apple, Citrus } from "lucide-react";
+import {
+  ExternalLink,
+  Sparkles,
+  GitBranch,
+  Database,
+  Layers,
+  Eye,
+  Dna,
+  Globe,
+  Apple,
+  Citrus,
+  Banana,
+} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -19,7 +31,7 @@ const tools = [
     description:
       "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
     link: "https://banana-genome-hub.southgreen.fr/",
-    icon: Apple,
+    icon: Banana,
     color: "from-yellow-500 to-amber-500",
     internal: false,
   },
