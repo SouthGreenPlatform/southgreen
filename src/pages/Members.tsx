@@ -43,7 +43,7 @@ const teamMembers = [
   { name: "Fred de Lamotte ", institute: "INRAE, UMR AGAP" },
   { name: "David Lopez ", institute: "CIRAD, UMR AGAP" },
   { name: "Julie Orjuela ", institute: "IRD, UMR DIADE" },
-  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM" }
+  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM" },
   { name: "Guillaume Martin ", institute: "CIRAD, UMR AGAP" },
   { name: "Julien Paul ", institute: "CIRAD, UMR AGAP" },
   { name: "Sébastien Ravel ", institute: "CIRAD, UMR PHIM" },
