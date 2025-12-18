@@ -35,11 +35,9 @@ export default function TermsOfUse() {
               <h2 className="font-heading text-2xl font-semibold text-foreground mb-4">2. Description of Services</h2>
               <p>South Green provides access to bioinformatics resources, including but not limited to:</p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Genome Hubs for tropical and Mediterranean crops</li>
                 <li>Bioinformatics analysis tools and software</li>
                 <li>Scientific databases and data repositories</li>
                 <li>Training materials and educational resources</li>
-                <li>High-Performance Computing (HPC) infrastructure</li>
               </ul>
             </section>
 
