@@ -18,7 +18,9 @@ import {
   Container,
   BookOpen,
   Users,
+  Zap,
 } from "lucide-react";
+import ebsLogo from "@/assets/ebs-logo.png";
 
 const liveInstances = [
   {
@@ -520,6 +522,50 @@ export default function Gigwa() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Powered by Gigwa Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 flex items-center justify-center gap-3">
+            <Zap className="w-8 h-8 text-primary" />
+            Powered by Gigwa
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Tools and platforms that leverage Gigwa for genotyping data management
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
+              <CardHeader className="text-center">
+                <div className="h-16 flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src={ebsLogo}
+                    alt="Enterprise Breeding System logo"
+                    className="h-12 object-contain"
+                  />
+                </div>
+                <CardTitle className="text-xl">Enterprise Breeding System</CardTitle>
+                <CardDescription>
+                  A comprehensive digital platform for modern breeding programs, integrating genotyping data management powered by Gigwa
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                >
+                  <a href="https://ebs.excellenceinbreeding.org/" target="_blank" rel="noopener noreferrer">
+                    Visit EBS
+                    <ExternalLink className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
