@@ -32,7 +32,7 @@ const genomeHubs = [
     image: "☕",
     tags: ["Annotation"],
     status: "Archive",
-  },
+  },*/
   {
     name: "Cocoa Genome Hub",
     species: "Theobroma cacao",
@@ -41,7 +41,7 @@ const genomeHubs = [
     image: "🍫",
     tags: ["Assembly", "Genes", "Variants"],
     status: "Archive",
-  },*/
+  },
   {
     name: "Rice Genome Hub",
     species: "Oryza spp.",
