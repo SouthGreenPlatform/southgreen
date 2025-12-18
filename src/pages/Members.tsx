@@ -58,14 +58,14 @@ const teamMembers = [
 ];
 
 const students = [
+  { name: "Bill Happi", degree: "PhD", dates: "2021-2024" },
+  { name: "Yann Pomie", degree: "MSc2", dates: "2021-2023" },
   { name: "Thi-Minh Nguyet Dang", degree: "PhD", dates: "2019-2022" },
+  { name: "Marine Salson", degree: "MSc2", dates: "2021" },
   { name: "Anais Louis", degree: "MSc2", dates: "2020" },
   { name: "Justine Fleuret", degree: "MSc2", dates: "2020" },
   { name: "Nastasija Mijovic", degree: "MSc2", dates: "2020" },
   { name: "Clément Agret", degree: "PhD", dates: "2017-2020" },
-  { name: "Yann Pomie", degree: "MSc2", dates: "2021-2023" },
-  { name: "Marine Salson", degree: "MSc2", dates: "2021" },
-  { name: "Bill Happi", degree: "PhD", dates: "2021-2024" },
 ];
 
 const previousMembers = [
