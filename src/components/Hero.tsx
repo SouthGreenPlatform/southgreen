@@ -80,7 +80,7 @@ export function Hero() {
                 <Database className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold text-foreground">8+</p>
+                <p className="text-2xl font-semibold text-foreground">11+</p>
                 <p className="text-sm text-muted-foreground">Genome Hubs</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export function Hero() {
                 <FlaskConical className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold text-foreground">13+</p>
+                <p className="text-2xl font-semibold text-foreground">15+</p>
                 <p className="text-sm text-muted-foreground">Analysis Tools</p>
               </div>
             </div>
