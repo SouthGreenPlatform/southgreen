@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { DatabaseHero } from "@/components/databases/DatabaseHero";
 import { GenomeHubsSection, genomeHubs } from "@/components/databases/GenomeHubsSection";
 import { AnalysisToolsSection, toolCategories } from "@/components/databases/AnalysisToolsSection";
+import { LegacyToolsSection, legacyTools } from "@/components/databases/LegacyToolsSection";
 import { SearchX } from "lucide-react";
 
 const Databases = () => {
@@ -24,7 +25,11 @@ const Databases = () => {
       )
     : true;
 
-  const noResults = activeSearch && !hasHubResults && !hasToolResults;
+  const hasLegacyResults = activeSearch
+    ? legacyTools.some((tool) => tool.name.toLowerCase().includes(activeSearch.toLowerCase()))
+    : true;
+
+  const noResults = activeSearch && !hasHubResults && !hasToolResults && !hasLegacyResults;
 
   return (
     <div className="min-h-screen bg-background font-body">
@@ -51,6 +56,7 @@ const Databases = () => {
           <>
             <GenomeHubsSection searchQuery={activeSearch} />
             <AnalysisToolsSection searchQuery={activeSearch} />
+            <LegacyToolsSection searchQuery={activeSearch} />
           </>
         )}
       </main>
