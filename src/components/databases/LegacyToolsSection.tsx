@@ -25,7 +25,7 @@ const legacyTools = [
   },
   {
     name: "EstTik",
-    description: "EST database for ticks and tick-borne pathogens research.",
+    description: "EST database is a tool dedicated to the analysis and annotation of cDNA raw data",
     link: "http://esttik.cirad.fr/",
     icon: Database,
     color: "from-slate-500 to-slate-600",
@@ -47,9 +47,7 @@ interface LegacyToolsSectionProps {
 
 export function LegacyToolsSection({ searchQuery = "" }: LegacyToolsSectionProps) {
   const filteredTools = searchQuery
-    ? legacyTools.filter((tool) =>
-        tool.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? legacyTools.filter((tool) => tool.name.toLowerCase().includes(searchQuery.toLowerCase()))
     : legacyTools;
 
   if (searchQuery && filteredTools.length === 0) {
@@ -69,24 +67,21 @@ export function LegacyToolsSection({ searchQuery = "" }: LegacyToolsSectionProps
             Legacy Tools (Not Supported Anymore)
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            These tools are no longer actively maintained but remain accessible for reference and historical data access.
+            These tools are no longer actively maintained but remain accessible for reference and historical data
+            access.
           </p>
         </div>
 
         {/* Tools Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredTools.map((tool) => (
-            <a
-              key={tool.name}
-              href={tool.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-            >
+            <a key={tool.name} href={tool.link} target="_blank" rel="noopener noreferrer" className="group block">
               <Card className="h-full border-border/30 bg-card/50 backdrop-blur-sm hover:border-muted-foreground/30 hover:shadow-md transition-all duration-300 group-hover:-translate-y-1 opacity-80 hover:opacity-100">
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between mb-3">
-                    <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}>
+                    <div
+                      className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
+                    >
                       <tool.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
