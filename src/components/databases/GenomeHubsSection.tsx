@@ -24,20 +24,20 @@ const genomeHubs = [
     ],
     status: "Active",
   },
-  /*{
+  {
     name: "Coffee Genome Hub",
     species: "Coffea spp.",
     description: "Comprehensive genome browser and analysis tools for coffee genomics research.",
-    link: "http://coffee-genome.org/",
+    link: "https://coffee-genome-hub.southgreen.fr/",
     image: "☕",
     tags: ["Annotation"],
     status: "Archive",
-  },*/
+  },
   {
     name: "Cocoa Genome Hub",
     species: "Theobroma cacao",
     description: "Genomic resources and tools for cocoa research and breeding programs.",
-    link: "http://cocoagendb.cirad.fr/",
+    link: "https://cocoa-genome-hub.southgreen.fr/",
     image: "🍫",
     tags: ["Assembly", "Genes", "Variants"],
     status: "Archive",
@@ -103,6 +103,15 @@ const genomeHubs = [
     link: "https://palm-genome-hub.southgreen.fr/",
     image: "🌴",
     tags: ["JBrowse", "BLAST", "Pathways", "Genetic maps"],
+    status: "Active",
+  },
+  {
+    name: "Yam Genome Hub",
+    species: "Dioscorea family",
+    description: "Genomic resources for Dioscorea species",
+    link: "https://yam-genome-hub.southgreen.fr",
+    image: "🌴",
+    tags: ["Assemblies", "JBrowse", "BLAST"],
     status: "Active",
   },
 ];
