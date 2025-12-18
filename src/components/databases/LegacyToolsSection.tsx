@@ -1,6 +1,6 @@
-import { ExternalLink, Archive, Database, Dna, FlaskConical, Settings } from "lucide-react";
+import { ExternalLink, Archive, Database, Dna, FlaskConical, Settings, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { Alert, AlertDescription } from "@/components/ui/alert";
 const legacyTools = [
   {
     name: "TropGene",
@@ -66,10 +66,16 @@ export function LegacyToolsSection({ searchQuery = "" }: LegacyToolsSectionProps
           <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4 text-muted-foreground">
             Legacy Tools (Not Supported Anymore)
           </h2>
-          <p className="text-muted-foreground max-w-2xl">
+          <p className="text-muted-foreground max-w-2xl mb-6">
             These tools are no longer actively maintained but remain accessible for reference and historical data
             access.
           </p>
+          <Alert variant="destructive" className="max-w-2xl bg-amber-500/10 border-amber-500/30 text-amber-700 dark:text-amber-400">
+            <AlertTriangle className="h-4 w-4 !text-amber-600 dark:!text-amber-400" />
+            <AlertDescription className="text-amber-700 dark:text-amber-400">
+              These legacy tools may contain broken links, outdated data, or deprecated functionality. Use with caution.
+            </AlertDescription>
+          </Alert>
         </div>
 
         {/* Tools Grid */}
