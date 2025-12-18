@@ -7,7 +7,7 @@ const genomeHubs = [
     name: "Banana Genome Hub",
     species: "Musa spp.",
     description: "Integrated platform for banana genome information, annotation, and comparative genomics analysis.",
-    link: "http://banana-genome.cirad.fr/",
+    link: "https://banana-genome-hub.southgreen.fr/",
     image: "🍌",
     tags: [
       "Assemblies",
@@ -20,7 +20,7 @@ const genomeHubs = [
       "Pangenome",
       "Mosaics",
       "Structural variation",
-      "Pathways"
+      "Pathways",
     ],
     status: "Active",
   },
@@ -84,7 +84,7 @@ const genomeHubs = [
     description: "Multi-species genome browser for grass family comparative genomics research.",
     link: "https://grass-genome-hub.southgreen.fr/",
     image: "🌱",
-    tags: ["JBrowse", "Synteny", "Variants",],
+    tags: ["JBrowse", "Synteny", "Variants"],
     status: "Archive",
   },
   {
@@ -102,7 +102,7 @@ const genomeHubs = [
     description: "Genomic resources for palm species including oil palm, date palm, and coconut research.",
     link: "https://palm-genome-hub.southgreen.fr/",
     image: "🌴",
-    tags: ["JBrowse",  "BLAST", "Pathways", "Genetic maps"],
+    tags: ["JBrowse", "BLAST", "Pathways", "Genetic maps"],
     status: "Active",
   },
 ];
@@ -115,9 +115,7 @@ interface GenomeHubsSectionProps {
 
 export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) {
   const filteredHubs = searchQuery
-    ? genomeHubs.filter((hub) =>
-        hub.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? genomeHubs.filter((hub) => hub.name.toLowerCase().includes(searchQuery.toLowerCase()))
     : genomeHubs;
 
   if (searchQuery && filteredHubs.length === 0) {
