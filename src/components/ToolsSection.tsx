@@ -1,16 +1,5 @@
-import {
-  ExternalLink,
-  Sparkles,
-  GitBranch,
-  Database,
-  Layers,
-  Eye,
-  Dna,
-  Globe,
-  Apple,
-  Citrus,
-  Banana,
-} from "lucide-react";
+import { ExternalLink, Sparkles, GitBranch, Database, Layers, Eye, Dna, Globe, Citrus, Banana } from "lucide-react";
+import { LiaNetworkWiredSolid } from "react-icons/lia";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -68,7 +57,7 @@ const tools = [
     category: "Visualization",
     description: "Tool for circular genome visualization and comparative genomics analysis.",
     link: "https://github.com/SouthGreenPlatform/genoring",
-    icon: GitBranch,
+    icon: LiaNetworkWiredSolid,
     color: "from-violet-500 to-purple-500",
     internal: false,
   },
