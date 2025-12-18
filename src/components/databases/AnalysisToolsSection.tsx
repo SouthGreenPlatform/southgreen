@@ -1,4 +1,4 @@
-import { ExternalLink, Database, Layers, Eye, Workflow, Sparkles, Dna, GitBranch, Search, TreeDeciduous } from "lucide-react";
+import { ExternalLink, Database, Layers, Eye, Workflow, Sparkles, Dna, GitBranch, Search, TreeDeciduous, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const toolCategories = [
@@ -127,6 +127,19 @@ const toolCategories = [
         link: "https://synflow.southgreen.fr/",
         icon: GitBranch,
         color: "from-cyan-500 to-blue-500",
+      },
+    ],
+  },
+  {
+    name: "Gene Expression",
+    description: "Tools for analyzing and visualizing gene expression data",
+    tools: [
+      {
+        name: "DIANE",
+        description: "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
+        link: "https://github.com/Alexandre-So/DIANE",
+        icon: BarChart3,
+        color: "from-rose-500 to-pink-500",
       },
     ],
   },
