@@ -1,6 +1,22 @@
-import { Dna, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import ifbElixirLogos from "@/assets/ifb-elixir-logos.png";
+
+declare const __BUILD_DATE__: string;
+
+const formatBuildDate = () => {
+  try {
+    const date = new Date(__BUILD_DATE__);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return "Unknown";
+  }
+};
+
 const quickLinks = [
   {
     label: "Home",
@@ -101,9 +117,14 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} South Green Bioinformatics Platform.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+            <p className="text-sm text-primary-foreground/50">
+              © {new Date().getFullYear()} South Green Bioinformatics Platform.
+            </p>
+            <p className="text-sm text-primary-foreground/40">
+              Last updated: {formatBuildDate()}
+            </p>
+          </div>
           <div className="flex gap-6">
             <Link
               to="/terms-of-use"
