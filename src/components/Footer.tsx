@@ -31,11 +31,11 @@ const quickLinks = [
   },
   {
     label: "Databases & Tools",
-    href: "#databases",
+    href: "./databases",
   },
   {
     label: "Training",
-    href: "#training",
+    href: "./training",
   },
   {
     label: "About",
@@ -49,7 +49,7 @@ const resources = [
   },
   {
     label: "Publications",
-    href: "#Publications",
+    href: "./publications",
   },
 ];
 export function Footer() {
@@ -128,9 +128,7 @@ export function Footer() {
             <p className="text-sm text-primary-foreground/50">
               © {new Date().getFullYear()} South Green Bioinformatics Platform.
             </p>
-            <p className="text-sm text-primary-foreground/40">
-              Last updated: {formatBuildDate()}
-            </p>
+            <p className="text-sm text-primary-foreground/40">Last updated: {formatBuildDate()}</p>
           </div>
           <div className="flex gap-6">
             <Link
