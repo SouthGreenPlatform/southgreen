@@ -19,7 +19,7 @@ const tools = [
     description:
       "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
     link: "https://banana-genome-hub.southgreen.fr/",
-    icon: Banana,
+    icon: Cherry,
     color: "from-yellow-500 to-amber-500",
     internal: false,
   },
