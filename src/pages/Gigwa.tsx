@@ -19,6 +19,7 @@ import {
   BookOpen,
   Users,
   Zap,
+  Globe,
 } from "lucide-react";
 import ebsLogo from "@/assets/ebs-logo.png";
 
@@ -537,7 +538,7 @@ export default function Gigwa() {
             Tools and platforms that leverage Gigwa for genotyping data management
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
               <CardHeader className="text-center">
                 <div className="h-16 flex items-center justify-center mx-auto mb-4">
@@ -561,6 +562,81 @@ export default function Gigwa() {
                 >
                   <a href="https://ebs.excellenceinbreeding.org/" target="_blank" rel="noopener noreferrer">
                     Visit EBS
+                    <ExternalLink className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
+              <CardHeader className="text-center">
+                <div className="h-16 flex items-center justify-center mx-auto mb-4">
+                  <Database className="w-12 h-12 text-primary" />
+                </div>
+                <CardTitle className="text-xl">South Green Genome Hubs</CardTitle>
+                <CardDescription>
+                  Genome browsers and annotation portals for tropical and Mediterranean crops, powered by Gigwa for variant data
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                >
+                  <a href="/databases" rel="noopener noreferrer">
+                    Explore Hubs
+                    <ExternalLink className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
+              <CardHeader className="text-center">
+                <div className="h-16 flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-12 h-12 text-primary" />
+                </div>
+                <CardTitle className="text-xl">CGIAR Genebanks</CardTitle>
+                <CardDescription>
+                  Global genetic resources for food security, using Gigwa for multicrop genotyping data management
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                >
+                  <a href="https://gigwa.cgiar.org/" target="_blank" rel="noopener noreferrer">
+                    Visit CGIAR
+                    <ExternalLink className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
+              <CardHeader className="text-center">
+                <div className="h-16 flex items-center justify-center mx-auto mb-4">
+                  <Server className="w-12 h-12 text-primary" />
+                </div>
+                <CardTitle className="text-xl">MainLab Databases</CardTitle>
+                <CardDescription>
+                  Integrated databases for plant genetic resources and breeding data, leveraging Gigwa infrastructure
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                >
+                  <a href="https://www.mainlab.org/" target="_blank" rel="noopener noreferrer">
+                    Visit MainLab
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </a>
                 </Button>
