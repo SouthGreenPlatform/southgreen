@@ -15,6 +15,9 @@ const keywords = [
   "Knowledge representation",
   "Phylogenomics",
   "Workflow development",
+  "Mosaic genomes",
+  "Plants and Pathogens",
+  "Genome Assembly and annotation",
 ];
 
 const scientificLeaders = [
@@ -30,23 +33,28 @@ const technicalLeaders = [
 ];
 
 const teamMembers = [
-  { name: "Boizet Alice", institute: "CIRAD, UMR AGAP" },
-  { name: "Breton Cathrine", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
-  { name: "Dainat Jacques", institute: "IRD" },
-  { name: "Dufayard Jean-François", institute: "CIRAD, UMR AGAP" },
-  { name: "Guignon Valentin", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
-  { name: "Lopez David", institute: "CIRAD, UMR AGAP" },
-  { name: "Orjuela Julie", institute: "IRD, UMR DIADE" },
-  { name: "Paul Julien", institute: "CIRAD, UMR AGAP" },
-  { name: "Ravel Sébastien", institute: "CIRAD, UMR PHIM" },
-  { name: "Ruiz Manuel", institute: "CIRAD, UMR AGAP" },
-  { name: "Sabot François", institute: "IRD, UMR DIADE" },
-  { name: "Sarah Gautier", institute: "INRAE, UMR AGAP" },
-  { name: "Sempéré Guilhem", institute: "CIRAD" },
-  { name: "Sidibe-Bocs Stéphanie", institute: "CIRAD, UMR AGAP" },
-  { name: "Soriano Alexandre", institute: "CIRAD, UMR AGAP" },
-  { name: "Summo Marilyne", institute: "CIRAD, UMR AGAP" },
-  { name: "Tranchant-Dubreuil Christine", institute: "IRD, UMR DIADE" },
+  { name: "Alice Boizet ", institute: "CIRAD, UMR AGAP" },
+  { name: "Saliha Beddek ", institute: "IFB, UMR AGAP" },
+  { name: "Cathrine Breton ", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
+  { name: "Aurore Comte", institute: "IRD, UMR PHIM" },
+  { name: "Jacques Dainat", institute: "IRD" },
+  { name: "Jean-François Dufayard ", institute: "CIRAD, UMR AGAP" },
+  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
+  { name: "Fred de Lamotte ", institute: "INRAE, UMR AGAP" },
+  { name: "David Lopez ", institute: "CIRAD, UMR AGAP" },
+  { name: "Julie Orjuela ", institute: "IRD, UMR DIADE" },
+  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM" }
+  { name: "Guillaume Martin ", institute: "CIRAD, UMR AGAP" },
+  { name: "Julien Paul ", institute: "CIRAD, UMR AGAP" },
+  { name: "Sébastien Ravel ", institute: "CIRAD, UMR PHIM" },
+  { name: "Manuel Ruiz ", institute: "CIRAD, UMR AGAP" },
+  { name: "François Sabot ", institute: "IRD, UMR DIADE" },
+  { name: "Gautier Sarah ", institute: "INRAE, UMR AGAP" },
+  { name: "Guilhem Sempéré ", institute: "CIRAD" },
+  { name: "Stéphanie Sidibe-Bocs ", institute: "CIRAD, UMR AGAP" },
+  { name: "Alexandre Soriano ", institute: "CIRAD, UMR AGAP" },
+  { name: "Marilyne Summo ", institute: "CIRAD, UMR AGAP" },
+  { name: "Christine Tranchant-Dubreuil ", institute: "IRD, UMR DIADE" },
 ];
 
 export default function Members() {
