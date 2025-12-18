@@ -54,6 +54,11 @@ const liveInstances = [
     url: "https://www.peanutbase.org/gigwa/",
     description: "Peanut data",
   },
+  {
+    name: "CottonGen",
+    url: "https://gigwa.cottongen.org/gigwa/",
+    description: "Cotton data",
+  },
 ];
 
 const features = [
