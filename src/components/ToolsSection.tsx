@@ -151,6 +151,17 @@ export function ToolsSection() {
             );
           })}
         </div>
+
+        {/* More Tools Link */}
+        <div className="text-center mt-12">
+          <Link 
+            to="/databases#analysis-tools" 
+            className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition-colors"
+          >
+            More tools
+            <ExternalLink className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>;
 }
