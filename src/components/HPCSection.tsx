@@ -106,7 +106,7 @@ export function HPCSection() {
             <p className="text-sm text-muted-foreground">Active Users</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-primary">600+</p>
+            <p className="text-3xl font-bold text-primary">300+</p>
             <p className="text-sm text-muted-foreground">Tools Available</p>
           </div>
           <div className="text-center">
