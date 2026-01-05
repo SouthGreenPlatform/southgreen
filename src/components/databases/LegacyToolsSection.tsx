@@ -3,9 +3,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert";
 const legacyTools = [
   {
-    name: "TropGene",
-    description: "Database for tropical crop genetic resources and molecular data.",
-    link: "http://tropgenedb.cirad.fr",
+    name: "ChadoController",
+    description: "Tool for managing and controlling Chado database instances.",
+    link: "https://www.gnpannot.org/content/chado-controller",
+    icon: Settings,
+    color: "from-slate-500 to-slate-600",
+  },
+  {
+    name: "EstTik",
+    description: "EST database is a tool dedicated to the analysis and annotation of cDNA raw data",
+    link: "http://esttik.cirad.fr/",
     icon: Database,
     color: "from-slate-500 to-slate-600",
   },
@@ -24,17 +31,10 @@ const legacyTools = [
     color: "from-slate-500 to-slate-600",
   },
   {
-    name: "EstTik",
-    description: "EST database is a tool dedicated to the analysis and annotation of cDNA raw data",
-    link: "http://esttik.cirad.fr/",
+    name: "TropGene",
+    description: "Database for tropical crop genetic resources and molecular data.",
+    link: "http://tropgenedb.cirad.fr",
     icon: Database,
-    color: "from-slate-500 to-slate-600",
-  },
-  {
-    name: "ChadoController",
-    description: "Tool for managing and controlling Chado database instances.",
-    link: "https://www.gnpannot.org/content/chado-controller",
-    icon: Settings,
     color: "from-slate-500 to-slate-600",
   },
 ];
