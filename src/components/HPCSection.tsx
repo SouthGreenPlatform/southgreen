@@ -19,7 +19,7 @@ const hpcClusters = [{
   location: "IRD",
   type: "HOSTEL",
   partner: "IRD",
-  docUrl: "https://bioinfo.ird.fr/index.php/cluster-fr/",
+  docUrl: "https://bioinfo.ird.fr/index.php/en/cluster-2/",
   showItrop: true,
   specs: {
     cores: "1148 cores",
