@@ -38,7 +38,7 @@ export function HPCSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Computing <span className="text-gradient">Infrastructure</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">The platform has privileged access to two HPC clusters providing 400+ users with 300+ bioinformatics tools.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">The platform has privileged access to two HPC clusters providing 400+ users with 500+ bioinformatics tools.</p>
         </div>
 
         {/* HPC Cards */}
@@ -106,7 +106,7 @@ export function HPCSection() {
             <p className="text-sm text-muted-foreground">Active Users</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-primary">300+</p>
+            <p className="text-3xl font-bold text-primary">500+</p>
             <p className="text-sm text-muted-foreground">Tools Available</p>
           </div>
           <div className="text-center">
