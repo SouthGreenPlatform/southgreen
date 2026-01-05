@@ -1,7 +1,6 @@
 import { Server, HardDrive, Cpu, Zap, ExternalLink } from "lucide-react";
 import itropLogo from "@/assets/itrop-logo.png";
 import iso9001Logo from "@/assets/iso9001-logo.png";
-
 const hpcClusters = [{
   name: "Meso@LR",
   location: "CINES",
@@ -39,7 +38,7 @@ export function HPCSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Computing <span className="text-gradient">Infrastructure</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">The platform has privileged access to two HPC clusters providing 400+ users with 600+ bioinformatics tools.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">The platform has privileged access to two HPC clusters providing 400+ users with 300+ bioinformatics tools.</p>
         </div>
 
         {/* HPC Cards */}
@@ -52,12 +51,10 @@ export function HPCSection() {
 
               {/* Partner Badge */}
               <div className="absolute -top-3 right-6 flex items-center gap-2">
-                {cluster.showItrop && (
-                  <>
+                {cluster.showItrop && <>
                     <img src={iso9001Logo} alt="ISO 9001" className="h-8 w-auto" />
                     <img src={itropLogo} alt="i-Trop" className="h-8 w-auto" />
-                  </>
-                )}
+                  </>}
                 <span className="px-4 py-1 rounded-full text-sm font-medium bg-secondary text-muted-foreground border border-border">
                   {cluster.partner}
                 </span>
@@ -72,13 +69,7 @@ export function HPCSection() {
                       @ {cluster.location}
                     </span>
                   </h3>
-                  <a 
-                    href={cluster.docUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-                    title="Documentation"
-                  >
+                  <a href={cluster.docUrl} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors" title="Documentation">
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
