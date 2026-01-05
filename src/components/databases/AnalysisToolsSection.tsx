@@ -3,16 +3,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const toolCategories = [
   {
+    name: "Gene Expression",
+    description: "Tools for analyzing and visualizing gene expression data",
+    tools: [
+      {
+        name: "DIANE",
+        description: "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
+        link: "https://github.com/Alexandre-So/DIANE",
+        icon: BarChart3,
+        color: "from-rose-500 to-pink-500",
+      },
+    ],
+  },
+  {
     name: "Molecular Markers Exploration & Analysis",
     description: "Tools for exploring and analyzing molecular markers and genetic variants",
     tools: [
-      {
-        name: "SniPlay",
-        description: "Web-based tool for detection, management, and analysis of SNPs from re-sequencing data.",
-        link: "https://sniplay.southgreen.fr/",
-        icon: Search,
-        color: "from-blue-500 to-indigo-500",
-      },
       {
         name: "Gigwa",
         description: "Gigantic Data explorer for high-density genotyping data management and analysis.",
@@ -20,6 +26,33 @@ const toolCategories = [
         icon: Database,
         color: "from-indigo-500 to-purple-500",
         internal: true,
+      },
+      {
+        name: "SniPlay",
+        description: "Web-based tool for detection, management, and analysis of SNPs from re-sequencing data.",
+        link: "https://sniplay.southgreen.fr/",
+        icon: Search,
+        color: "from-blue-500 to-indigo-500",
+      },
+    ],
+  },
+  {
+    name: "Mosaic Genomes",
+    description: "Tools for analyzing genome structure and evolution",
+    tools: [
+      {
+        name: "GeMo",
+        description: "Genome Evolution MOdeler for comparative genomics visualization and analysis.",
+        link: "http://gemo.southgreen.fr/",
+        icon: GitBranch,
+        color: "from-violet-500 to-purple-500",
+      },
+      {
+        name: "VCFHunter",
+        description: "Tools for VCF file exploration, chromosome painting, and haplotype analysis.",
+        link: "https://github.com/SouthGreenPlatform/VcfHunter",
+        icon: Search,
+        color: "from-teal-500 to-cyan-500",
       },
     ],
   },
@@ -47,53 +80,6 @@ const toolCategories = [
         link: "https://github.com/SouthGreenPlatform/PanExplorer",
         icon: Eye,
         color: "from-pink-500 to-rose-500",
-      },
-    ],
-  },
-  {
-    name: "Workflow",
-    description: "Platforms for building and running bioinformatics pipelines",
-    tools: [
-      {
-        name: "Galaxy",
-        description: "Web-based platform for accessible, reproducible, and transparent computational research.",
-        link: "https://plants.usegalaxy.fr/",
-        icon: Sparkles,
-        color: "from-blue-500 to-cyan-500",
-      },
-      {
-        name: "Toggle",
-        description: "Toolbox for generic NGS analyses with comprehensive pipeline management capabilities.",
-        link: "https://github.com/SouthGreenPlatform/TOGGLE",
-        icon: Workflow,
-        color: "from-emerald-500 to-green-500",
-      },
-      {
-        name: "Culebront",
-        description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
-        link: "https://github.com/SouthGreenPlatform/culebront",
-        icon: Dna,
-        color: "from-yellow-500 to-amber-500",
-      },
-    ],
-  },
-  {
-    name: "Mosaic Genomes",
-    description: "Tools for analyzing genome structure and evolution",
-    tools: [
-      {
-        name: "GeMo",
-        description: "Genome Evolution MOdeler for comparative genomics visualization and analysis.",
-        link: "http://gemo.southgreen.fr/",
-        icon: GitBranch,
-        color: "from-violet-500 to-purple-500",
-      },
-      {
-        name: "VCFHunter",
-        description: "Tools for VCF file exploration, chromosome painting, and haplotype analysis.",
-        link: "https://github.com/SouthGreenPlatform/VcfHunter",
-        icon: Search,
-        color: "from-teal-500 to-cyan-500",
       },
     ],
   },
@@ -131,15 +117,29 @@ const toolCategories = [
     ],
   },
   {
-    name: "Gene Expression",
-    description: "Tools for analyzing and visualizing gene expression data",
+    name: "Workflow",
+    description: "Platforms for building and running bioinformatics pipelines",
     tools: [
       {
-        name: "DIANE",
-        description: "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
-        link: "https://github.com/Alexandre-So/DIANE",
-        icon: BarChart3,
-        color: "from-rose-500 to-pink-500",
+        name: "Culebront",
+        description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
+        link: "https://github.com/SouthGreenPlatform/culebront",
+        icon: Dna,
+        color: "from-yellow-500 to-amber-500",
+      },
+      {
+        name: "Galaxy",
+        description: "Web-based platform for accessible, reproducible, and transparent computational research.",
+        link: "https://plants.usegalaxy.fr/",
+        icon: Sparkles,
+        color: "from-blue-500 to-cyan-500",
+      },
+      {
+        name: "Toggle",
+        description: "Toolbox for generic NGS analyses with comprehensive pipeline management capabilities.",
+        link: "https://github.com/SouthGreenPlatform/TOGGLE",
+        icon: Workflow,
+        color: "from-emerald-500 to-green-500",
       },
     ],
   },
