@@ -9,6 +9,7 @@ import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 import githubFavicon from "@/assets/tools/github-favicon.svg";
 import dianeFavicon from "@/assets/tools/diane-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
+import greenphylFavicon from "@/assets/tools/greenphyl-favicon.png";
 
 interface Tool {
   name: string;
@@ -116,7 +117,7 @@ const toolCategories: ToolCategory[] = [
         name: "GreenPhyl",
         description: "Database for plant comparative genomics based on gene family analysis.",
         link: "http://www.greenphyl.org/",
-        icon: TreeDeciduous,
+        favicon: greenphylFavicon,
         color: "from-green-600 to-emerald-500",
       },
       {
