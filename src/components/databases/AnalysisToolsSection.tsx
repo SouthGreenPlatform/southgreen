@@ -233,13 +233,13 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                       <Card className="h-full border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                         <CardHeader className="pb-3">
                           <div className="flex items-start justify-between mb-3">
-                            <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm overflow-hidden`}>
-                              {tool.favicon ? (
-                                <img src={tool.favicon} alt={`${tool.name} icon`} className="w-6 h-6 object-contain" />
-                              ) : tool.icon ? (
-                                <tool.icon className="w-5 h-5 text-primary-foreground" />
-                              ) : null}
-                            </div>
+                            {tool.favicon ? (
+                              <img src={tool.favicon} alt={`${tool.name} icon`} className="w-10 h-10 object-contain" />
+                            ) : (
+                              <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}>
+                                {tool.icon && <tool.icon className="w-5 h-5 text-primary-foreground" />}
+                              </div>
+                            )}
                           </div>
                           <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
                             {tool.name}
