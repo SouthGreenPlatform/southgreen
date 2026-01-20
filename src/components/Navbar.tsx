@@ -16,6 +16,13 @@ const navItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+    if (href.includes("/#")) return location.pathname === "/" && location.hash === href.replace("/", "");
+    return location.pathname === href || location.pathname.startsWith(href + "/");
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -30,12 +37,16 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => {
               const isExternal = item.href.startsWith('#') || item.href.includes('/#');
+              const activeClass = isActive(item.href) 
+                ? "text-primary bg-primary/10 font-semibold" 
+                : "text-muted-foreground hover:text-foreground hover:bg-secondary";
+              
               if (isExternal) {
                 return (
                   <a
                     key={item.label}
                     href={item.href}
-                    className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary"
+                    className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${activeClass}`}
                   >
                     {item.label}
                   </a>
@@ -45,7 +56,7 @@ export function Navbar() {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary"
+                  className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${activeClass}`}
                 >
                   {item.label}
                 </Link>
@@ -67,16 +78,21 @@ export function Navbar() {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-up">
             <div className="flex flex-col gap-1">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const activeClass = isActive(item.href) 
+                  ? "text-primary bg-primary/10 font-semibold" 
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary";
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${activeClass}`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </div>
           </div>
         )}
