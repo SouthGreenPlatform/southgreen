@@ -6,22 +6,33 @@ import {
   Layers,
   Eye,
   Dna,
-  Globe,
   Citrus,
 } from "lucide-react";
 import { GiBananaPeeled } from "react-icons/gi";
 import { TbCircuitSwitchOpen } from "react-icons/tb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 
-const tools = [
+interface Tool {
+  name: string;
+  category: string;
+  description: string;
+  link: string;
+  icon?: React.ComponentType<{ className?: string }>;
+  favicon?: string;
+  color: string;
+  internal: boolean;
+}
+
+const tools: Tool[] = [
   {
     name: "AgroLD",
     category: "Knowledge Graph",
     description:
       "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
     link: "https://agrold.southgreen.fr/aldp/index.jsp",
-    icon: Globe,
+    favicon: agroldFavicon,
     color: "from-green-600 to-teal-500",
     internal: false,
   },
@@ -142,11 +153,15 @@ export function ToolsSection() {
               <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
-                    <div
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
-                    >
-                      <tool.icon className="w-6 h-6 text-primary-foreground" />
-                    </div>
+                    {tool.favicon ? (
+                      <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
+                    ) : (
+                      <div
+                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
+                      >
+                        {tool.icon && <tool.icon className="w-6 h-6 text-primary-foreground" />}
+                      </div>
+                    )}
                     <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-md">
                       {tool.category}
                     </span>
