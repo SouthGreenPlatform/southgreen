@@ -4,7 +4,7 @@ import type { LucideIcon } from "lucide-react";
 
 // Import favicons
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.ico";
-import galaxyFavicon from "@/assets/tools/galaxy-favicon.svg";
+import galaxyFavicon from "@/assets/tools/galaxy-favicon.png";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 import githubFavicon from "@/assets/tools/github-favicon.svg";
 import dianeFavicon from "@/assets/tools/diane-favicon.png";
