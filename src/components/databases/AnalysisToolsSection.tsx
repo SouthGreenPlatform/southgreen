@@ -7,6 +7,7 @@ import gigwaFavicon from "@/assets/tools/gigwa-favicon.ico";
 import galaxyFavicon from "@/assets/tools/galaxy-favicon.svg";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 import githubFavicon from "@/assets/tools/github-favicon.svg";
+import dianeFavicon from "@/assets/tools/diane-favicon.png";
 
 interface Tool {
   name: string;
@@ -33,7 +34,7 @@ const toolCategories: ToolCategory[] = [
         name: "DIANE",
         description: "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
         link: "https://github.com/Alexandre-So/DIANE",
-        favicon: githubFavicon,
+        favicon: dianeFavicon,
         color: "from-rose-500 to-pink-500",
       },
     ],
