@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import type { LucideIcon } from "lucide-react";
 
 // Import favicons
-import gigwaFavicon from "@/assets/tools/gigwa-favicon.ico";
+import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import galaxyFavicon from "@/assets/tools/galaxy-favicon.png";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 import githubFavicon from "@/assets/tools/github-favicon.svg";
