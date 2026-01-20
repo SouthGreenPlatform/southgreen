@@ -2,10 +2,8 @@ import {
   ExternalLink,
   Sparkles,
   GitBranch,
-  Database,
   Layers,
   Eye,
-  Dna,
   Citrus,
 } from "lucide-react";
 import { GiBananaPeeled } from "react-icons/gi";
@@ -13,6 +11,8 @@ import { TbCircuitSwitchOpen } from "react-icons/tb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
+import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
+import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 
 interface Tool {
   name: string;
@@ -60,7 +60,7 @@ const tools: Tool[] = [
     category: "Assembly",
     description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
     link: "https://github.com/SouthGreenPlatform/culebront",
-    icon: Dna,
+    favicon: culebrontFavicon,
     color: "from-emerald-500 to-green-500",
     internal: false,
   },
@@ -88,7 +88,7 @@ const tools: Tool[] = [
     category: "Variant Database",
     description: "Gigantic Data explorer for high-density genotyping data management and analysis.",
     link: "/gigwa",
-    icon: Database,
+    favicon: gigwaFavicon,
     color: "from-indigo-500 to-purple-500",
     internal: true,
   },
