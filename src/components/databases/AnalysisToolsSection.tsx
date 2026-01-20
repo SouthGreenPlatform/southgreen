@@ -236,7 +236,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                         <CardHeader className="pb-3">
                           <div className="flex items-start justify-between mb-3">
                             {tool.favicon ? (
-                              <img src={tool.favicon} alt={`${tool.name} icon`} className="w-10 h-10 object-contain" />
+                              <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
                             ) : (
                               <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}>
                                 {tool.icon && <tool.icon className="w-5 h-5 text-primary-foreground" />}
