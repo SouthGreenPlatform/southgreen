@@ -1,5 +1,6 @@
-import { Database, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import southGreenLogo from "@/assets/south-green-logo-large.svg";
 
 interface DatabaseHeroProps {
   searchQuery: string;
@@ -40,10 +41,9 @@ export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: Database
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Database className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Databases and Tools</span>
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <img src={southGreenLogo} alt="South Green" className="h-16 md:h-20" />
           </div>
 
           {/* Heading */}
