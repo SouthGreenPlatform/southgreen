@@ -1,7 +1,5 @@
 import {
   ExternalLink,
-  Sparkles,
-  GitBranch,
   Layers,
   Eye,
   Citrus,
@@ -13,6 +11,8 @@ import { Link } from "react-router-dom";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
+import galaxyFavicon from "@/assets/tools/galaxy-favicon.svg";
+import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 
 interface Tool {
   name: string;
@@ -70,7 +70,7 @@ const tools: Tool[] = [
     description:
       "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
     link: "https://plants.usegalaxy.fr/",
-    icon: Sparkles,
+    favicon: galaxyFavicon,
     color: "from-blue-500 to-cyan-500",
     internal: false,
   },
@@ -125,7 +125,7 @@ const tools: Tool[] = [
     description:
       "Interactive web application for exploring and visualizing synteny and structural variations across genomes.",
     link: "https://synflow.southgreen.fr/",
-    icon: GitBranch,
+    favicon: synflowFavicon,
     color: "from-cyan-500 to-blue-500",
     internal: false,
   },
