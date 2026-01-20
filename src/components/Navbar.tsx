@@ -38,15 +38,17 @@ export function Navbar() {
             {navItems.map((item) => {
               const isExternal = item.href.startsWith('#') || item.href.includes('/#');
               const activeClass = isActive(item.href) 
-                ? "text-primary bg-primary/10 font-semibold" 
-                : "text-muted-foreground hover:text-foreground hover:bg-secondary";
+                ? "text-primary font-semibold after:scale-x-100" 
+                : "text-muted-foreground hover:text-foreground";
+              
+              const baseClass = "relative px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-secondary after:content-[''] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:bg-primary after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100";
               
               if (isExternal) {
                 return (
                   <a
                     key={item.label}
                     href={item.href}
-                    className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${activeClass}`}
+                    className={`${baseClass} ${activeClass}`}
                   >
                     {item.label}
                   </a>
@@ -56,7 +58,7 @@ export function Navbar() {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${activeClass}`}
+                  className={`${baseClass} ${activeClass}`}
                 >
                   {item.label}
                 </Link>
