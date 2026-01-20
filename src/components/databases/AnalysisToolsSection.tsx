@@ -10,6 +10,7 @@ import githubFavicon from "@/assets/tools/github-favicon.svg";
 import dianeFavicon from "@/assets/tools/diane-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 import greenphylFavicon from "@/assets/tools/greenphyl-favicon.png";
+import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 
 interface Tool {
   name: string;
@@ -28,6 +29,19 @@ interface ToolCategory {
 }
 
 const toolCategories: ToolCategory[] = [
+  {
+    name: "Data Integration",
+    description: "Platforms for integrating and querying multi-source plant data",
+    tools: [
+      {
+        name: "AgroLD",
+        description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
+        link: "https://agrold.southgreen.fr/aldp/index.jsp",
+        favicon: agroldFavicon,
+        color: "from-green-600 to-teal-500",
+      },
+    ],
+  },
   {
     name: "Gene Expression",
     description: "Tools for analyzing and visualizing gene expression data",
