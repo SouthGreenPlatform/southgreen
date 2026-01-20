@@ -8,6 +8,7 @@ import galaxyFavicon from "@/assets/tools/galaxy-favicon.png";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 import githubFavicon from "@/assets/tools/github-favicon.svg";
 import dianeFavicon from "@/assets/tools/diane-favicon.png";
+import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 
 interface Tool {
   name: string;
@@ -148,7 +149,7 @@ const toolCategories: ToolCategory[] = [
         name: "Culebront",
         description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
         link: "https://github.com/SouthGreenPlatform/culebront",
-        favicon: githubFavicon,
+        favicon: culebrontFavicon,
         color: "from-yellow-500 to-amber-500",
       },
       {
