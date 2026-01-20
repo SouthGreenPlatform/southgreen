@@ -1,7 +1,30 @@
-import { ExternalLink, Database, Layers, Eye, Workflow, Sparkles, Dna, GitBranch, Search, TreeDeciduous, BarChart3 } from "lucide-react";
+import { ExternalLink, GitBranch, Search, TreeDeciduous } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import type { LucideIcon } from "lucide-react";
 
-const toolCategories = [
+// Import favicons
+import gigwaFavicon from "@/assets/tools/gigwa-favicon.ico";
+import galaxyFavicon from "@/assets/tools/galaxy-favicon.svg";
+import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
+import githubFavicon from "@/assets/tools/github-favicon.svg";
+
+interface Tool {
+  name: string;
+  description: string;
+  link: string;
+  icon?: LucideIcon;
+  favicon?: string;
+  color: string;
+  internal?: boolean;
+}
+
+interface ToolCategory {
+  name: string;
+  description: string;
+  tools: Tool[];
+}
+
+const toolCategories: ToolCategory[] = [
   {
     name: "Gene Expression",
     description: "Tools for analyzing and visualizing gene expression data",
@@ -10,7 +33,7 @@ const toolCategories = [
         name: "DIANE",
         description: "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
         link: "https://github.com/Alexandre-So/DIANE",
-        icon: BarChart3,
+        favicon: githubFavicon,
         color: "from-rose-500 to-pink-500",
       },
     ],
@@ -23,7 +46,7 @@ const toolCategories = [
         name: "Gigwa",
         description: "Gigantic Data explorer for high-density genotyping data management and analysis.",
         link: "/gigwa",
-        icon: Database,
+        favicon: gigwaFavicon,
         color: "from-indigo-500 to-purple-500",
         internal: true,
       },
@@ -51,7 +74,7 @@ const toolCategories = [
         name: "VCFHunter",
         description: "Tools for VCF file exploration, chromosome painting, and haplotype analysis.",
         link: "https://github.com/SouthGreenPlatform/VcfHunter",
-        icon: Search,
+        favicon: githubFavicon,
         color: "from-teal-500 to-cyan-500",
       },
     ],
@@ -64,21 +87,21 @@ const toolCategories = [
         name: "FrangiPANe",
         description: "A tool for building and analyzing pangenome graphs from multiple genome assemblies.",
         link: "https://github.com/tranchant/frangiPANe",
-        icon: Layers,
+        favicon: githubFavicon,
         color: "from-amber-500 to-orange-500",
       },
       {
         name: "Panache",
         description: "Web-based interface designed for the visualization of linear pangenome graphs.",
         link: "https://github.com/SouthGreenPlatform/panache",
-        icon: Layers,
+        favicon: githubFavicon,
         color: "from-orange-500 to-red-500",
       },
       {
         name: "PanExplorer",
         description: "Interactive tool for exploring and analyzing pangenomic data across multiple genomes.",
         link: "https://github.com/SouthGreenPlatform/PanExplorer",
-        icon: Eye,
+        favicon: githubFavicon,
         color: "from-pink-500 to-rose-500",
       },
     ],
@@ -98,7 +121,7 @@ const toolCategories = [
         name: "RAP-Green",
         description: "Reconciled gene trees for comprehensive phylogenomic analysis of green plants.",
         link: "https://github.com/SouthGreenPlatform/rap-green/",
-        icon: GitBranch,
+        favicon: githubFavicon,
         color: "from-lime-500 to-green-500",
       },
     ],
@@ -111,7 +134,7 @@ const toolCategories = [
         name: "SynFlow",
         description: "Interactive web application for exploring and visualizing synteny and structural variations across genomes.",
         link: "https://synflow.southgreen.fr/",
-        icon: GitBranch,
+        favicon: synflowFavicon,
         color: "from-cyan-500 to-blue-500",
       },
     ],
@@ -124,21 +147,21 @@ const toolCategories = [
         name: "Culebront",
         description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
         link: "https://github.com/SouthGreenPlatform/culebront",
-        icon: Dna,
+        favicon: githubFavicon,
         color: "from-yellow-500 to-amber-500",
       },
       {
         name: "Galaxy",
         description: "Web-based platform for accessible, reproducible, and transparent computational research.",
         link: "https://plants.usegalaxy.fr/",
-        icon: Sparkles,
+        favicon: galaxyFavicon,
         color: "from-blue-500 to-cyan-500",
       },
       {
         name: "Toggle",
         description: "Toolbox for generic NGS analyses with comprehensive pipeline management capabilities.",
         link: "https://github.com/SouthGreenPlatform/TOGGLE",
-        icon: Workflow,
+        favicon: githubFavicon,
         color: "from-emerald-500 to-green-500",
       },
     ],
@@ -209,8 +232,12 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                       <Card className="h-full border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                         <CardHeader className="pb-3">
                           <div className="flex items-start justify-between mb-3">
-                            <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}>
-                              <tool.icon className="w-5 h-5 text-primary-foreground" />
+                            <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm overflow-hidden`}>
+                              {tool.favicon ? (
+                                <img src={tool.favicon} alt={`${tool.name} icon`} className="w-6 h-6 object-contain" />
+                              ) : tool.icon ? (
+                                <tool.icon className="w-5 h-5 text-primary-foreground" />
+                              ) : null}
                             </div>
                           </div>
                           <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
