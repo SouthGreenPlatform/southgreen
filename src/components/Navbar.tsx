@@ -23,7 +23,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={southGreenLogo} alt="South Green" className="h-10 md:h-12" />
+            <img src={southGreenLogo} alt="South Green" className="h-10 md:h-12 transition-all duration-300 group-hover:scale-105 group-hover:opacity-80" />
           </Link>
 
           {/* Desktop Navigation */}
