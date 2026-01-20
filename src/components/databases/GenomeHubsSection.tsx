@@ -49,8 +49,8 @@ const genomeHubs = [
     description: "Comprehensive genome browser and analysis tools for coffee genomics research.",
     link: "https://coffee-genome-hub.southgreen.fr/",
     image: "☕",
-    tags: ["Annotation"],
-    status: "Archive",
+    tags: ["Assemblies"],
+    status: "Active",
   },
   {
     name: "Grass Genome Hub",
@@ -159,11 +159,7 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                 <div className="relative p-6 pb-0">
                   <div className="flex items-start justify-between">
                     <div className="text-5xl mb-4">
-                      {hub.image === "icon" && hub.icon ? (
-                        <hub.icon className="w-12 h-12 text-primary" />
-                      ) : (
-                        hub.image
-                      )}
+                      {hub.image === "icon" && hub.icon ? <hub.icon className="w-12 h-12 text-primary" /> : hub.image}
                     </div>
                     <Badge
                       variant={hub.status === "Active" ? "default" : "secondary"}
