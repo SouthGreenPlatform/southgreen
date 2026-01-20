@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Source Serif 4', 'Georgia', 'serif'],
+        heading: ['Ubuntu', 'system-ui', 'sans-serif'],
         body: ['Outfit', 'system-ui', 'sans-serif'],
       },
       colors: {
