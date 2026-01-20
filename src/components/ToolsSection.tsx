@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
-import galaxyFavicon from "@/assets/tools/galaxy-favicon.svg";
+import galaxyFavicon from "@/assets/tools/galaxy-favicon.png";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 
 interface Tool {
