@@ -25,23 +25,27 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-background/90 via-background/80 to-background/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+      {/* Glossy shine overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+      
+      <div className="container mx-auto px-4 relative">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <img src={southGreenLogo} alt="South Green" className="h-10 md:h-12 transition-all duration-300 group-hover:scale-105 group-hover:opacity-80" />
+          {/* Logo with glow effect */}
+          <Link to="/" className="flex items-center gap-2 group relative">
+            <div className="absolute -inset-2 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <img src={southGreenLogo} alt="South Green" className="h-10 md:h-12 transition-all duration-300 group-hover:scale-105 relative drop-shadow-[0_0_8px_rgba(41,107,68,0.3)]" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-full px-2 py-1.5 border border-white/10 shadow-inner">
             {navItems.map((item) => {
               const isExternal = item.href.startsWith('#') || item.href.includes('/#');
               const activeClass = isActive(item.href) 
-                ? "text-primary font-semibold after:scale-x-100" 
-                : "text-muted-foreground hover:text-foreground";
+                ? "text-primary font-semibold bg-primary/10 shadow-[0_0_20px_rgba(41,107,68,0.3)] after:scale-x-100 after:shadow-[0_0_8px_rgba(41,107,68,0.5)]" 
+                : "text-muted-foreground hover:text-foreground hover:bg-white/5";
               
-              const baseClass = "relative px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-secondary after:content-[''] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:bg-primary after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100";
+              const baseClass = "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full after:content-[''] after:absolute after:bottom-1.5 after:left-4 after:right-4 after:h-0.5 after:bg-primary after:rounded-full after:origin-left after:scale-x-0 after:transition-all after:duration-300 hover:after:scale-x-100";
               
               if (isExternal) {
                 return (
@@ -78,18 +82,18 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-up">
-            <div className="flex flex-col gap-1">
+          <div className="md:hidden py-4 border-t border-white/10 animate-fade-in">
+            <div className="flex flex-col gap-1 bg-white/5 rounded-2xl p-2 border border-white/10">
               {navItems.map((item) => {
                 const activeClass = isActive(item.href) 
-                  ? "text-primary bg-primary/10 font-semibold" 
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary";
+                  ? "text-primary bg-primary/15 font-semibold shadow-[0_0_15px_rgba(41,107,68,0.2)]" 
+                  : "text-muted-foreground hover:text-foreground hover:bg-white/10";
                 return (
                   <a
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${activeClass}`}
+                    className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 ${activeClass}`}
                   >
                     {item.label}
                   </a>
