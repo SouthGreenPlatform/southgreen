@@ -47,12 +47,12 @@ export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: Database
           </div>
 
           {/* Heading */}
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-5">
             Genome Hubs & <span className="text-gradient">Analysis Tools</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
             Explore our integrated information systems for tropical and Mediterranean plants, featuring genome browsers,
             pangenomic visualization, and high-performance analysis workflows.
           </p>
