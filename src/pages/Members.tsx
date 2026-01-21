@@ -75,6 +75,7 @@ const students = [
   { name: "Nastasija Mijovic", degree: "MSc2", dates: "2020" },
   { name: "Clément Agret", degree: "PhD", dates: "2017-2020" },
   { name: "Cecile Monat", degree: "PhD", dates: "2013-2016" },
+  { name: "Adrien Petel", degree: "MSc2", dates: "2016" },
   { name: "Delphine Lariviere", degree: "PhD", dates: "2012-2015" },
 ];
 
