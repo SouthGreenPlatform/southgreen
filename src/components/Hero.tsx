@@ -7,8 +7,12 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="DNA and plant genomics visualization" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img 
+          src={heroBg} 
+          alt="DNA and plant genomics visualization" 
+          className="w-full h-full object-cover animate-bg-rotate" 
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>

@@ -154,6 +154,10 @@
     animation: dna-spin 4s ease-out forwards;
   }
 
+  .animate-bg-rotate {
+    animation: bg-rotate 5s ease-out forwards;
+  }
+
   .animate-fade-up {
     animation: fade-up 0.8s ease-out forwards;
   }
@@ -215,5 +219,14 @@
   }
   100% {
     transform: translateY(-50%) rotateY(360deg);
+  }
+}
+
+@keyframes bg-rotate {
+  0% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(0deg);
   }
 }
