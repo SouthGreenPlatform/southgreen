@@ -547,15 +547,12 @@ export default function Gigwa() {
             <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
               <CardHeader className="text-center">
                 <div className="h-16 flex items-center justify-center mx-auto mb-4">
-                  <img
-                    src={ebsLogo}
-                    alt="Enterprise Breeding System logo"
-                    className="h-12 object-contain"
-                  />
+                  <img src={ebsLogo} alt="Enterprise Breeding System logo" className="h-12 object-contain" />
                 </div>
                 <CardTitle className="text-xl">Enterprise Breeding System</CardTitle>
                 <CardDescription>
-                  A comprehensive digital platform for modern breeding programs, integrating genotyping data management powered by Gigwa
+                  A comprehensive digital platform for modern breeding programs, integrating genotyping data management
+                  powered by Gigwa
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -580,7 +577,8 @@ export default function Gigwa() {
                 </div>
                 <CardTitle className="text-xl">South Green Genome Hubs</CardTitle>
                 <CardDescription>
-                  Genome browsers and annotation portals for tropical and Mediterranean crops, powered by Gigwa for variant data
+                  Genome browsers and annotation portals for tropical and Mediterranean crops, powered by Gigwa for
+                  variant data
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -640,7 +638,7 @@ export default function Gigwa() {
                   asChild
                   className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                 >
-                  <a href="https://www.mainlab.org/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.bioinfo.wsu.edu/" target="_blank" rel="noopener noreferrer">
                     Visit MainLab
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </a>
