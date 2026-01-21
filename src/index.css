@@ -150,6 +150,10 @@
     animation: pulse-slow 4s ease-in-out infinite;
   }
 
+  .animate-dna-spin {
+    animation: dna-spin 4s ease-out forwards;
+  }
+
   .animate-fade-up {
     animation: fade-up 0.8s ease-out forwards;
   }
@@ -202,5 +206,14 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes dna-spin {
+  0% {
+    transform: translateY(-50%) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotateY(360deg);
   }
 }
