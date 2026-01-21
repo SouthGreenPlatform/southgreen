@@ -11,6 +11,7 @@ import dianeFavicon from "@/assets/tools/diane-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 import greenphylFavicon from "@/assets/tools/greenphyl-favicon.png";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
+import rapgreenFavicon from "@/assets/tools/rapgreen-favicon.png";
 
 interface Tool {
   name: string;
@@ -138,7 +139,7 @@ const toolCategories: ToolCategory[] = [
         name: "RAP-Green",
         description: "Reconciled gene trees for comprehensive phylogenomic analysis of green plants.",
         link: "https://github.com/SouthGreenPlatform/rap-green/",
-        favicon: githubFavicon,
+        favicon: rapgreenFavicon,
         color: "from-lime-500 to-green-500",
       },
     ],
