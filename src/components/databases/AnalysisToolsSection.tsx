@@ -36,7 +36,8 @@ const toolCategories: ToolCategory[] = [
     tools: [
       {
         name: "AgroLD",
-        description: "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
+        description:
+          "Agronomic Linked Data platform integrating data from various plant resources using semantic web technologies.",
         link: "https://agrold.southgreen.fr/aldp/index.jsp",
         favicon: agroldFavicon,
         color: "from-green-600 to-teal-500",
@@ -49,7 +50,8 @@ const toolCategories: ToolCategory[] = [
     tools: [
       {
         name: "DIANE",
-        description: "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
+        description:
+          "Dashboard for the Inference and Analysis of Network from Expression data, a Shiny application for RNA-seq analysis.",
         link: "https://github.com/Alexandre-So/DIANE",
         favicon: dianeFavicon,
         color: "from-rose-500 to-pink-500",
@@ -150,7 +152,8 @@ const toolCategories: ToolCategory[] = [
     tools: [
       {
         name: "SynFlow",
-        description: "Interactive web application for exploring and visualizing synteny and structural variations across genomes.",
+        description:
+          "Interactive web application for exploring and visualizing synteny and structural variations across genomes.",
         link: "https://synflow.southgreen.fr/",
         favicon: synflowFavicon,
         color: "from-cyan-500 to-blue-500",
@@ -171,7 +174,7 @@ const toolCategories: ToolCategory[] = [
       {
         name: "Galaxy",
         description: "Web-based platform for accessible, reproducible, and transparent computational research.",
-        link: "https://plants.usegalaxy.fr/",
+        link: "https://plants-pathogens.usegalaxy.fr/",
         favicon: galaxyFavicon,
         color: "from-blue-500 to-cyan-500",
       },
@@ -197,9 +200,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
     ? toolCategories
         .map((category) => ({
           ...category,
-          tools: category.tools.filter((tool) =>
-            tool.name.toLowerCase().includes(searchQuery.toLowerCase())
-          ),
+          tools: category.tools.filter((tool) => tool.name.toLowerCase().includes(searchQuery.toLowerCase())),
         }))
         .filter((category) => category.tools.length > 0)
     : toolCategories;
@@ -216,9 +217,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent-foreground text-sm font-medium mb-4">
             Analysis Tools
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            Bioinformatics Software Suite
-          </h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">Bioinformatics Software Suite</h2>
           <p className="text-muted-foreground max-w-2xl">
             Comprehensive tools organized by research domain to support your complete genomics analysis pipeline.
           </p>
@@ -229,31 +228,27 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
           {filteredCategories.map((category) => (
             <div key={category.name}>
               <div className="mb-6">
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-1">
-                  {category.name}
-                </h3>
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-1">{category.name}</h3>
                 <p className="text-sm text-muted-foreground">{category.description}</p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {category.tools.map((tool) => {
-                  const linkProps = tool.internal 
+                  const linkProps = tool.internal
                     ? { href: tool.link }
                     : { href: tool.link, target: "_blank", rel: "noopener noreferrer" };
-                  
+
                   return (
-                    <a
-                      key={tool.name}
-                      {...linkProps}
-                      className="group block"
-                    >
+                    <a key={tool.name} {...linkProps} className="group block">
                       <Card className="h-full border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                         <CardHeader className="pb-3">
                           <div className="flex items-start justify-between mb-3">
                             {tool.favicon ? (
                               <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
                             ) : (
-                              <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}>
+                              <div
+                                className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
+                              >
                                 {tool.icon && <tool.icon className="w-5 h-5 text-primary-foreground" />}
                               </div>
                             )}
@@ -268,7 +263,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                         </CardHeader>
                         <CardContent className="pt-0">
                           <span className="text-sm text-primary font-medium group-hover:underline">
-                            {tool.internal ? 'Learn More →' : 'Access Tool →'}
+                            {tool.internal ? "Learn More →" : "Access Tool →"}
                           </span>
                         </CardContent>
                       </Card>
