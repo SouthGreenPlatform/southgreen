@@ -2,7 +2,6 @@ import { ArrowRight, Database, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
-import { DNAHelix } from "./DNAHelix";
 
 export function Hero() {
   return (
@@ -13,9 +12,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
-
-      {/* Animated DNA Helix */}
-      <DNAHelix />
 
       {/* Floating Elements */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-pulse-slow" />
