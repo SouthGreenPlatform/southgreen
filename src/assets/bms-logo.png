@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="plant breeding software, plant breeding, breeding management, breeding services, data management">
+    <meta name="description" content="The Breeding Management System is data management software specifically designed to meet the needs of modern plant breeders.">
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/res/styles/css/screen.css?v=5">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" />
+
+    <title>Breeding Management System | Integrated Breeding Platform | Plant Breeding Software</title>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="/res/js/jquery.sticky.js"></script>
+    <script src="/res/js/jquery.waypoints.min.js"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="/res/js/main.js?v=3"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="/res/tools/bootstrap-notify/css/bootstrap-notify.css" rel="stylesheet">
+    <script src="/res/tools/bootstrap-notify/js/bootstrap-notify.js"></script>
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140418393-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-140418393-1');
+    </script>
+
+  </head>
+  <body>
+    
+    <div class="header">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="logo-unit">
+            <a href="https://integratedbreeding.net/"><img src="/res/img/logofull.png" class="ibp-icon" data-toggle="tooltip" data-placement="bottom" title="Back to homepage"></a>
+            <a href="https://integratedbreeding.net/1"><img src="/res/img/icon-home-ibp.png?v=2" class="home-icon" data-toggle="tooltip" data-placement="bottom" title="Back to community"></a>
+            <a href="/"><img src="/res/img/icon-home-bms.png?v=2" class="home-icon" data-toggle="tooltip" data-placement="bottom" title="Back to BMS Pro"></a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <a href="#sidr" class="mobile-menu"><i class="fas fa-bars"></i></a>
+          <div class="nav float-right">
+            <ul>
+	<li><a href="/1740/features">Features</a></li>
+	<li><a href="/1741/licensing">Licensing</a></li>
+	<li><a href="/1743/services">Services</a></li>
+	<li><a class="btn btn-solid" href="https://ibplatform.atlassian.net/servicedesk/customer/portals" target="_blank">Help desk</a></li>
+	<li><a data-fancybox href="#switchlang">EN</a>
+
+<div style="display: none;">
+  <div id="switchlang">
+    Select language:
+    <div><a href="?switchlang=en">English</a></div>
+    <div><a href="?switchlang=fr">Français</a></div>
+  </div>
+</div></li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+    <div class="container-fluid">
+      <div class="homepage-bg">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="featured-content">
+              
+              <h1 id="content-homeh1">Better data, better crops</h1>
+              <h2 id="content-homeh2">BMS Pro</h2>
+              
+              <p id="content-featurep">A data management software specifically designed to meet the needs of modern plant breeders.</p>
+              
+              <div id="content-feature">
+                <p><a class="btn btn-solid" href="https://bmspro.io/1741/purchase" target="_blank">Get BMS Pro</a>&nbsp;</p>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hp-waves" style="visibility: hidden;">
+      <img src="/res/img/waves1.png">
+    </div>
+
+    <div class="container-fluid">
+      <div class="row topPad20">
+        <div class="col-md-12 text-center">
+          <div id="content-features">  
+            <h1>Features</h1>
+
+<p>One centralized and intuitive system.&nbsp;<br />
+Get your data flowing between&nbsp;tasks, teams and seasons.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <div class="row" style="margin: 0; overflow: hidden;">
+        <div class="col-md-1 fadeleft"></div>
+        <div class="col-md-10">
+          <!--carousel-->
+          <div class="carousel">
+              <div class="headings-container" style="height: 120px;">
+  <div class="headings" style="max-width: 100%; position: absolute; height: 100px;">
+  <div class="row" style="flex-wrap: nowrap;">
+              <div class="col-md-3">
+                <div class="c-heading c-heading-1" data-id="1">
+                  <div class="label">Database & queries</div>
+                  <div class="progress"><div class="bar"></div></div>
+                </div>
+              </div>
+    
+                  <div class="col-md-3">
+                <div class="c-heading c-heading-2" data-id="2">
+                  <div class="label">Breeding activities</div>
+                  <div class="progress"><div class="bar"></div></div>
+                </div>
+              </div>
+    
+                  <div class="col-md-3">
+                <div class="c-heading c-heading-3" data-id="3">
+                  <div class="label">Statistical analysis</div>
+                  <div class="progress"><div class="bar"></div></div>
+                </div>
+              </div>
+    
+                  <div class="col-md-3">
+                <div class="c-heading c-heading-4" data-id="4">
+                  <div class="label">GIGWA - High-Throughput Genotyping Data Management System</div>
+                  <div class="progress"><div class="bar"></div></div>
+                </div>
+              </div>
+    
+                  <div class="col-md-3">
+                <div class="c-heading c-heading-5" data-id="5">
+                  <div class="label">Field data capture</div>
+                  <div class="progress"><div class="bar"></div></div>
+                </div>
+              </div>
+    
+      </div>
+  </div>
+  </div>
+
+
+            <div class="c-body-container">
+                  
+    
+      <!--carouselbody-->
+      <div class="c-body c-body-1 active">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title">Database & queries</div>
+            <div class="desc"><p>A&nbsp;customizable breeding database, with embedded query tools, making&nbsp;it easy to retrieve information with accuracy and speed.</p>
+</div>
+            <a href="https://bmspro.io/1740/features?f=1" class="btn btn-solid">Learn more</a>
+          </div>
+          <div class="col-md-7">
+            <div class="feat-image">
+              <img src="/pub/carousels/1/genotyping1.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/carouselbody-->
+    
+        
+    
+      <!--carouselbody-->
+      <div class="c-body c-body-2 ">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title">Breeding activities</div>
+            <div class="desc"><p>Comprehensive functionality&nbsp;with an intuitive user interface to manage your day-to-day tasks and inventories throughout the breeding season.&nbsp;</p>
+</div>
+            <a href="https://bmspro.io/1740/features?f=2" class="btn btn-solid">Learn more</a>
+          </div>
+          <div class="col-md-7">
+            <div class="feat-image">
+              <img src="/pub/carousels/1/fielddata2.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/carouselbody-->
+    
+        
+    
+      <!--carouselbody-->
+      <div class="c-body c-body-3 ">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title">Statistical analysis</div>
+            <div class="desc"><p><span style="background-color:white"><span style="color:#333333">The Breeding View module is&nbsp;</span>an effective analytical&nbsp;pipeline for germplasm evaluation, exclusive to BMS Pro. Developed by&nbsp;<a href="https://www.vsni.co.uk/">VSNi</a>, the makers of GenStat and ASReml.</span></p>
+</div>
+            <a href="https://bmspro.io/1740/features?f=3" class="btn btn-solid">Learn more</a>
+          </div>
+          <div class="col-md-7">
+            <div class="feat-image">
+              <img src="/pub/carousels/1/bv.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/carouselbody-->
+    
+        
+    
+      <!--carouselbody-->
+      <div class="c-body c-body-4 ">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title">GIGWA - High-Throughput Genotyping Data Management System</div>
+            <div class="desc"><ul>
+	<li>Deployed and interoperable with the BMS through <a href="https://brapi.org/" target="_blank">BrAPI</a> (Breeding API), a programming standard developed and used by the global breeding community.</li>
+	<li>Developed by <a href="https://www.cirad.fr/en" target="_blank">CIRAD</a>, France&rsquo;s agricultural research and international cooperation organization for the sustainable development of tropical and Mediterranean regions.</li>
+</ul>
+</div>
+            <a href="https://bmspro.io/1740/features?f=4" class="btn btn-solid">Learn more</a>
+          </div>
+          <div class="col-md-7">
+            <div class="feat-image">
+              <img src="/pub/carousels/1/GIGWA.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/carouselbody-->
+    
+        
+    
+      <!--carouselbody-->
+      <div class="c-body c-body-5 ">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title">Field data capture</div>
+            <div class="desc"><p>Phenotypic data captured in the field easily&nbsp;transfers&nbsp;to and from BMS Pro. Optimized for interoperability with the <a href="https://play.google.com/store/apps/details?id=com.fieldbook.tracker" target="_blank">KSU FieldBook</a>, an Android application part of the <a href="http://phenoapps.org/apps/" target="_blank">PhenoApps collection</a>.</p>
+</div>
+            <a href="https://bmspro.io/1740/features?f=17" class="btn btn-solid">Learn more</a>
+          </div>
+          <div class="col-md-7">
+            <div class="feat-image">
+              <img src="/pub/carousels/1/ksu fieldbook2.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/carouselbody-->
+    
+    
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 faderight"></div>
+      </div>
+      
+      <script type="text/javascript">
+        
+        var activeitem = 1;
+        var lastitemvisible = 4;
+        var totalitems = 5;
+        var totalitemsvisible = 4;
+        var pctdone = 0;
+        var negmargin = -(100/totalitemsvisible);
+        var animating = false;
+        var animatingbody = false;
+        
+        function progress() {
+          if(pctdone >= 100) {
+            $('.c-heading').find('.bar').width(0);
+            var nextitem = activeitem++;
+            if(activeitem > totalitems) {
+              var nextitem = 1;
+              activeitem = 1;
+            }
+            pctdone = 0;
+            
+            if(animatingbody == false) {
+              animatingbody = true;
+              var outgoing = $('.c-body:visible');
+              $('.c-body:visible').animate({
+                left: '-100px',
+                right: '100px',
+                opacity: 0
+              }, 400, function() {
+                $(outgoing).css('left', 0);
+                $(outgoing).css('right', 0);
+                $(outgoing).removeClass('active');
+                $(outgoing).css('opacity', 1);
+              });
+              setTimeout(function() {
+                $('.c-body-'+activeitem).css('opacity', 0);
+                $('.c-body-'+activeitem).css('right', '-100px');
+                $('.c-body-'+activeitem).css('left', '100px');
+                $('.c-body-'+activeitem).addClass('active');
+                $('.c-body-'+activeitem).animate({
+                  left: '0px',
+                  right: '0px',
+                  opacity: 1
+                }, 500, function() {
+                  animatingbody = false;
+                });
+              }, 300);
+            }
+          }
+          $('.c-heading').removeClass('active');
+          $('.c-heading-'+activeitem).addClass('active');
+          $('.c-heading-'+activeitem).find('.bar').width(pctdone+'%');
+          pctdone = pctdone+0.2;
+          if(activeitem > lastitemvisible) {
+            lastitemvisible = activeitem;
+            if(animating == false) {
+              animating = true;
+              $('.c-heading:first').parent().animate({
+                marginLeft: negmargin*(lastitemvisible-totalitemsvisible)+'%'
+              }, 500, function() {
+                animating = false;
+              });
+            }
+          }
+          if(activeitem == 1) {
+            lastitemvisible = totalitemsvisible;
+            if(animating == false) {
+              animating = true;
+              $('.c-heading:first').parent().animate({
+                marginLeft: 0
+              }, 500, function() {
+                animating = false;
+              });
+            }
+          }
+        }
+        
+        setInterval(function() {
+          
+          progress();
+          
+        }, 20);
+        
+        $('.c-heading').on('click', function() {
+          pctdone = 0;
+          $('.c-heading-'+activeitem).find('.bar').width(pctdone+'%');
+          activeitem = $(this).data('id');
+          nextitem = $(this).data('id');
+          $('.c-heading').removeClass('active');
+          $('.c-heading-'+activeitem).addClass('active');
+          $('.c-body').removeClass('active');
+          $('.c-body-'+activeitem).addClass('active');
+        });
+        
+      </script>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 id="content-mtd-text" >Making the difference</h1>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-3 offset-md-2 text-center">
+          <div class="hp-icon-item">
+            <img src="/res/img/icon-support.png">
+            <div id="content-icon1text"><p>Strong user<br />
+support</p>
+</div>
+            <div id="content-icon1link">
+              <p><a href="https://bmspro.io/1743/services"><img src="/res/img/icon-right.png" /></a></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div class="hp-icon-item">
+            <img src="/res/img/icon-licensing.png">
+            <div id="content-icon2text"><p>Tailored<br />
+licensing</p>
+</div>
+            <div id="content-icon2link">
+              <p><a href="https://bmspro.io/1741/licensing"><img src="/res/img/icon-right.png" /></a></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="hp-icon-item">
+            <img src="/res/img/icon-userbase.png">
+            <div id="content-icon3text"><p>Diverse<br />
+user experience</p>
+</div>
+            <div id="content-icon3link">
+              <p><a href="/1747/diverse-user-base"><img src="/res/img/icon-right.png" /></a></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box-feature box-feature-1" style="background-image: url(/res/img/bg_seeitnow.png);">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="text" id="content-box1text"><p>See it now</p>
+</div>
+              </div>
+              <div class="col-md-6 text-right">
+                <div id="content-box1link">
+                  <p><a class="btn" href="https://ibplatform.atlassian.net/servicedesk/customer/portal/4/group/30/create/61" target="_blank">Request a demo</a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box-feature box-feature-2" style="background-image: url(/res/img/bg_howto.png);">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="text" id="content-box2text"><p>Services</p>
+</div>
+              </div>
+              <div class="col-md-6 text-right">
+                <div id="content-box2link">
+                  <p><a class="btn" href="https://bmspro.io/1743/services">See our services</a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="trust">
+        <div class="row">
+          <div class="col-md-4">
+            <div id="content-trust" style="margin-top: 30px;">
+              <h1>They trust us</h1>
+
+<p>Using the BMS Pro for better plant breeding worldwide</p>
+
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="logos">
+              <section class="customer-logos slider">
+        <div class="slide"><div class="img" style="background-image: url('/pub/logos/50_93_LOGO-africarice-landscape.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/87_KALRO.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/49_6_UoA_logo_col_vert_forIBP.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/74_Logo-Tropicasem.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/52_LogoSemana.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/99_CORAFlogo.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/63_NovaGeneticlogoRVB.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/35_Logo_INRAN.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/33_Logo_UCAD.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/26_Seed_Co_logo.svg.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/91_LogoSemagri.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/58_Logo_ISRA.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/68_logoceraas.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/100_LogoDeSeed.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/48_novalliance.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/82_Logo_SARI.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/64_ICARDALogo.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/3_cereals-badeggi-nigeria.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/88_NRCRILogo.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/10_HOPE.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/53_TLIII.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/87_LogCirad_Eng.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/31_PBA_SM_HiRes_cmyk_retractablebanner_11_2_11.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/19_CATLogo_resized.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/19_49_IITATAAnewlogo.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/77_MaRCCIlogowithtext_FINAL.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/44_CIATTaglinelogo_EN.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/74_Hyballiance.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/82_LogoBGA-M-White.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/53_LogoNankogenetic.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/11_pbea_logo-4.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/41_LogoArmorGenetic.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/aatf.jpg');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/10_ICRISAT-Short-Logo.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/20_nacgrab.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/42_aw_biotec.png');"></div></div>
+            <div class="slide"><div class="img" style="background-image: url('/pub/logos/71_naccri.png');"></div></div>
+        </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div> <!--/container-->
+    
+    <div class="waves2-container" style="visibility: hidden;">
+      <img src="/res/img/waves2.png" class="waves2">
+      <div></div>
+    </div>
+    
+    <div class="footer">
+      <div class="container">  
+        <div class="row">
+<div class="col-md-2">
+<h3>Meet our team</h3>
+<a class="logo" href="https://integratedbreeding.net/1/"><img src="/res/img/logofull.png" /></a></div>
+
+<div class="col-md-4 offset-md-2">
+<h3>Contact us</h3>
+
+<div style="margin-top:21px">
+<p><a href="http://ibplatform.atlassian.net/servicedesk/customer/portals">We have people based around the world to assist you at all times. What&rsquo;s on your mind?</a></p>
+</div>
+</div>
+
+<div class="col-md-3 offset-md-1">
+<h3>Follow us</h3>
+
+<div class="social-icons"><a href="https://www.facebook.com/IntegratedBreedingPlatform/"><img src="/res/img/icon-facebook.svg" /></a> <a href="https://twitter.com/IBPlatform"><img src="/res/img/icon-twitter.svg" /></a> <a href="https://www.linkedin.com/company/ibplatform/"><img src="/res/img/icon-linkedin.svg" /></a> <a href="https://www.youtube.com/user/IBPlatform"><img src="/res/img/icon-youtube.svg" /></a> <a class="no-margin" href="https://soundcloud.com/ibplatform"><img src="/res/img/icon-soundcloud.svg" /></a></div>
+</div>
+</div>
+
+<div class="extra-links">
+<p><strong><a href="/1744/faq">FAQ</a></strong> | <strong><a href="/1745/privacy-policy">Privacy Policy</a></strong> &copy; Integrated Breeding Platform, 2019. All rights reserved.</p>
+</div>
+
+      </div> <!--/container-->
+    </div>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-26363793-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+
+
+
+<div id="langConflictModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Language Conflict</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Return to Page</button>
+        <button type="button" class="btn btn-danger btn-page-force-save" data-publish="">Force Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="notifications top-right"></div>
+
+    <script type="text/javascript">
+
+      //waypoints      
+      var waypoint = new Waypoint({
+        element: $('.homepage-bg'),
+        handler: function(direction) {
+          $('.hp-waves').addClass('fade-container');
+          $('.hp-waves').css('visibility', 'visible');
+        }
+      })
+      
+      var waypoint2 = new Waypoint({
+        element: $('.waves2-container'),
+        offset: 'bottom-in-view',
+        handler: function(direction) {
+          $('.waves2-container').addClass('fade-container');
+          $('.waves2-container').find('div').addClass('fade-effect');
+          $('.waves2-container').css('visibility', 'visible');
+        }
+      })
+
+    </script>
+
+    <div id="sidr">
+      <!-- Your content -->
+      <ul>
+        <li><a href="/1740/features">Features</a></li>
+        <li><a href="/1741/licensing">Licensing</a></li>
+        <li><a href="/1742/how-to">How to</a></li>
+        <li><a href="/1743/services">Services</a></li>
+        <li><a href="https://ibplatform.atlassian.net/servicedesk/customer/portals" class="btn btn-solid" target="_blank">Help desk</a></li>
+      </ul>
+    </div>
+  
+  
+  
+
+  </body>
+</html>
