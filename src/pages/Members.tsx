@@ -67,7 +67,7 @@ const students = [
   { name: "Adama Ndar", degree: "MSc2", dates: "2021" },
   { name: "Louis Dennu", degree: "MSc2", dates: "2021" },
   { name: "Anais Louis", degree: "MSc2", dates: "2020" },
-  { name: "Justine Fleuret", degree: "MSc2", dates: "2020" },
+  { name: "Justine Floret", degree: "MSc2", dates: "2020" },
   { name: "Nastasija Mijovic", degree: "MSc2", dates: "2020" },
   { name: "Clément Agret", degree: "PhD", dates: "2017-2020" },
   { name: "Cecile Monat", degree: "PhD", dates: "2013-2016" },
