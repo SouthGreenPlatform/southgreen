@@ -2,24 +2,15 @@ import { ArrowRight, Database, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
-import { DNAHelix3D } from "./DNAHelix3D";
-
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <img 
-          src={heroBg} 
-          alt="DNA and plant genomics visualization" 
-          className="w-full h-full object-cover" 
-        />
+      <div className="absolute inset-0 z-0">
+        <img src={heroBg} alt="DNA and plant genomics visualization" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
-
-      {/* 3D DNA Helix Animation */}
-      <DNAHelix3D />
 
       {/* Floating Elements */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-pulse-slow" />
