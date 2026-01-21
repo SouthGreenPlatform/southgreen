@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Building2, Tag, GraduationCap, UserMinus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { FaGithub } from "react-icons/fa";
 
 const keywords = [
   "NGS Data Analysis",
@@ -21,40 +22,40 @@ const keywords = [
 ];
 
 const scientificLeaders = [
-  { name: "Alexis Dereeper", institute: "IRD, UMR PHIM" },
-  { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP" },
-  { name: "Pierre Larmande", institute: "IRD, UMR DIADE" },
-  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
+  { name: "Alexis Dereeper", institute: "IRD, UMR PHIM", github: "" },
+  { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Pierre Larmande", institute: "IRD, UMR DIADE", github: "" },
+  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "" },
 ];
 
 const technicalLeaders = [
-  { name: "Bertrand Pitollat", institute: "CIRAD, UMR AGAP" },
-  { name: "Ndomassi Tando", institute: "IRD, UMR DIADE" },
+  { name: "Bertrand Pitollat", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Ndomassi Tando", institute: "IRD, UMR DIADE", github: "" },
 ];
 
 const teamMembers = [
-  { name: "Alice Boizet ", institute: "CIRAD, UMR AGAP" },
-  { name: "Saliha Beddek ", institute: "IFB, UMR AGAP" },
-  { name: "Cathrine Breton ", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
-  { name: "Aurore Comte", institute: "IRD, UMR PHIM" },
-  { name: "Jacques Dainat", institute: "IRD" },
-  { name: "Jean-François Dufayard ", institute: "CIRAD, UMR AGAP" },
-  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP" },
-  { name: "Fred de Lamotte ", institute: "INRAE, UMR AGAP" },
-  { name: "David Lopez ", institute: "CIRAD, UMR AGAP" },
-  { name: "Julie Orjuela ", institute: "IRD, UMR DIADE" },
-  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM" },
-  { name: "Guillaume Martin ", institute: "CIRAD, UMR AGAP" },
-  { name: "Julien Paul ", institute: "CIRAD, UMR AGAP" },
-  { name: "Sébastien Ravel ", institute: "CIRAD, UMR PHIM" },
-  { name: "Manuel Ruiz ", institute: "CIRAD, UMR AGAP" },
-  { name: "François Sabot ", institute: "IRD, UMR DIADE" },
-  { name: "Gautier Sarah ", institute: "INRAE, UMR AGAP" },
-  { name: "Guilhem Sempéré ", institute: "CIRAD" },
-  { name: "Stéphanie Sidibe-Bocs ", institute: "CIRAD, UMR AGAP" },
-  { name: "Alexandre Soriano ", institute: "CIRAD, UMR AGAP" },
-  { name: "Marilyne Summo ", institute: "CIRAD, UMR AGAP" },
-  { name: "Christine Tranchant-Dubreuil ", institute: "IRD, UMR DIADE" },
+  { name: "Alice Boizet", institute: "CIRAD, UMR AGAP", github: "https://github.com/aliceboizet" },
+  { name: "Saliha Beddek", institute: "IFB, UMR AGAP", github: "" },
+  { name: "Cathrine Breton", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "" },
+  { name: "Aurore Comte", institute: "IRD, UMR PHIM", github: "" },
+  { name: "Jacques Dainat", institute: "IRD", github: "" },
+  { name: "Jean-François Dufayard", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "" },
+  { name: "Fred de Lamotte", institute: "INRAE, UMR AGAP", github: "" },
+  { name: "David Lopez", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Julie Orjuela", institute: "IRD, UMR DIADE", github: "" },
+  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM", github: "" },
+  { name: "Guillaume Martin", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Julien Paul", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Sébastien Ravel", institute: "CIRAD, UMR PHIM", github: "" },
+  { name: "Manuel Ruiz", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "François Sabot", institute: "IRD, UMR DIADE", github: "" },
+  { name: "Gautier Sarah", institute: "INRAE, UMR AGAP", github: "" },
+  { name: "Guilhem Sempéré", institute: "CIRAD", github: "" },
+  { name: "Stéphanie Sidibe-Bocs", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Alexandre Soriano", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Marilyne Summo", institute: "CIRAD, UMR AGAP", github: "" },
+  { name: "Christine Tranchant-Dubreuil", institute: "IRD, UMR DIADE", github: "" },
 ];
 
 const students = [
@@ -195,8 +196,20 @@ export default function Members() {
                     className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
                   >
                     <span className="text-primary mt-1">•</span>
-                    <div>
-                      <span className="text-foreground font-medium">{member.name}</span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-foreground font-medium">{member.name}</span>
+                        {member.github && (
+                          <a
+                            href={member.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            <FaGithub className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
                       <div className="flex items-center gap-2 text-muted-foreground mt-1">
                         <Building2 className="w-3 h-3" />
                         <span className="text-xs italic">{member.institute || "Institute placeholder"}</span>
