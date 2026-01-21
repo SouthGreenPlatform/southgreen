@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Building2, Tag, GraduationCap, UserMinus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 
 const keywords = [
@@ -89,7 +91,19 @@ const previousMembers = [
   "Cédric Farcy",
 ];
 
+type StudentFilter = "all" | "current" | "past";
+
+const isCurrentStudent = (dates: string) => dates.endsWith("-");
+
 export default function Members() {
+  const [studentFilter, setStudentFilter] = useState<StudentFilter>("all");
+
+  const filteredStudents = students.filter((student) => {
+    if (studentFilter === "all") return true;
+    if (studentFilter === "current") return isCurrentStudent(student.dates);
+    return !isCurrentStudent(student.dates);
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -226,12 +240,37 @@ export default function Members() {
       {/* Students */}
       <section className="py-12 md:py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Students</h2>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <GraduationCap className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">Students</h2>
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant={studentFilter === "all" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setStudentFilter("all")}
+              >
+                All
+              </Button>
+              <Button
+                variant={studentFilter === "current" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setStudentFilter("current")}
+              >
+                Current
+              </Button>
+              <Button
+                variant={studentFilter === "past" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setStudentFilter("past")}
+              >
+                Past
+              </Button>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {students.map((student) => (
+            {filteredStudents.map((student) => (
               <Card key={student.name} className="border-border hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-3">{student.name}</h3>
