@@ -1,9 +1,4 @@
-import {
-  ExternalLink,
-  Layers,
-  Eye,
-  Citrus,
-} from "lucide-react";
+import { ExternalLink, Layers, Eye, Citrus } from "lucide-react";
 import { GiBananaPeeled } from "react-icons/gi";
 import { TbCircuitSwitchOpen } from "react-icons/tb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,7 +64,7 @@ const tools: Tool[] = [
     category: "Workflow Platform",
     description:
       "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
-    link: "https://plants.usegalaxy.fr/",
+    link: "https://plants-pathogens.usegalaxy.fr/",
     favicon: galaxyFavicon,
     color: "from-blue-500 to-cyan-500",
     internal: false,
