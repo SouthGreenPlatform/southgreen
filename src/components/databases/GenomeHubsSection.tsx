@@ -143,7 +143,6 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Genome Hubs
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">Integrated Information Systems</h2>
           <p className="text-muted-foreground max-w-2xl">
             Our Genome Hubs provide comprehensive genomic resources including genome browsers, BLAST servers, expression
             atlases, and comparative genomics tools for tropical crops.
