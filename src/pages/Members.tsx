@@ -91,6 +91,7 @@ const previousMembers = [
   "Nordine El Hassouni",
   "David Couvin",
   "Cédric Farcy",
+  "Anestis Gkanogiannis",
 ];
 
 type StudentFilter = "all" | "current" | "past";
