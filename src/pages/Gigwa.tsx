@@ -24,6 +24,7 @@ import {
 import ebsLogo from "@/assets/ebs-logo.png";
 import bmsLogo from "@/assets/bms-logo.png";
 import cgiarLogo from "@/assets/cgiar-logo.jpg";
+import mainlabLogo from "@/assets/mainlab-logo.png";
 
 const liveInstances = [
   {
@@ -625,7 +626,7 @@ export default function Gigwa() {
             <Card className="bg-card border-border/50 hover:border-primary/50 transition-all hover:shadow-lg group">
               <CardHeader className="text-center">
                 <div className="h-16 flex items-center justify-center mx-auto mb-4">
-                  <Server className="w-12 h-12 text-primary" />
+                  <img src={mainlabLogo} alt="MainLab logo" className="h-12 object-contain" />
                 </div>
                 <CardTitle className="text-xl">MainLab Databases</CardTitle>
                 <CardDescription>
