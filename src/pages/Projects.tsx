@@ -9,6 +9,7 @@ interface Project {
   title: string;
   url?: string;
   donor?: string;
+  years?: string;
 }
 
 const projects: Project[] = [
@@ -55,6 +56,13 @@ const projects: Project[] = [
     title: "Breeding for cOffee and cocoa root resiLiEnce in low input farming systems based on improved ROotstock",
     url: "https://www.bolero-project.eu/project/bolero-project",
     donor: "EU",
+  },
+  {
+    acronym: "BRIDGES",
+    title: "Bridging Resources for Innovation in Diversified Genomic Exploration of Species - Coffee genomics research project",
+    url: "https://www.bridgescoffea.org/",
+    donor: "ANR",
+    years: "2024-2027",
   },
 ];
 
