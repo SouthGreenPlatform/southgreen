@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import { ExternalLink, Filter, X } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GiVanillaFlower, GiBamboo, GiPotato } from "react-icons/gi";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -12,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { PlantIcons, PlantIconName } from "@/components/icons/PlantIcons";
 
 const genomeHubs = [
   {
@@ -19,7 +19,7 @@ const genomeHubs = [
     species: "Musa spp.",
     description: "Integrated platform for banana genome information, annotation, and comparative genomics analysis.",
     link: "https://banana-genome-hub.southgreen.fr/",
-    image: "🍌",
+    icon: "banana" as PlantIconName,
     tags: [
       "Assemblies",
       "JBrowse",
@@ -40,7 +40,7 @@ const genomeHubs = [
     species: "Citrus spp.",
     description: "Comprehensive platform for citrus genomics, comparative analysis, and breeding tools.",
     link: "https://citrus-genome-hub.southgreen.fr/",
-    image: "🍊",
+    icon: "citrus" as PlantIconName,
     tags: ["Assemblies", "JBrowse", "Synteny", "Variants", "Repeat Elements"],
     status: "Active",
   },
@@ -49,7 +49,7 @@ const genomeHubs = [
     species: "Theobroma cacao",
     description: "Genomic resources and tools for cocoa research and breeding programs.",
     link: "https://cocoa-genome-hub.southgreen.fr/",
-    image: "🍫",
+    icon: "cocoa" as PlantIconName,
     tags: ["Assembly", "Genes", "Variants"],
     status: "Archive",
   },
@@ -58,7 +58,7 @@ const genomeHubs = [
     species: "Coffea spp.",
     description: "Comprehensive genome browser and analysis tools for coffee genomics research.",
     link: "https://coffee-genome-hub.southgreen.fr/",
-    image: "☕",
+    icon: "coffee" as PlantIconName,
     tags: ["Assemblies"],
     status: "Active",
   },
@@ -67,7 +67,7 @@ const genomeHubs = [
     species: "Poaceae family",
     description: "Multi-species genome browser for grass family comparative genomics research.",
     link: "https://grass-genome-hub.southgreen.fr/",
-    image: "🌱",
+    icon: "poaceae" as PlantIconName,
     tags: ["JBrowse", "Synteny", "Variants"],
     status: "Archive",
   },
@@ -76,7 +76,7 @@ const genomeHubs = [
     species: "Olea europaea",
     description: "Integrated genomic resources for olive research and Mediterranean crop improvement.",
     link: "https://olive-genome-hub.climolivemed.com/",
-    image: "🫒",
+    icon: "olive" as PlantIconName,
     tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
@@ -85,7 +85,7 @@ const genomeHubs = [
     species: "Arecaceae family",
     description: "Genomic resources for palm species including oil palm, date palm, and coconut research.",
     link: "https://palm-genome-hub.southgreen.fr/",
-    image: "🌴",
+    icon: "palm" as PlantIconName,
     tags: ["JBrowse", "BLAST", "Pathways", "Genetic maps"],
     status: "Active",
   },
@@ -94,7 +94,7 @@ const genomeHubs = [
     species: "Oryza spp.",
     description: "Rice genomics platform with multi-species comparative analysis capabilities.",
     link: "https://rice-genome-hub.southgreen.fr/",
-    image: "🌾",
+    icon: "rice" as PlantIconName,
     tags: ["Assemblies", "JBrowse", "BLAST", "Variants", "Expression", "Repeat Elements"],
     status: "Active",
   },
@@ -103,8 +103,7 @@ const genomeHubs = [
     species: "Saccharum spp.",
     description: "Specialized hub for complex sugarcane genome analysis and visualization.",
     link: "http://sugarcane-genome.cirad.fr/",
-    image: "icon",
-    icon: GiBamboo,
+    icon: "sugarcane" as PlantIconName,
     tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
@@ -113,8 +112,7 @@ const genomeHubs = [
     species: "Vanilla planifolia",
     description: "Genomic resources for vanilla research, breeding, and flavor compound studies.",
     link: "https://vanilla-genome-hub.cirad.fr/",
-    image: "icon",
-    icon: GiVanillaFlower,
+    icon: "vanilla" as PlantIconName,
     tags: ["JBrowse", "BLAST", "Synteny", "Expression", "GO Enrichment"],
     status: "Active",
   },
@@ -123,8 +121,7 @@ const genomeHubs = [
     species: "Dioscorea family",
     description: "Genomic resources for Dioscorea species",
     link: "https://yam-genome-hub.southgreen.fr",
-    image: "icon",
-    icon: GiPotato,
+    icon: "yam" as PlantIconName,
     tags: ["Assemblies", "JBrowse", "BLAST"],
     status: "Active",
   },
@@ -268,8 +265,11 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                 {/* Header with emoji and status */}
                 <div className="relative p-6 pb-0">
                   <div className="flex items-start justify-between">
-                    <div className="text-5xl mb-4">
-                      {hub.image === "icon" && hub.icon ? <hub.icon className="w-12 h-12 text-primary" /> : hub.image}
+                    <div className="mb-4">
+                      {(() => {
+                        const IconComponent = PlantIcons[hub.icon];
+                        return IconComponent ? <IconComponent size={48} className="text-primary" /> : null;
+                      })()}
                     </div>
                     <Badge
                       variant={hub.status === "Active" ? "default" : "secondary"}
