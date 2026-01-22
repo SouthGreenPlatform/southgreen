@@ -1,7 +1,17 @@
-import { ExternalLink } from "lucide-react";
+import { useState, useMemo } from "react";
+import { ExternalLink, Filter, X } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GiVanillaFlower, GiBamboo, GiPotato } from "react-icons/gi";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 const genomeHubs = [
   {
@@ -122,16 +132,47 @@ const genomeHubs = [
 
 export { genomeHubs };
 
+// Extract all unique tags from genome hubs
+const allTags = Array.from(
+  new Set(genomeHubs.flatMap((hub) => hub.tags))
+).sort();
+
 interface GenomeHubsSectionProps {
   searchQuery?: string;
 }
 
 export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) {
-  const filteredHubs = searchQuery
-    ? genomeHubs.filter((hub) => hub.name.toLowerCase().includes(searchQuery.toLowerCase()))
-    : genomeHubs;
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  if (searchQuery && filteredHubs.length === 0) {
+  const filteredHubs = useMemo(() => {
+    let hubs = genomeHubs;
+    
+    // Filter by search query
+    if (searchQuery) {
+      hubs = hubs.filter((hub) => hub.name.toLowerCase().includes(searchQuery.toLowerCase()));
+    }
+    
+    // Filter by selected tags
+    if (selectedTags.length > 0) {
+      hubs = hubs.filter((hub) => 
+        selectedTags.some((tag) => hub.tags.includes(tag))
+      );
+    }
+    
+    return hubs;
+  }, [searchQuery, selectedTags]);
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const clearFilters = () => {
+    setSelectedTags([]);
+  };
+
+  if (searchQuery && filteredHubs.length === 0 && selectedTags.length === 0) {
     return null;
   }
 
@@ -140,14 +181,84 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Genome Hubs
-          </span>
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Genome Hubs
+            </span>
+            
+            {/* Filter Dropdown */}
+            <div className="flex items-center gap-2">
+              {selectedTags.length > 0 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <X className="w-4 h-4 mr-1" />
+                  Clear ({selectedTags.length})
+                </Button>
+              )}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <Filter className="w-4 h-4" />
+                    Filter by tools
+                    {selectedTags.length > 0 && (
+                      <Badge variant="secondary" className="ml-1 px-1.5 py-0 text-xs">
+                        {selectedTags.length}
+                      </Badge>
+                    )}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56 max-h-80 overflow-y-auto bg-popover">
+                  <DropdownMenuLabel>Available Tools</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  {allTags.map((tag) => (
+                    <DropdownMenuCheckboxItem
+                      key={tag}
+                      checked={selectedTags.includes(tag)}
+                      onCheckedChange={() => toggleTag(tag)}
+                    >
+                      {tag}
+                    </DropdownMenuCheckboxItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </div>
           <p className="text-muted-foreground max-w-2xl">
             Our Genome Hubs provide comprehensive genomic resources including genome browsers, BLAST servers, expression
             atlases, and comparative genomics tools for tropical crops.
           </p>
         </div>
+
+        {/* Selected Tags Display */}
+        {selectedTags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {selectedTags.map((tag) => (
+              <Badge
+                key={tag}
+                variant="default"
+                className="cursor-pointer gap-1 gradient-hero border-0"
+                onClick={() => toggleTag(tag)}
+              >
+                {tag}
+                <X className="w-3 h-3" />
+              </Badge>
+            ))}
+          </div>
+        )}
+
+        {/* No results message */}
+        {filteredHubs.length === 0 && (
+          <div className="text-center py-12 text-muted-foreground">
+            <p>No genome hubs match the selected filters.</p>
+            <Button variant="link" onClick={clearFilters} className="mt-2">
+              Clear all filters
+            </Button>
+          </div>
+        )}
 
         {/* Genome Hubs Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -181,7 +292,11 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {hub.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
+                      <Badge 
+                        key={tag} 
+                        variant="outline" 
+                        className={`text-xs ${selectedTags.includes(tag) ? 'bg-primary/20 border-primary' : ''}`}
+                      >
                         {tag}
                       </Badge>
                     ))}
