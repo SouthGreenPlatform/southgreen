@@ -25,8 +25,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/databases" element={<Databases />} />
           <Route path="/genome-hubs" element={<Navigate to="/databases?section=genome-hubs" replace />} />
-          <Route path="/analysis-tools" element={<Navigate to="/databases?section=analysis-tools" replace />} />
-          <Route path="/legacy-tools" element={<Navigate to="/databases?section=legacy-tools" replace />} />
           <Route path="/training" element={<Training />} />
           <Route path="/gigwa" element={<Gigwa />} />
           <Route path="/members" element={<Members />} />
