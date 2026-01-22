@@ -20,13 +20,14 @@ const Training = () => {
                 <GraduationCap className="w-4 h-4" />
                 <span className="text-sm font-medium">Training & Education</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-                South Green <span className="text-primary">Training</span> Resources
+                <span className="text-primary">Training</span> Resources
               </h1>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Access comprehensive training materials, tutorials, and workshops for bioinformatics tools and analysis pipelines.
+                Access comprehensive training materials, tutorials, and workshops for bioinformatics tools and analysis
+                pipelines.
               </p>
 
               <Button
@@ -50,9 +51,7 @@ const Training = () => {
                   <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">University Courses</h3>
-                <p className="text-muted-foreground text-sm">
-                  Modules in Masters programs.
-                </p>
+                <p className="text-muted-foreground text-sm">Modules in Masters programs.</p>
               </div>
 
               <div className="bg-card p-6 rounded-xl border border-border text-center">
@@ -80,7 +79,7 @@ const Training = () => {
               <p className="text-muted-foreground mb-4">
                 You will be redirected to our training portal for full access to all resources.
               </p>
-              <a 
+              <a
                 href={externalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -101,11 +100,9 @@ const Training = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                   <BookOpen className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
-                  Upcoming Events
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">Upcoming Events</h2>
               </div>
-              
+
               <div className="bg-card border border-border rounded-xl p-8 text-center">
                 <p className="text-muted-foreground text-lg">None</p>
               </div>
