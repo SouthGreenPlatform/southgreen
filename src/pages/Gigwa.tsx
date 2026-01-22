@@ -88,11 +88,11 @@ const features = [
 ];
 
 const downloads = [
-  { version: "v2.10-RELEASE", isLatest: true },
+  { version: "v2.11-RELEASE", isLatest: true },
+  { version: "v2.10-RELEASE" },
   { version: "v2.9-RELEASE" },
   { version: "v2.8-RELEASE" },
   { version: "v2.7-RELEASE" },
-  { version: "v2.6.1-RELEASE" },
 ];
 
 const teamMembers = {
@@ -309,6 +309,11 @@ export default function Gigwa() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     {
+                      version: "v2.11-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.11-RELEASE/Gigwa_V2.11-RELEASE_bundle_creation_windows.ps1",
+                      isScript: true,
+                    },
+                    {
                       version: "v2.10-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.10-RELEASE/Gigwa_V2.10-RELEASE_bundle_creation_windows.ps1",
                       isScript: true,
@@ -321,11 +326,6 @@ export default function Gigwa() {
                     {
                       version: "v2.8-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_windows.ps1",
-                      isScript: true,
-                    },
-                    {
-                      version: "v2.7-RELEASE",
-                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_windows.ps1",
                       isScript: true,
                     },
                   ].map((item, index) => (
@@ -362,6 +362,11 @@ export default function Gigwa() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     {
+                      version: "v2.11-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.11-RELEASE/Gigwa_V2.11-RELEASE_bundle_creation_osx.command",
+                      isScript: true,
+                    },
+                    {
                       version: "v2.10-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.10-RELEASE/Gigwa_V2.10-RELEASE_bundle_creation_osx.command",
                       isScript: true,
@@ -374,11 +379,6 @@ export default function Gigwa() {
                     {
                       version: "v2.8-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_osx.command",
-                      isScript: true,
-                    },
-                    {
-                      version: "v2.7-RELEASE",
-                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_osx.command",
                       isScript: true,
                     },
                   ].map((item, index) => (
@@ -425,6 +425,11 @@ export default function Gigwa() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     {
+                      version: "v2.11-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.11-RELEASE/Gigwa_V2.11-RELEASE_bundle_creation_ubuntu.sh",
+                      isScript: true,
+                    },
+                    {
                       version: "v2.10-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.10-RELEASE/Gigwa_V2.10-RELEASE_bundle_creation_ubuntu.sh",
                       isScript: true,
@@ -437,11 +442,6 @@ export default function Gigwa() {
                     {
                       version: "v2.8-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_ubuntu.sh",
-                      isScript: true,
-                    },
-                    {
-                      version: "v2.7-RELEASE",
-                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.7-RELEASE/Gigwa_V2.7-RELEASE_bundle_creation_ubuntu.sh",
                       isScript: true,
                     },
                   ].map((item, index) => (
