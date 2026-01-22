@@ -24,33 +24,32 @@ const outlineProps = {
   strokeLinejoin: "round" as const,
 };
 
-// Banana (Musa) — pseudostem + large leaf + banana bunch
+// Banana (Musa) — curved crescent banana shape like 🍌
 export const BananaIcon: React.FC<IconProps> = ({ size = 24, variant = "filled", ...props }) => {
   if (variant === "outline") {
     return (
       <svg {...outlineProps} width={size} height={size} {...props}>
-        {/* Large banana leaf */}
-        <path d="M24 4c-8 4-12 14-10 24h20c2-10-2-20-10-24z" />
-        <path d="M24 4v24" />
-        {/* Banana bunch */}
-        <path d="M14 32c-2 2-3 6-1 10" />
-        <path d="M19 32c-1 2-1 7 1 10" />
-        <path d="M24 32c0 3 0 7 0 10" />
-        <path d="M29 32c1 2 1 7-1 10" />
-        <path d="M34 32c2 2 3 6 1 10" />
+        {/* Back banana */}
+        <path d="M12 8c-4 6-4 16 2 26c2 1 4 0 5-2c1-8-1-18-7-24z" />
+        {/* Front banana - curved crescent */}
+        <path d="M20 4c-6 8-6 20 0 32c3 2 6 1 8-2c2-10-1-24-8-30z" />
+        {/* Stem tip */}
+        <path d="M20 4c2-2 5-3 8-2" />
+        {/* Banana ridge line */}
+        <path d="M24 8c-4 8-4 18 0 26" />
       </svg>
     );
   }
   return (
     <svg {...filledProps} width={size} height={size} {...props}>
-      {/* Large banana leaf silhouette */}
-      <path d="M24 2c-10 5-14 16-12 28h24c2-12-2-23-12-28zM23 6v22h2V6z" fillRule="evenodd" />
-      {/* Banana bunch - curved bananas */}
-      <path d="M12 32c-1 0-2 1-3 4c-1 4 0 8 2 9c1-2 2-6 3-9c0-2-1-4-2-4z" />
-      <path d="M18 33c-1 0-1.5 1-2 4c-0.5 4 0.5 7 2 8c0.5-2 1-6 1.5-9c0-2-0.5-3-1.5-3z" />
-      <path d="M24 33c-1 0-1 1-1 4c0 4 0 7 1 8c1-1 1-4 1-8c0-3 0-4-1-4z" />
-      <path d="M30 33c1 0 1.5 1 2 4c0.5 4-0.5 7-2 8c-0.5-2-1-6-1.5-9c0-2 0.5-3 1.5-3z" />
-      <path d="M36 32c1 0 2 1 3 4c1 4 0 8-2 9c-1-2-2-6-3-9c0-2 1-4 2-4z" />
+      {/* Back banana (slightly behind) */}
+      <path d="M10 10c-5 8-5 18 2 28c3 2 6 0 7-4c1-10-2-20-9-24z" opacity="0.6" />
+      {/* Front banana - iconic curved crescent */}
+      <path d="M18 4c-7 10-7 22 0 34c4 2 8 0 10-4c2-12-2-26-10-30z" />
+      {/* Stem tip */}
+      <path d="M18 4c3-3 7-4 12-2c-3 0-7 1-10 4" />
+      {/* Ridge highlight */}
+      <path d="M22 10c-4 8-4 20 0 28" stroke="white" strokeWidth="2" fill="none" opacity="0.4" />
     </svg>
   );
 };
