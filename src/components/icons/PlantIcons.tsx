@@ -11,228 +11,211 @@ const defaultProps = {
   viewBox: "0 0 24 24",
   fill: "none",
   stroke: "currentColor",
-  strokeWidth: 1.75,
+  strokeWidth: 2,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
 };
 
-// Bananier (Musa) — silhouette avec régime
+// Banana (Musa) — pseudostem + large leaf + small bunch
 export const BananaIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Régime de bananes */}
-    <path d="M12 3c-2 1-3 3-2.5 5.5" />
-    <path d="M12 3c2 1 3 3 2.5 5.5" />
-    <path d="M9.5 8.5c-1.5 0.5-2.5 2-2 4" />
-    <path d="M14.5 8.5c1.5 0.5 2.5 2 2 4" />
-    <path d="M10 12c-1 0.5-1.5 2-1 3.5" />
-    <path d="M14 12c1 0.5 1.5 2 1 3.5" />
-    {/* Tige */}
-    <path d="M12 3v-1" />
-    {/* Grande feuille caractéristique */}
-    <path d="M12 16c-3 0-5 2-5 5h10c0-3-2-5-5-5z" />
-    <path d="M12 16v5" />
+    {/* Large banana leaf */}
+    <path d="M12 2c-4 3-5 8-4 14" />
+    <path d="M12 2c4 3 5 8 4 14" />
+    <path d="M12 2v14" />
+    {/* Small banana bunch */}
+    <path d="M9 18c-1 0-2 1-1.5 3" />
+    <path d="M12 18c0 1 0 2.5 0 4" />
+    <path d="M15 18c1 0 2 1 1.5 3" />
   </svg>
 );
 
-// Riz (Oryza) — tige + panicule avec grains pendants
+// Rice (Oryza sativa) — culm + drooping panicle
 export const RiceIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Tige principale */}
-    <path d="M12 22v-14" />
-    {/* Panicule - grains pendants */}
-    <path d="M12 8c-1-2-2-3-4-3.5" />
-    <path d="M12 8c1-2 2-3 4-3.5" />
-    <path d="M8 4.5c-0.5 0-1 0.5-1.5 1" />
-    <path d="M16 4.5c0.5 0 1 0.5 1.5 1" />
-    <path d="M10 6c-1-1.5-2-2-3-2" />
-    <path d="M14 6c1-1.5 2-2 3-2" />
-    <path d="M7 4c-0.3 0.3-0.5 0.8-0.5 1.2" />
-    <path d="M17 4c0.3 0.3 0.5 0.8 0.5 1.2" />
-    {/* Feuille */}
-    <path d="M12 14c2 0 4-1 5-3" />
-    <path d="M12 18c-2 0-4-1-5-3" />
+    {/* Main culm */}
+    <path d="M12 22v-12" />
+    {/* Drooping panicle branches with grains */}
+    <path d="M12 10c-1-1-3-2-5-1" />
+    <path d="M12 10c1-1 3-2 5-1" />
+    <path d="M12 8c-1-1-2-2-4-2" />
+    <path d="M12 8c1-1 2-2 4-2" />
+    <path d="M12 6c-0.5-1-1.5-2-3-2.5" />
+    <path d="M12 6c0.5-1 1.5-2 3-2.5" />
+    {/* Leaf */}
+    <path d="M12 16c3-1 5-3 6-5" />
   </svg>
 );
 
-// Poaceae (graminées) — inflorescence typique
+// Poaceae (grass family) — spikelet inflorescence
 export const PoaceaeIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Tige */}
+    {/* Main stem */}
     <path d="M12 22v-18" />
-    {/* Épillets alternés typiques des graminées */}
-    <path d="M12 4l-3-1.5" />
-    <path d="M12 5.5l3-1.5" />
-    <path d="M12 7l-3-1.5" />
-    <path d="M12 8.5l3-1.5" />
-    <path d="M12 10l-3-1.5" />
-    <path d="M12 11.5l3-1.5" />
-    {/* Feuilles basales */}
-    <path d="M12 16c-2 1-4 0-5-2" />
-    <path d="M12 18c2 1 4 0 5-2" />
+    {/* Alternating spikelets */}
+    <path d="M12 4l-4-1" />
+    <path d="M12 6l4-1" />
+    <path d="M12 8l-4-1" />
+    <path d="M12 10l4-1" />
+    <path d="M12 12l-4-1" />
+    {/* Basal leaves */}
+    <path d="M12 18c-3 0-5-2-6-4" />
+    <path d="M12 20c3 0 5-2 6-4" />
   </svg>
 );
 
-// Vanille (Vanilla planifolia) — fleur d'orchidée + gousse
+// Vanilla (Vanilla planifolia) — orchid flower + pod
 export const VanillaIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Fleur d'orchidée stylisée */}
-    <path d="M12 2c-1 1-1 3 0 4" />
-    <path d="M12 2c1 1 1 3 0 4" />
-    <path d="M12 6c-2 0-3 1-3 2s1 1 3 1" />
-    <path d="M12 6c2 0 3 1 3 2s-1 1-3 1" />
-    <circle cx="12" cy="7" r="1" />
-    {/* Gousse de vanille */}
-    <path d="M8 12c0 0-1 4 0 8c0.5 1 1.5 1.5 2 1.5" />
-    <path d="M16 12c0 0 1 4 0 8c-0.5 1-1.5 1.5-2 1.5" />
-    <path d="M10 21.5c1 0.5 3 0.5 4 0" />
-    {/* Tige */}
-    <path d="M12 9v3" />
+    {/* Orchid flower petals */}
+    <path d="M12 3c-2 1-2 3-1 4" />
+    <path d="M12 3c2 1 2 3 1 4" />
+    <path d="M11 7c-2 0-3 1-2 3" />
+    <path d="M13 7c2 0 3 1 2 3" />
+    {/* Labellum */}
+    <ellipse cx="12" cy="8" rx="1.5" ry="1" />
+    {/* Stem */}
+    <path d="M12 10v2" />
+    {/* Vanilla pod */}
+    <path d="M10 12c-1 3-0.5 7 1 9" />
+    <path d="M14 12c1 3 0.5 7-1 9" />
   </svg>
 );
 
-// Taro (Colocasia esculenta) — feuille cordiforme + corme
+// Taro (Colocasia esculenta) — peltate heart leaf + corm
 export const TaroIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Grande feuille cordiforme (sagittée) */}
-    <path d="M12 2c-4 2-6 5-6 9c0 3 2 5 6 6c4-1 6-3 6-6c0-4-2-7-6-9z" />
-    {/* Nervure centrale */}
-    <path d="M12 4v13" />
-    {/* Nervures latérales */}
-    <path d="M12 7c-2 1-4 3-4 5" />
-    <path d="M12 7c2 1 4 3 4 5" />
-    {/* Pétiole + corme/tubercule */}
-    <path d="M12 17v2" />
-    <ellipse cx="12" cy="21" rx="2.5" ry="1.5" />
+    {/* Large peltate (heart-shaped) leaf */}
+    <path d="M12 2c-5 2-7 6-6 10c1 3 4 4 6 4c2 0 5-1 6-4c1-4-1-8-6-10z" />
+    {/* Central vein */}
+    <path d="M12 5v11" />
+    {/* Side veins */}
+    <path d="M12 8c-2 2-4 4-4 6" />
+    <path d="M12 8c2 2 4 4 4 6" />
+    {/* Petiole */}
+    <path d="M12 16v3" />
+    {/* Corm */}
+    <ellipse cx="12" cy="21" rx="3" ry="1.5" />
   </svg>
 );
 
-// Cacao (Theobroma cacao) — cabosse nervurée
+// Cocoa (Theobroma cacao) — ribbed pod
 export const CocoaIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Cabosse de cacao - forme allongée nervurée */}
-    <path d="M12 2c-3 0-5 3-5 7c0 5 2 10 5 12c3-2 5-7 5-12c0-4-2-7-5-7z" />
-    {/* Nervures verticales caractéristiques */}
-    <path d="M9 4c-1 3-1 8 0 14" />
-    <path d="M15 4c1 3 1 8 0 14" />
+    {/* Cacao pod outline */}
+    <path d="M12 2c-4 1-6 5-6 10c0 4 3 8 6 10c3-2 6-6 6-10c0-5-2-9-6-10z" />
+    {/* Longitudinal ribs */}
+    <path d="M8 5c-1 4-1 10 1 14" />
     <path d="M12 3v18" />
-    {/* Pédoncule */}
-    <path d="M12 2v-1" />
-    <circle cx="12" cy="0.5" r="0.5" />
+    <path d="M16 5c1 4 1 10-1 14" />
   </svg>
 );
 
-// Café (Coffea) — branche avec cerises
+// Coffee (Coffea) — branch with cherries
 export const CoffeeIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Branche */}
-    <path d="M4 12h16" />
-    {/* Cerises de café (3) */}
-    <ellipse cx="8" cy="15" rx="1.5" ry="2" />
-    <ellipse cx="12" cy="16" rx="1.5" ry="2" />
-    <ellipse cx="16" cy="15" rx="1.5" ry="2" />
-    {/* Pédoncules */}
-    <path d="M8 13v-1" />
-    <path d="M12 14v-2" />
-    <path d="M16 13v-1" />
-    {/* Feuilles opposées typiques */}
-    <path d="M6 12c-2-1-3-3-2-5c2 0 4 2 4 5" />
-    <path d="M18 12c2-1 3-3 2-5c-2 0-4 2-4 5" />
-    <path d="M6 7l2 5" />
-    <path d="M18 7l-2 5" />
+    {/* Branch */}
+    <path d="M4 12h14" />
+    {/* Coffee cherries */}
+    <circle cx="9" cy="16" r="2" />
+    <circle cx="15" cy="15" r="2" />
+    {/* Cherry stems */}
+    <path d="M9 14v-2" />
+    <path d="M15 13v-1" />
+    {/* Opposite leaves */}
+    <path d="M6 12c-2-2-2-5 0-6c2 1 3 4 2 6" />
+    <path d="M18 12c2-2 2-5 0-6c-2 1-3 4-2 6" />
   </svg>
 );
 
-// Canne à sucre (Saccharum) — tige segmentée avec nœuds
+// Sugarcane (Saccharum) — segmented stalk with nodes
 export const SugarcaneIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Tige segmentée avec nœuds visibles */}
+    {/* Segmented stalk */}
     <path d="M10 22v-20" />
     <path d="M14 22v-20" />
-    {/* Nœuds (entre-nœuds) */}
+    {/* Nodes */}
     <path d="M9 5h6" />
     <path d="M9 10h6" />
     <path d="M9 15h6" />
     <path d="M9 20h6" />
-    {/* Feuilles fines partant des nœuds */}
-    <path d="M14 5c2 0 4-1 6-3" />
-    <path d="M10 10c-2 0-4-1-6-3" />
-    <path d="M14 15c2 0 4-1 6-3" />
+    {/* Narrow leaves from nodes */}
+    <path d="M14 5c2-1 5-2 7-4" />
+    <path d="M10 10c-2-1-5-2-7-4" />
+    <path d="M14 15c2-1 5-2 7-4" />
   </svg>
 );
 
-// Palmier (Arecaceae) — tronc + palmes
+// Palm (Arecaceae) — trunk + pinnate frond
 export const PalmIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Tronc avec cicatrices foliaires */}
-    <path d="M12 22v-12" />
-    <path d="M11 14h2" />
-    <path d="M11 17h2" />
-    <path d="M11 20h2" />
-    {/* Palmes (feuilles pennées) */}
-    <path d="M12 10c-4-1-7-4-8-7" />
-    <path d="M12 10c4-1 7-4 8-7" />
-    <path d="M12 10c-5 0-9-2-10-4" />
-    <path d="M12 10c5 0 9-2 10-4" />
-    <path d="M12 10c-3 1-6 0-8 0" />
-    <path d="M12 10c3 1 6 0 8 0" />
-    {/* Palme centrale */}
-    <path d="M12 10v-8" />
+    {/* Trunk with leaf scars */}
+    <path d="M12 22v-10" />
+    <path d="M11 15h2" />
+    <path d="M11 18h2" />
+    {/* Pinnate fronds */}
+    <path d="M12 12c-4-2-7-5-9-6" />
+    <path d="M12 12c4-2 7-5 9-6" />
+    <path d="M12 12c-5-1-8-3-10-3" />
+    <path d="M12 12c5-1 8-3 10-3" />
+    <path d="M12 12c-4 0-7-1-9-1" />
+    <path d="M12 12c4 0 7-1 9-1" />
+    {/* Central frond */}
+    <path d="M12 12v-10" />
   </svg>
 );
 
-// Citrus — fruit + feuille + pédoncule
+// Citrus — fruit + leaf + stem
 export const CitrusIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Fruit rond (agrume) */}
+    {/* Citrus fruit */}
     <circle cx="12" cy="14" r="6" />
-    {/* Segments internes suggérés */}
+    {/* Internal segments hint */}
     <path d="M12 8v12" />
-    <path d="M7.5 10.5l9 7" />
-    <path d="M16.5 10.5l-9 7" />
-    {/* Pédoncule */}
+    <path d="M6.5 11.5l11 5" />
+    <path d="M17.5 11.5l-11 5" />
+    {/* Stem */}
     <path d="M12 8v-2" />
-    {/* Feuille typique des agrumes */}
-    <path d="M12 6c2-1 4-3 3-5c-2 0-4 2-4 4" />
-    <path d="M13 3l-1 3" />
+    {/* Leaf */}
+    <path d="M12 6c3-2 4-4 2-5c-2 0-3 2-3 4" />
   </svg>
 );
 
-// Olivier (Olea europaea) — branche avec olives
+// Olive (Olea europaea) — branch with olives
 export const OliveIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Branche */}
-    <path d="M4 12c4 0 12 0 16-2" />
-    {/* Olives (2) */}
-    <ellipse cx="10" cy="15" rx="1.5" ry="2.5" />
-    <ellipse cx="15" cy="14" rx="1.5" ry="2.5" />
-    {/* Pédoncules des olives */}
+    {/* Branch */}
+    <path d="M3 12c5 0 14-1 18-3" />
+    {/* Olives */}
+    <ellipse cx="10" cy="15" rx="2" ry="2.5" />
+    <ellipse cx="16" cy="13" rx="2" ry="2.5" />
+    {/* Olive stems */}
     <path d="M10 12.5v-1" />
-    <path d="M15 11.5v-1" />
-    {/* Feuilles lancéolées opposées */}
-    <path d="M6 12c-1-2-1-4 1-5c1 1 1 3-1 5" />
-    <path d="M8 11c0-2 1-4 3-4c0 1-1 3-3 4" />
-    <path d="M18 10c1-2 1-4-1-5c-1 1-1 3 1 5" />
-    <path d="M13 9c0-2 1-3 3-3c0 1-1 2-3 3" />
+    <path d="M16 10.5v-1" />
+    {/* Lanceolate leaves */}
+    <path d="M5 12c-1-2 0-4 2-4c0 2-1 4-2 4" />
+    <path d="M8 11c0-2 1-4 3-4c0 2-1 4-3 4" />
+    <path d="M19 9c1-2 0-4-2-4c0 2 1 4 2 4" />
   </svg>
 );
 
-// Igname/Yam (Dioscorea) — feuille cordée + tubercule
+// Yam (Dioscorea) — cordate leaf + tuber
 export const YamIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Feuille cordée (en cœur) typique */}
-    <path d="M12 3c-3 1-5 4-5 7c0 2 1 4 5 5c4-1 5-3 5-5c0-3-2-6-5-7z" />
-    {/* Nervures */}
+    {/* Cordate (heart-shaped) leaf */}
+    <path d="M12 3c-4 2-6 5-5 9c1 2 3 3 5 3c2 0 4-1 5-3c1-4-1-7-5-9z" />
+    {/* Veins */}
     <path d="M12 4v11" />
-    <path d="M12 7c-2 2-3 4-3 5" />
-    <path d="M12 7c2 2 3 4 3 5" />
-    {/* Tige/liane */}
-    <path d="M12 15c0 2-1 3-2 4" />
-    {/* Tubercule allongé */}
-    <path d="M8 19c-2 0-3 1-3 2c0 1 2 1.5 4 1c2-0.5 3-1.5 3-2c0-0.5-1-1-2-1" />
+    <path d="M12 7c-2 2-3 4-3 6" />
+    <path d="M12 7c2 2 3 4 3 6" />
+    {/* Vine stem */}
+    <path d="M12 15c-1 2-2 3-3 4" />
+    {/* Elongated tuber */}
+    <path d="M7 19c-2 0-3 1-3 2.5c0 1 3 1.5 5 0.5c2-1 3-2 3-2.5c0-0.5-1-0.5-2-0.5" />
   </svg>
 );
 
-// Export de tous les icônes
+// Export all icons
 export const PlantIcons = {
   banana: BananaIcon,
   rice: RiceIcon,
