@@ -39,12 +39,9 @@ export const BananaIcon: React.FC<IconProps> = ({ size = 24, variant = "filled",
         strokeLinejoin="round"
         {...props}
       >
-        {/* banana outer curve */}
-        <path d="M5 14c3.5 5 11 6.5 15 2" />
-        {/* banana inner curve */}
-        <path d="M6.5 13c3 4 9.5 5 12.5 2" />
-        {/* stem */}
-        <path d="M19.5 15.8c.8-.2 1.5-.7 2-1.4" />
+        <path d="M6 14c3 5 10 6 14 2" />
+        <path d="M6.5 11.5c3 4 8 5 11.5 2" />
+        <path d="M18.8 16c.8-.2 1.6-.7 2.2-1.5" />
       </svg>
     );
   }
