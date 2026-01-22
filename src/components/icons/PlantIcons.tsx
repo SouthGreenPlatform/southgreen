@@ -28,15 +28,23 @@ const outlineProps = {
 export const BananaIcon: React.FC<IconProps> = ({ size = 24, variant = "filled", ...props }) => {
   if (variant === "outline") {
     return (
-      <svg {...outlineProps} width={size} height={size} {...props}>
-        {/* Back banana */}
-        <path d="M12 8c-4 6-4 16 2 26c2 1 4 0 5-2c1-8-1-18-7-24z" />
-        {/* Front banana - curved crescent */}
-        <path d="M20 4c-6 8-6 20 0 32c3 2 6 1 8-2c2-10-1-24-8-30z" />
-        {/* Stem tip */}
-        <path d="M20 4c2-2 5-3 8-2" />
-        {/* Banana ridge line */}
-        <path d="M24 8c-4 8-4 18 0 26" />
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        {...props}
+      >
+        {/* banana outer curve */}
+        <path d="M5 14c3.5 5 11 6.5 15 2" />
+        {/* banana inner curve */}
+        <path d="M6.5 13c3 4 9.5 5 12.5 2" />
+        {/* stem */}
+        <path d="M19.5 15.8c.8-.2 1.5-.7 2-1.4" />
       </svg>
     );
   }
@@ -92,7 +100,12 @@ export const RiceIcon: React.FC<IconProps> = ({ size = 24, variant = "filled", .
       <ellipse cx="19" cy="5" rx="3" ry="4" />
       <ellipse cx="29" cy="5" rx="3" ry="4" />
       {/* Branch connections */}
-      <path d="M24 20L12 16M24 20L36 16M24 16L15 10M24 16L33 10M24 12L19 6M24 12L29 6" stroke="currentColor" strokeWidth="2" fill="none" />
+      <path
+        d="M24 20L12 16M24 20L36 16M24 16L15 10M24 16L33 10M24 12L19 6M24 12L29 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        fill="none"
+      />
       {/* Leaf */}
       <path d="M26 32c8-2 12-8 14-14c-4 1-10 6-16 12z" />
     </svg>
