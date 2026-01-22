@@ -31,6 +31,7 @@ const genomeHubs = [
       "Mosaics",
       "Structural variation",
       "Pathways",
+      "CRISPR",
     ],
     status: "Active",
   },
@@ -94,7 +95,7 @@ const genomeHubs = [
     description: "Rice genomics platform with multi-species comparative analysis capabilities.",
     link: "https://rice-genome-hub.southgreen.fr/",
     icon: "rice" as PlantIconName,
-    tags: ["JBrowse", "BLAST", "Variants", "Expression", "Repeats"],
+    tags: ["JBrowse", "BLAST", "Synteny", "Variants", "Expression", "GO Enrichment", "Repeats"],
     status: "Active",
   },
   {
