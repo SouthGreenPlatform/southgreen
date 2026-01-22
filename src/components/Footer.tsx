@@ -48,6 +48,10 @@ const resources = [
     href: "https://github.com/SouthGreenPlatform",
   },
   {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/south-green-bioinformatics-platform",
+  },
+  {
     label: "Publications",
     href: "./publications",
   },
