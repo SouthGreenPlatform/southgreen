@@ -88,7 +88,8 @@ const features = [
 ];
 
 const downloads = [
-  { version: "v2.9-RELEASE", isLatest: true },
+  { version: "v2.10-RELEASE", isLatest: true },
+  { version: "v2.9-RELEASE" },
   { version: "v2.8-RELEASE" },
   { version: "v2.7-RELEASE" },
   { version: "v2.6.1-RELEASE" },
@@ -308,6 +309,11 @@ export default function Gigwa() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     {
+                      version: "v2.10-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.10-RELEASE/Gigwa_V2.10-RELEASE_bundle_creation_windows.ps1",
+                      isScript: true,
+                    },
+                    {
                       version: "v2.9-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_windows.ps1",
                       isScript: true,
@@ -355,6 +361,11 @@ export default function Gigwa() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {[
+                    {
+                      version: "v2.10-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.10-RELEASE/Gigwa_V2.10-RELEASE_bundle_creation_osx.command",
+                      isScript: true,
+                    },
                     {
                       version: "v2.9-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_osx.command",
@@ -414,6 +425,11 @@ export default function Gigwa() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     {
+                      version: "v2.10-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.10-RELEASE/Gigwa_V2.10-RELEASE_bundle_creation_ubuntu.sh",
+                      isScript: true,
+                    },
+                    {
                       version: "v2.9-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_ubuntu.sh",
                       isScript: true,
@@ -460,7 +476,7 @@ export default function Gigwa() {
               </h2>
               <div className="space-y-3">
                 <a
-                  href="https://github.com/SouthGreenPlatform/gigwa/wiki"
+                  href="https://github.com/SouthGreenPlatform/Gigwa2/wiki"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
@@ -478,7 +494,7 @@ export default function Gigwa() {
                   <span>Administration Guide (v1)</span>
                 </a>
                 <a
-                  href="https://southgreen.fr/sites/southgreen.fr/files/uploads/gigwa_releases/howto_gigwa_rapidnj_taxonium.pdf"
+                  href="https://github.com/SouthGreenPlatform/Gigwa2"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
