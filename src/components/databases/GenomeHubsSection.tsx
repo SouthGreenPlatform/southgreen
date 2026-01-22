@@ -181,9 +181,12 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
         {/* Section Header */}
         <div className="mb-12">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              Genome Hubs
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                Genome Hubs
+              </span>
+              <SdpElixirBadge />
+            </div>
 
             {/* Filter Dropdown */}
             <div className="flex items-center gap-2">
@@ -273,15 +276,12 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                         return IconComponent ? <IconComponent size={48} className="text-primary" /> : null;
                       })()}
                     </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <SdpElixirBadge />
-                      <Badge
-                        variant={hub.status === "Active" ? "default" : "secondary"}
-                        className={hub.status === "Active" ? "gradient-hero border-0" : ""}
-                      >
-                        {hub.status}
-                      </Badge>
-                    </div>
+                    <Badge
+                      variant={hub.status === "Active" ? "default" : "secondary"}
+                      className={hub.status === "Active" ? "gradient-hero border-0" : ""}
+                    >
+                      {hub.status}
+                    </Badge>
                   </div>
                 </div>
 
