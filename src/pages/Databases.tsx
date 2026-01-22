@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { DatabaseHero } from "@/components/databases/DatabaseHero";
@@ -10,10 +11,28 @@ import { Button } from "@/components/ui/button";
 
 type SectionFilter = "all" | "genome-hubs" | "analysis-tools" | "legacy-tools";
 
+const validSections: SectionFilter[] = ["all", "genome-hubs", "analysis-tools", "legacy-tools"];
+
 const Databases = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [activeSearch, setActiveSearch] = useState("");
-  const [sectionFilter, setSectionFilter] = useState<SectionFilter>("all");
+  
+  // Initialize section filter from URL parameter
+  const sectionFromUrl = searchParams.get("section") as SectionFilter | null;
+  const [sectionFilter, setSectionFilter] = useState<SectionFilter>(
+    sectionFromUrl && validSections.includes(sectionFromUrl) ? sectionFromUrl : "all"
+  );
+
+  // Sync URL when filter changes
+  useEffect(() => {
+    if (sectionFilter === "all") {
+      searchParams.delete("section");
+    } else {
+      searchParams.set("section", sectionFilter);
+    }
+    setSearchParams(searchParams, { replace: true });
+  }, [sectionFilter, searchParams, setSearchParams]);
 
   const handleSearch = () => {
     setActiveSearch(searchQuery);
