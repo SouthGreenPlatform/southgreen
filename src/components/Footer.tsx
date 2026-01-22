@@ -1,4 +1,4 @@
-import { Mail, MapPin, ExternalLink, Linkedin } from "lucide-react";
+import { Mail, MapPin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import ifbElixirLogos from "@/assets/ifb-elixir-logos.png";
 
@@ -117,9 +117,8 @@ export function Footer() {
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="text-primary-foreground/70 hover:text-primary transition-colors inline-flex items-center gap-1"
                   >
-                    {link.label === "LinkedIn" && <Linkedin className="w-4 h-4" />}
                     {link.label}
-                    {link.href.startsWith("http") && link.label !== "LinkedIn" && <ExternalLink className="w-3 h-3" />}
+                    {link.href.startsWith("http") && <ExternalLink className="w-3 h-3" />}
                   </a>
                 </li>
               ))}
