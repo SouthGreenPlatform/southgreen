@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { ExternalLink, Filter, X } from "lucide-react";
+import { ExternalLink, Filter, X, Sparkles } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -12,6 +12,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { PlantIcons, PlantIconName } from "@/components/icons/PlantIcons";
+
+// SDP ELIXIR Badge component
+const SdpElixirBadge = () => (
+  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-orange-300 to-orange-400 text-orange-900 text-xs font-semibold shadow-sm border border-orange-400/50">
+    <Sparkles className="w-3 h-3" />
+    SDP ELIXIR
+  </span>
+);
 
 const genomeHubs = [
   {
@@ -265,12 +273,15 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                         return IconComponent ? <IconComponent size={48} className="text-primary" /> : null;
                       })()}
                     </div>
-                    <Badge
-                      variant={hub.status === "Active" ? "default" : "secondary"}
-                      className={hub.status === "Active" ? "gradient-hero border-0" : ""}
-                    >
-                      {hub.status}
-                    </Badge>
+                    <div className="flex flex-col items-end gap-2">
+                      <SdpElixirBadge />
+                      <Badge
+                        variant={hub.status === "Active" ? "default" : "secondary"}
+                        className={hub.status === "Active" ? "gradient-hero border-0" : ""}
+                      >
+                        {hub.status}
+                      </Badge>
+                    </div>
                   </div>
                 </div>
 

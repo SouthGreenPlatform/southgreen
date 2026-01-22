@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { ExternalLink, GitBranch, Search, TreeDeciduous, Filter, X } from "lucide-react";
+import { ExternalLink, GitBranch, Search, TreeDeciduous, Filter, X, Sparkles } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   DropdownMenu,
@@ -10,6 +10,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { LucideIcon } from "lucide-react";
+
+// SDP ELIXIR Badge component
+const SdpElixirBadge = () => (
+  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-gradient-to-r from-orange-300 to-orange-400 text-orange-900 text-[10px] font-semibold shadow-sm border border-orange-400/50">
+    <Sparkles className="w-2.5 h-2.5" />
+    SDP ELIXIR
+  </span>
+);
 
 // Import favicons
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
@@ -31,6 +39,7 @@ interface Tool {
   color: string;
   internal?: boolean;
   tags?: string[];
+  sdpElixir?: boolean;
 }
 
 interface ToolCategory {
@@ -52,6 +61,7 @@ const toolCategories: ToolCategory[] = [
         favicon: agroldFavicon,
         color: "from-green-600 to-teal-500",
         tags: ["Semantic Web", "Linked Data", "SPARQL"],
+        sdpElixir: true,
       },
     ],
   },
@@ -82,6 +92,7 @@ const toolCategories: ToolCategory[] = [
         color: "from-indigo-500 to-purple-500",
         internal: true,
         tags: ["SNP", "Genotyping", "VCF"],
+        sdpElixir: true,
       },
       {
         name: "SniPlay",
@@ -379,6 +390,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                                   {tool.icon && <tool.icon className="w-5 h-5 text-primary-foreground" />}
                                 </div>
                               )}
+                              {tool.sdpElixir && <SdpElixirBadge />}
                             </div>
                             <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
                               {tool.name}
