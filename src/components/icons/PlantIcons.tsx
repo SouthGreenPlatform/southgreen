@@ -85,17 +85,22 @@ export const VanillaIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
 // Taro (Colocasia esculenta) — peltate heart leaf + corm
 export const TaroIcon: React.FC<IconProps> = ({ size = 24, ...props }) => (
   <svg {...defaultProps} width={size} height={size} {...props}>
-    {/* Large peltate (heart-shaped) leaf */}
-    <path d="M12 2c-5 2-7 6-6 10c1 3 4 4 6 4c2 0 5-1 6-4c1-4-1-8-6-10z" />
-    {/* Central vein */}
-    <path d="M12 5v11" />
-    {/* Side veins */}
-    <path d="M12 8c-2 2-4 4-4 6" />
-    <path d="M12 8c2 2 4 4 4 6" />
-    {/* Petiole */}
+    {/* Peltate heart-shaped leaf - notch at top, rounded lobes */}
+    <path d="M12 1c-1 1-1 2 0 3" />
+    <path d="M12 1c1 1 1 2 0 3" />
+    <path d="M12 4c-4 0-7 3-7 6c0 4 3 6 7 6c4 0 7-2 7-6c0-3-3-6-7-6z" />
+    {/* Peltate attachment point (petiole joins center of leaf) */}
+    <circle cx="12" cy="10" r="0.5" />
+    {/* Radiating veins from peltate center */}
+    <path d="M12 10l-4-3" />
+    <path d="M12 10l4-3" />
+    <path d="M12 10l-5 2" />
+    <path d="M12 10l5 2" />
+    <path d="M12 10v4" />
+    {/* Petiole coming from center */}
     <path d="M12 16v3" />
-    {/* Corm */}
-    <ellipse cx="12" cy="21" rx="3" ry="1.5" />
+    {/* Corm/tuber */}
+    <path d="M9 19c-1 0.5-1 2 0 3c1 0.5 2 0.5 3 0c1-0.5 2-0.5 3 0c1-1 1-2.5 0-3" />
   </svg>
 );
 
