@@ -21,13 +21,12 @@ const genomeHubs = [
     link: "https://banana-genome-hub.southgreen.fr/",
     icon: "banana" as PlantIconName,
     tags: [
-      "Assemblies",
       "JBrowse",
       "BLAST",
       "Synteny",
       "Expression",
       "GO Enrichment",
-      "Markers",
+      "Variants",
       "Pangenome",
       "Mosaics",
       "Structural variation",
@@ -41,7 +40,7 @@ const genomeHubs = [
     description: "Comprehensive platform for citrus genomics, comparative analysis, and breeding tools.",
     link: "https://citrus-genome-hub.southgreen.fr/",
     icon: "citrus" as PlantIconName,
-    tags: ["Assemblies", "JBrowse", "Synteny", "Variants", "Repeat Elements"],
+    tags: ["JBrowse", "BLAST", "Synteny", "Variants", "Repeats"],
     status: "Active",
   },
   {
@@ -50,7 +49,7 @@ const genomeHubs = [
     description: "Genomic resources and tools for cocoa research and breeding programs.",
     link: "https://cocoa-genome-hub.southgreen.fr/",
     icon: "cocoa" as PlantIconName,
-    tags: ["Assembly", "Genes", "Variants"],
+    tags: ["JBrowse", "BLAST", "Pathways"],
     status: "Archive",
   },
   {
@@ -59,7 +58,7 @@ const genomeHubs = [
     description: "Comprehensive genome browser and analysis tools for coffee genomics research.",
     link: "https://coffee-genome-hub.southgreen.fr/",
     icon: "coffee" as PlantIconName,
-    tags: ["Assemblies"],
+    tags: ["JBrowse", "BLAST"],
     status: "Active",
   },
   {
@@ -77,7 +76,7 @@ const genomeHubs = [
     description: "Integrated genomic resources for olive research and Mediterranean crop improvement.",
     link: "https://olive-genome-hub.climolivemed.com/",
     icon: "olive" as PlantIconName,
-    tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
+    tags: ["JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
   {
@@ -95,7 +94,7 @@ const genomeHubs = [
     description: "Rice genomics platform with multi-species comparative analysis capabilities.",
     link: "https://rice-genome-hub.southgreen.fr/",
     icon: "rice" as PlantIconName,
-    tags: ["Assemblies", "JBrowse", "BLAST", "Variants", "Expression", "Repeat Elements"],
+    tags: ["JBrowse", "BLAST", "Variants", "Expression", "Repeats"],
     status: "Active",
   },
   {
@@ -104,7 +103,7 @@ const genomeHubs = [
     description: "Specialized hub for complex sugarcane genome analysis and visualization.",
     link: "http://sugarcane-genome.cirad.fr/",
     icon: "sugarcane" as PlantIconName,
-    tags: ["Assemblies", "JBrowse", "BLAST", "Synteny"],
+    tags: ["JBrowse", "BLAST", "Synteny"],
     status: "Active",
   },
   {
@@ -122,7 +121,7 @@ const genomeHubs = [
     description: "Genomic resources for Dioscorea species",
     link: "https://yam-genome-hub.southgreen.fr",
     icon: "yam" as PlantIconName,
-    tags: ["Assemblies", "JBrowse", "BLAST"],
+    tags: ["JBrowse", "BLAST"],
     status: "Active",
   },
 ];
@@ -130,9 +129,7 @@ const genomeHubs = [
 export { genomeHubs };
 
 // Extract all unique tags from genome hubs
-const allTags = Array.from(
-  new Set(genomeHubs.flatMap((hub) => hub.tags))
-).sort();
+const allTags = Array.from(new Set(genomeHubs.flatMap((hub) => hub.tags))).sort();
 
 interface GenomeHubsSectionProps {
   searchQuery?: string;
@@ -143,26 +140,22 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
 
   const filteredHubs = useMemo(() => {
     let hubs = genomeHubs;
-    
+
     // Filter by search query
     if (searchQuery) {
       hubs = hubs.filter((hub) => hub.name.toLowerCase().includes(searchQuery.toLowerCase()));
     }
-    
+
     // Filter by selected tags
     if (selectedTags.length > 0) {
-      hubs = hubs.filter((hub) => 
-        selectedTags.some((tag) => hub.tags.includes(tag))
-      );
+      hubs = hubs.filter((hub) => selectedTags.some((tag) => hub.tags.includes(tag)));
     }
-    
+
     return hubs;
   }, [searchQuery, selectedTags]);
 
   const toggleTag = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
+    setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]));
   };
 
   const clearFilters = () => {
@@ -182,7 +175,7 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
               Genome Hubs
             </span>
-            
+
             {/* Filter Dropdown */}
             <div className="flex items-center gap-2">
               {selectedTags.length > 0 && (
@@ -292,10 +285,10 @@ export function GenomeHubsSection({ searchQuery = "" }: GenomeHubsSectionProps) 
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {hub.tags.map((tag) => (
-                      <Badge 
-                        key={tag} 
-                        variant="outline" 
-                        className={`text-xs ${selectedTags.includes(tag) ? 'bg-primary/20 border-primary' : ''}`}
+                      <Badge
+                        key={tag}
+                        variant="outline"
+                        className={`text-xs ${selectedTags.includes(tag) ? "bg-primary/20 border-primary" : ""}`}
                       >
                         {tag}
                       </Badge>
