@@ -92,6 +92,26 @@ const Training = () => {
             </div>
           </div>
         </section>
+
+        {/* Upcoming Events Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                  Upcoming Events
+                </h2>
+              </div>
+              
+              <div className="bg-card border border-border rounded-xl p-8 text-center">
+                <p className="text-muted-foreground text-lg">None</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
