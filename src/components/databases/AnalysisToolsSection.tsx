@@ -89,7 +89,7 @@ const toolCategories: ToolCategory[] = [
         link: "https://sniplay.southgreen.fr/",
         icon: Search,
         color: "from-blue-500 to-indigo-500",
-        tags: ["SNP", "Re-sequencing", "Variant Analysis"],
+        tags: ["SNP", "Variant Analysis", "haplotypes", "Diversity analyses"],
       },
     ],
   },
@@ -103,7 +103,7 @@ const toolCategories: ToolCategory[] = [
         link: "http://gemo.southgreen.fr/",
         icon: GitBranch,
         color: "from-violet-500 to-purple-500",
-        tags: ["Comparative Genomics", "Visualization"],
+        tags: ["Chromosome Painting", "Visualization"],
       },
       {
         name: "VCFHunter",
@@ -111,7 +111,7 @@ const toolCategories: ToolCategory[] = [
         link: "https://github.com/SouthGreenPlatform/VcfHunter",
         favicon: githubFavicon,
         color: "from-teal-500 to-cyan-500",
-        tags: ["VCF", "Haplotype", "Chromosome Painting"],
+        tags: ["VCF", "Chromosome Painting"],
       },
     ],
   },
@@ -125,7 +125,7 @@ const toolCategories: ToolCategory[] = [
         link: "https://github.com/tranchant/frangiPANe",
         favicon: githubFavicon,
         color: "from-amber-500 to-orange-500",
-        tags: ["Pangenome", "Assembly", "Graph"],
+        tags: ["Pangenome", "Assembly"],
       },
       {
         name: "Panache",
@@ -141,7 +141,7 @@ const toolCategories: ToolCategory[] = [
         link: "https://github.com/SouthGreenPlatform/PanExplorer",
         favicon: githubFavicon,
         color: "from-pink-500 to-rose-500",
-        tags: ["Pangenome", "Interactive", "Exploration"],
+        tags: ["Pangenome", "Visualization"],
       },
     ],
   },
@@ -218,7 +218,7 @@ export { toolCategories };
 
 // Extract all unique tags from tools
 const allToolTags = Array.from(
-  new Set(toolCategories.flatMap((category) => category.tools.flatMap((tool) => tool.tags || [])))
+  new Set(toolCategories.flatMap((category) => category.tools.flatMap((tool) => tool.tags || []))),
 ).sort();
 
 export { allToolTags };
@@ -248,9 +248,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
       categories = categories
         .map((category) => ({
           ...category,
-          tools: category.tools.filter((tool) =>
-            selectedTags.some((tag) => tool.tags?.includes(tag))
-          ),
+          tools: category.tools.filter((tool) => selectedTags.some((tag) => tool.tags?.includes(tag))),
         }))
         .filter((category) => category.tools.length > 0);
     }
@@ -259,9 +257,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
   }, [searchQuery, selectedTags]);
 
   const toggleTag = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
+    setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]));
   };
 
   const clearFilters = () => {
@@ -287,7 +283,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                 Comprehensive tools organized by research domain to support your complete genomics analysis pipeline.
               </p>
             </div>
-            
+
             {/* Tag Filter Dropdown */}
             <div className="flex flex-wrap items-center gap-2">
               <DropdownMenu>
@@ -314,7 +310,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              
+
               {selectedTags.length > 0 && (
                 <Button variant="ghost" size="sm" onClick={clearFilters} className="text-muted-foreground">
                   Clear filters
@@ -322,7 +318,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
               )}
             </div>
           </div>
-          
+
           {/* Selected Tags */}
           {selectedTags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
@@ -371,7 +367,11 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                           <CardHeader className="pb-3">
                             <div className="flex items-start justify-between mb-3">
                               {tool.favicon ? (
-                                <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
+                                <img
+                                  src={tool.favicon}
+                                  alt={`${tool.name} icon`}
+                                  className="w-12 h-12 object-contain"
+                                />
                               ) : (
                                 <div
                                   className={`w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
@@ -397,9 +397,7 @@ export function AnalysisToolsSection({ searchQuery = "" }: AnalysisToolsSectionP
                                     key={tag}
                                     variant="outline"
                                     className={`text-xs ${
-                                      selectedTags.includes(tag)
-                                        ? "bg-primary/10 border-primary/30 text-primary"
-                                        : ""
+                                      selectedTags.includes(tag) ? "bg-primary/10 border-primary/30 text-primary" : ""
                                     }`}
                                   >
                                     {tag}
