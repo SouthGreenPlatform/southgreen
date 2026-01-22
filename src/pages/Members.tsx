@@ -253,22 +253,25 @@ export default function Members() {
                 variant={studentFilter === "all" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setStudentFilter("all")}
+                className={studentFilter === "all" ? "gradient-hero border-0" : ""}
               >
-                All
+                All ({students.length})
               </Button>
               <Button
                 variant={studentFilter === "current" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setStudentFilter("current")}
+                className={studentFilter === "current" ? "gradient-hero border-0" : ""}
               >
-                Current
+                Current ({students.filter(s => isCurrentStudent(s.dates)).length})
               </Button>
               <Button
                 variant={studentFilter === "past" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setStudentFilter("past")}
+                className={studentFilter === "past" ? "gradient-hero border-0" : ""}
               >
-                Past
+                Past ({students.filter(s => !isCurrentStudent(s.dates)).length})
               </Button>
             </div>
           </div>
