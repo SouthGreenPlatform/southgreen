@@ -61,7 +61,7 @@ const teamMembers = [
 ];
 
 const students = [
-  { name: "Rayane Elmedjadji", degree: "MSc alternant", dates: "2024-2026" },
+  { name: "Rayane Elmedjadji", degree: "MSc alternant", dates: "2024-" },
   { name: "Michel Gomez", degree: "PhD", dates: "2023-" },
   { name: "Bill Happi", degree: "PhD", dates: "2021-2024" },
   { name: "Yann Pomie", degree: "MSc2", dates: "2021-2023" },
@@ -263,7 +263,7 @@ export default function Members() {
                 onClick={() => setStudentFilter("current")}
                 className={studentFilter === "current" ? "gradient-hero border-0" : ""}
               >
-                Current ({students.filter(s => isCurrentStudent(s.dates)).length})
+                Current ({students.filter((s) => isCurrentStudent(s.dates)).length})
               </Button>
               <Button
                 variant={studentFilter === "past" ? "default" : "outline"}
@@ -271,7 +271,7 @@ export default function Members() {
                 onClick={() => setStudentFilter("past")}
                 className={studentFilter === "past" ? "gradient-hero border-0" : ""}
               >
-                Past ({students.filter(s => !isCurrentStudent(s.dates)).length})
+                Past ({students.filter((s) => !isCurrentStudent(s.dates)).length})
               </Button>
             </div>
           </div>
