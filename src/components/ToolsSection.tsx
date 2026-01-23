@@ -1,7 +1,7 @@
-import { ExternalLink, Layers, Eye, Citrus } from "lucide-react";
-import { GiBananaPeeled } from "react-icons/gi";
+import { ExternalLink, Layers, Eye } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { BananaIcon, CitrusIcon } from "@/components/icons/PlantIcons";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
@@ -14,6 +14,7 @@ interface Tool {
   description: string;
   link: string;
   icon?: React.ComponentType<{ className?: string }>;
+  plantIcon?: React.ComponentType<{ size?: number; colored?: boolean }>;
   favicon?: string;
   color: string;
   internal: boolean;
@@ -36,7 +37,7 @@ const tools: Tool[] = [
     description:
       "Comprehensive genomic resources for banana including reference genomes, annotations, and genetic data.",
     link: "https://banana-genome-hub.southgreen.fr/",
-    icon: GiBananaPeeled,
+    plantIcon: BananaIcon,
     color: "from-yellow-500 to-amber-500",
     internal: false,
   },
@@ -45,7 +46,7 @@ const tools: Tool[] = [
     category: "Genome Hub",
     description: "Genomic portal for citrus species with reference genomes, variant data, and analysis tools.",
     link: "https://citrus-genome-hub.southgreen.fr/",
-    icon: Citrus,
+    plantIcon: CitrusIcon,
     color: "from-orange-500 to-yellow-500",
     internal: false,
   },
@@ -149,6 +150,8 @@ export function ToolsSection() {
                   <div className="flex items-start justify-between mb-2">
                     {tool.favicon ? (
                       <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
+                    ) : tool.plantIcon ? (
+                      <tool.plantIcon size={48} colored />
                     ) : (
                       <div
                         className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
