@@ -94,18 +94,27 @@ const previousMembers = [
   "Anestis Gkanogiannis",
 ];
 
-type StudentFilter = "all" | "current" | "past";
+type StudentFilter = "current" | "past";
 
 const isCurrentStudent = (dates: string) => dates.endsWith("-");
 
-export default function Members() {
-  const [studentFilter, setStudentFilter] = useState<StudentFilter>("all");
+// Convert previous members to student format for the "past" filter
+const previousMembersAsStudents = previousMembers.map((name) => ({
+  name,
+  degree: "Former member",
+  dates: "",
+}));
 
-  const filteredStudents = students.filter((student) => {
-    if (studentFilter === "all") return true;
-    if (studentFilter === "current") return isCurrentStudent(student.dates);
-    return !isCurrentStudent(student.dates);
-  });
+export default function Members() {
+  const [studentFilter, setStudentFilter] = useState<StudentFilter>("current");
+
+  const filteredStudents =
+    studentFilter === "current"
+      ? students.filter((student) => isCurrentStudent(student.dates))
+      : [
+          ...students.filter((student) => !isCurrentStudent(student.dates)),
+          ...previousMembersAsStudents,
+        ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -250,14 +259,6 @@ export default function Members() {
             </div>
             <div className="flex gap-2">
               <Button
-                variant={studentFilter === "all" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStudentFilter("all")}
-                className={studentFilter === "all" ? "gradient-hero border-0" : ""}
-              >
-                All ({students.length})
-              </Button>
-              <Button
                 variant={studentFilter === "current" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setStudentFilter("current")}
@@ -271,7 +272,7 @@ export default function Members() {
                 onClick={() => setStudentFilter("past")}
                 className={studentFilter === "past" ? "gradient-hero border-0" : ""}
               >
-                Past ({students.filter((s) => !isCurrentStudent(s.dates)).length})
+                Past ({students.filter((s) => !isCurrentStudent(s.dates)).length + previousMembers.length})
               </Button>
             </div>
           </div>
@@ -289,31 +290,6 @@ export default function Members() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Previous Members */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-3 mb-8">
-            <UserMinus className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Previous Members</h2>
-          </div>
-          <Card className="border-border">
-            <CardContent className="p-6 md:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {previousMembers.map((member) => (
-                  <div
-                    key={member}
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
-                  >
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-foreground">{member}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
