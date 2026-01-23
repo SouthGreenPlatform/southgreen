@@ -1,6 +1,5 @@
 import { ExternalLink, Layers, Eye, Citrus } from "lucide-react";
 import { GiBananaPeeled } from "react-icons/gi";
-import { TbCircuitSwitchOpen } from "react-icons/tb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
@@ -8,7 +7,7 @@ import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 import galaxyFavicon from "@/assets/tools/galaxy-favicon.png";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
-
+import genoringFavicon from "@/assets/tools/genoring-favicon.png";
 interface Tool {
   name: string;
   category: string;
@@ -71,10 +70,10 @@ const tools: Tool[] = [
   },
   {
     name: "GenoRing",
-    category: "Visualization",
+    category: "Data Integration",
     description: "Tool for circular genome visualization and comparative genomics analysis.",
     link: "https://github.com/SouthGreenPlatform/genoring",
-    icon: TbCircuitSwitchOpen,
+    favicon: genoringFavicon,
     color: "from-violet-500 to-purple-500",
     internal: false,
   },
