@@ -25,6 +25,10 @@ jobs:
       - name: Build site
         run: npm run build
 
+      # install git
+      - name: Install git
+        run: apk add git
+
       # 4. Déployer le dossier 'dist' sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
