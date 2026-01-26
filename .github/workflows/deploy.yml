@@ -1,0 +1,33 @@
+name: Deploy GitHub Pages
+
+# Déclenchement sur la branche test-gh-pages
+on:
+  push:
+    branches:
+      - test-gh-pages
+
+jobs:
+  create-pages:
+    runs-on: ubuntu-latest
+    container:
+      image: node:22.21-alpine3.21
+
+    steps:
+      # 1. Récupérer le code du repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Installer les dépendances
+      - name: Install dependencies
+        run: npm install
+
+      # 3. Construire le site
+      - name: Build site
+        run: npm run build
+
+      # 4. Déployer le dossier 'dist' sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
