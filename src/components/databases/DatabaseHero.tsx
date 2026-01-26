@@ -74,21 +74,6 @@ export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: Database
               Search
             </Button>
           </div>
-
-          {/* Quick Stats */}
-          <div className="flex justify-center gap-8 text-center">
-            <div>
-              <p className="text-3xl font-semibold text-foreground">11+</p>
-              <p className="text-sm text-muted-foreground">Genome Hubs</p>
-            </div>
-            <div className="w-px bg-border" />
-            <div>
-              <p className="text-3xl font-semibold text-foreground">15+</p>
-              <p className="text-sm text-muted-foreground">Tools</p>
-            </div>
-            <div className="w-px bg-border" />
-            <div></div>
-          </div>
         </div>
       </div>
     </section>
