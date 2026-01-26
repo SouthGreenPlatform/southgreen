@@ -10,10 +10,11 @@ interface Publication {
   title: string;
   journal: string;
   doi: string;
+  link?: string;
 }
 
 const toolsPublications: Publication[] = [
-  { authors: "Summo, M., Droc, G., Rouard, M., and Sarah, G.", year: 2025, title: "SynFlow: an interactive online genome structural variants viewer", journal: "HAL hal-05399031", doi: "" },
+  { authors: "Summo, M., Droc, G., Rouard, M., and Sarah, G.", year: 2025, title: "SynFlow: an interactive online genome structural variants viewer", journal: "HAL hal-05399031", doi: "", link: "https://hal.inrae.fr/BIOLOGIE_ET_AMELIORATION_DES_PLANTES/hal-05399031v1" },
   { authors: "Pierre, L., Bertrand, P., Ndomassi, T., Yann, P., Bill Gates, H. H., Valentin, G., et al.", year: 2025, title: "AgroLD: a knowledge graph for the plant sciences", journal: "BMC Genom Data 26, 73", doi: "10.1186/s12863-025-01359-6" },
   { authors: "Christine, T.-D., Clothilde, C., Mathieu, B., Laurence, A., Valentin, K., Cédric, M., et al.", year: 2023, title: "FrangiPANe, a tool for creating a panreference using left behind reads", journal: "NAR Genom Bioinform 5, lqad013", doi: "10.1093/nargab/lqad013" },
   { authors: "Mohamed, M., Sabot, F., Varoqui, M., Mugat, B., Audouin, K., Pélisson, A., et al.", year: 2023, title: "TrEMOLO: accurate transposable element allele frequency estimation using long-read sequencing data combining assembly and mapping-based approaches", journal: "Genome Biol 24, 63", doi: "10.1186/s13059-023-02911-2" },
@@ -86,7 +87,7 @@ const PublicationCard = ({ pub }: { pub: Publication }) => (
           <p className="text-sm text-muted-foreground/80 italic">
             {pub.journal}
           </p>
-          {pub.doi && (
+          {pub.doi ? (
             <a
               href={`https://doi.org/${pub.doi}`}
               target="_blank"
@@ -96,7 +97,17 @@ const PublicationCard = ({ pub }: { pub: Publication }) => (
               <ExternalLink className="w-3 h-3" />
               doi: {pub.doi}
             </a>
-          )}
+          ) : pub.link ? (
+            <a
+              href={pub.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 mt-2 transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              View publication
+            </a>
+          ) : null}
         </div>
       </div>
     </CardContent>
