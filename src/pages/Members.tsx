@@ -36,28 +36,28 @@ const technicalLeaders = [
 ];
 
 const teamMembers = [
-  { name: "Alice Boizet", institute: "CIRAD, UMR AGAP", github: "https://github.com/aliceboizet" },
-  { name: "Saliha Beddek", institute: "IFB, UMR AGAP", github: "" },
-  { name: "Cathrine Breton", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "" },
-  { name: "Aurore Comte", institute: "IRD, UMR PHIM", github: "" },
-  { name: "Jacques Dainat", institute: "IRD", github: "" },
-  { name: "Jean-François Dufayard", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "" },
-  { name: "Fred de Lamotte", institute: "INRAE, UMR AGAP", github: "" },
-  { name: "David Lopez", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Julie Orjuela", institute: "IRD, UMR DIADE", github: "" },
-  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM", github: "" },
-  { name: "Guillaume Martin", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Julien Paul", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Sébastien Ravel", institute: "CIRAD, UMR PHIM", github: "" },
-  { name: "Manuel Ruiz", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "François Sabot", institute: "IRD, UMR DIADE", github: "" },
-  { name: "Gautier Sarah", institute: "INRAE, UMR AGAP", github: "" },
-  { name: "Guilhem Sempéré", institute: "CIRAD", github: "" },
-  { name: "Stéphanie Sidibe-Bocs", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Alexandre Soriano", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Marilyne Summo", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Christine Tranchant-Dubreuil", institute: "IRD, UMR DIADE", github: "" },
+  { name: "Alice Boizet", institute: "CIRAD, UMR AGAP", github: "https://github.com/aliceboizet", dates: "2020-" },
+  { name: "Saliha Beddek", institute: "IFB, UMR AGAP", github: "", dates: "2023-" },
+  { name: "Cathrine Breton", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", dates: "2015-" },
+  { name: "Aurore Comte", institute: "IRD, UMR PHIM", github: "", dates: "2018-" },
+  { name: "Jacques Dainat", institute: "IRD", github: "", dates: "2019-" },
+  { name: "Jean-François Dufayard", institute: "CIRAD, UMR AGAP", github: "", dates: "2010-" },
+  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", dates: "2008-" },
+  { name: "Fred de Lamotte", institute: "INRAE, UMR AGAP", github: "", dates: "2015-" },
+  { name: "David Lopez", institute: "CIRAD, UMR AGAP", github: "", dates: "2020-" },
+  { name: "Julie Orjuela", institute: "IRD, UMR DIADE", github: "", dates: "2017-" },
+  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM", github: "", dates: "2022-" },
+  { name: "Guillaume Martin", institute: "CIRAD, UMR AGAP", github: "", dates: "2015-" },
+  { name: "Julien Paul", institute: "CIRAD, UMR AGAP", github: "", dates: "2021-" },
+  { name: "Sébastien Ravel", institute: "CIRAD, UMR PHIM", github: "", dates: "2012-" },
+  { name: "Manuel Ruiz", institute: "CIRAD, UMR AGAP", github: "", dates: "2005-" },
+  { name: "François Sabot", institute: "IRD, UMR DIADE", github: "", dates: "2010-" },
+  { name: "Gautier Sarah", institute: "INRAE, UMR AGAP", github: "", dates: "2015-" },
+  { name: "Guilhem Sempéré", institute: "CIRAD", github: "", dates: "2012-" },
+  { name: "Stéphanie Sidibe-Bocs", institute: "CIRAD, UMR AGAP", github: "", dates: "2008-" },
+  { name: "Alexandre Soriano", institute: "CIRAD, UMR AGAP", github: "", dates: "2020-" },
+  { name: "Marilyne Summo", institute: "CIRAD, UMR AGAP", github: "", dates: "2018-" },
+  { name: "Christine Tranchant-Dubreuil", institute: "IRD, UMR DIADE", github: "", dates: "2010-" },
 ];
 
 const students = [
@@ -94,17 +94,24 @@ const previousMembers = [
   "Anestis Gkanogiannis",
 ];
 
-type StudentFilter = "all" | "current" | "past";
+type MemberFilter = "all" | "current" | "past";
 
-const isCurrentStudent = (dates: string) => dates.endsWith("-");
+const isCurrentMember = (dates: string) => dates.endsWith("-");
 
 export default function Members() {
-  const [studentFilter, setStudentFilter] = useState<StudentFilter>("all");
+  const [studentFilter, setStudentFilter] = useState<MemberFilter>("all");
+  const [teamFilter, setTeamFilter] = useState<MemberFilter>("all");
 
   const filteredStudents = students.filter((student) => {
     if (studentFilter === "all") return true;
-    if (studentFilter === "current") return isCurrentStudent(student.dates);
-    return !isCurrentStudent(student.dates);
+    if (studentFilter === "current") return isCurrentMember(student.dates);
+    return !isCurrentMember(student.dates);
+  });
+
+  const filteredTeamMembers = teamMembers.filter((member) => {
+    if (teamFilter === "all") return true;
+    if (teamFilter === "current") return isCurrentMember(member.dates);
+    return !isCurrentMember(member.dates);
   });
 
   return (
@@ -200,12 +207,40 @@ export default function Members() {
       {/* Team Members */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-3 mb-8">
-            <Users className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Team</h2>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <Users className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">Team</h2>
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant={teamFilter === "all" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setTeamFilter("all")}
+                className={teamFilter === "all" ? "gradient-hero border-0" : ""}
+              >
+                All ({teamMembers.length})
+              </Button>
+              <Button
+                variant={teamFilter === "current" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setTeamFilter("current")}
+                className={teamFilter === "current" ? "gradient-hero border-0" : ""}
+              >
+                Current ({teamMembers.filter((m) => isCurrentMember(m.dates)).length})
+              </Button>
+              <Button
+                variant={teamFilter === "past" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setTeamFilter("past")}
+                className={teamFilter === "past" ? "gradient-hero border-0" : ""}
+              >
+                Past ({teamMembers.filter((m) => !isCurrentMember(m.dates)).length})
+              </Button>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {teamMembers.map((member) => (
+            {filteredTeamMembers.map((member) => (
               <Card key={member.name} className="border-border hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-3">
@@ -255,7 +290,7 @@ export default function Members() {
                 onClick={() => setStudentFilter("current")}
                 className={studentFilter === "current" ? "gradient-hero border-0" : ""}
               >
-                Current ({students.filter((s) => isCurrentStudent(s.dates)).length})
+                Current ({students.filter((s) => isCurrentMember(s.dates)).length})
               </Button>
               <Button
                 variant={studentFilter === "past" ? "default" : "outline"}
@@ -263,7 +298,7 @@ export default function Members() {
                 onClick={() => setStudentFilter("past")}
                 className={studentFilter === "past" ? "gradient-hero border-0" : ""}
               >
-                Past ({students.filter((s) => !isCurrentStudent(s.dates)).length})
+                Past ({students.filter((s) => !isCurrentMember(s.dates)).length})
               </Button>
             </div>
           </div>
