@@ -204,39 +204,31 @@ export default function Members() {
             <Users className="w-6 h-6 text-primary" />
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">Team</h2>
           </div>
-          <Card className="border-border">
-            <CardContent className="p-6 md:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {teamMembers.map((member) => (
-                  <div
-                    key={member.name}
-                    className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
-                  >
-                    <span className="text-primary mt-1">•</span>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-foreground font-medium">{member.name}</span>
-                        {member.github && (
-                          <a
-                            href={member.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            <FaGithub className="w-4 h-4" />
-                          </a>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-2 text-muted-foreground mt-1">
-                        <Building2 className="w-3 h-3" />
-                        <span className="text-xs italic">{member.institute || "Institute placeholder"}</span>
-                      </div>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {teamMembers.map((member) => (
+              <Card key={member.name} className="border-border hover:border-primary/30 transition-colors">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="font-semibold text-foreground">{member.name}</h3>
+                    {member.github && (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <FaGithub className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Building2 className="w-4 h-4" />
+                    <span className="text-sm italic">{member.institute}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
