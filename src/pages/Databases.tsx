@@ -73,7 +73,7 @@ const Databases = () => {
         />
         
         {/* Section Filter Buttons */}
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 pb-6">
           <div className="flex flex-wrap justify-center gap-2">
             <Button
               variant={sectionFilter === "all" ? "default" : "outline"}
