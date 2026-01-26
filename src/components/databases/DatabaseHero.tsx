@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Search, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface DatabaseHeroProps {
@@ -41,10 +41,13 @@ export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: Database
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
 
-          {/* Heading */}
-          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-5">
-            Genome Hubs & <span className="text-gradient">Analysis Tools</span>
-          </h1>
+          {/* Badge Title */}
+          <div className="flex justify-center mb-5">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20">
+              <Database className="w-5 h-5 text-primary" />
+              <span className="font-heading text-lg font-medium text-primary">Databases & Tools</span>
+            </div>
+          </div>
 
           {/* Subheading */}
           <p className="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
