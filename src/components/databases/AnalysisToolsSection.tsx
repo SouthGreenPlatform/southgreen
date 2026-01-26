@@ -29,6 +29,7 @@ import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 import greenphylFavicon from "@/assets/tools/greenphyl-favicon.png";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import rapgreenFavicon from "@/assets/tools/rapgreen-favicon.png";
+import gemoFavicon from "@/assets/tools/gemo-favicon.png";
 
 interface Tool {
   name: string;
@@ -112,7 +113,7 @@ const toolCategories: ToolCategory[] = [
         name: "GeMo",
         description: "Genome Evolution MOdeler for comparative genomics visualization and analysis.",
         link: "http://gemo.southgreen.fr/",
-        icon: GitBranch,
+        favicon: gemoFavicon,
         color: "from-violet-500 to-purple-500",
         tags: ["Chromosome Painting", "Visualization"],
       },
