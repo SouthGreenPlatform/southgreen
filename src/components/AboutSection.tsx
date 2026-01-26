@@ -84,7 +84,7 @@ export function AboutSection() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">{institute.name}</p>
-                      <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-primary transition-opacity" />
                     </div>
                     {institute.fullName && <p className="text-xs text-muted-foreground">{institute.fullName}</p>}
                     {institute.type && <span className="text-xs text-primary">{institute.type}</span>}
@@ -118,7 +118,7 @@ export function AboutSection() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">{unit.name}</p>
-                      <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-primary transition-opacity" />
                     </div>
                     <p className="text-xs text-muted-foreground">{unit.description}</p>
                   </div>
