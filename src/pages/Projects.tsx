@@ -75,10 +75,10 @@ const Projects = () => {
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4 border-primary/30 text-primary">
-              <FolderOpen className="w-3 h-3 mr-1" />
-              Research Projects
-            </Badge>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+              <FolderOpen className="w-4 h-4" />
+              <span className="text-sm font-medium">Research Projects</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Projects Supported by the Platform</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Discover the research projects leveraging South Green's infrastructure, tools, and expertise for advancing

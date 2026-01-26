@@ -42,10 +42,10 @@ export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: Database
         <div className="max-w-3xl mx-auto text-center">
 
           {/* Badge Title */}
-          <div className="flex justify-center mb-5">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20">
-              <Database className="w-5 h-5 text-primary" />
-              <span className="font-heading text-lg font-medium text-primary">Databases & Tools</span>
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
+              <Database className="w-4 h-4" />
+              <span className="text-sm font-medium">Databases & Tools</span>
             </div>
           </div>
 
