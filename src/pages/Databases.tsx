@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -12,6 +12,10 @@ import { Button } from "@/components/ui/button";
 type SectionFilter = "all" | "genome-hubs" | "analysis-tools" | "legacy-tools";
 
 const validSections: SectionFilter[] = ["all", "genome-hubs", "analysis-tools", "legacy-tools"];
+
+// Calculate total tools count (not including legacy)
+const genomeHubsCount = genomeHubs.length;
+const analysisToolsCount = toolCategories.reduce((acc, category) => acc + category.tools.length, 0);
 
 const Databases = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -85,7 +89,7 @@ const Databases = () => {
               onClick={() => setSectionFilter("genome-hubs")}
               className="rounded-full"
             >
-              Genome Hubs
+              Genome Hubs ({genomeHubsCount})
             </Button>
             <Button
               variant={sectionFilter === "analysis-tools" ? "default" : "outline"}
@@ -93,7 +97,7 @@ const Databases = () => {
               onClick={() => setSectionFilter("analysis-tools")}
               className="rounded-full"
             >
-              Analysis Tools
+              Analysis Tools ({analysisToolsCount})
             </Button>
             <Button
               variant={sectionFilter === "legacy-tools" ? "default" : "outline"}
