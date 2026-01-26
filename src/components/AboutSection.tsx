@@ -1,27 +1,45 @@
-import { Building2, FlaskConical, Users, Network } from "lucide-react";
-const institutes = [{
-  name: "Alliance Bioversity & CIAT",
-  type: "International Organisation (CGIAR)"
-}, {
-  name: "CIRAD",
-  fullName: "Centre de coopération internationale en recherche agronomique"
-}, {
-  name: "INRAE",
-  fullName: "Institut national de recherche pour l'agriculture"
-}, {
-  name: "IRD",
-  fullName: "Institut de Recherche pour le Développement"
-}];
-const researchUnits = [{
-  name: "AGAP",
-  description: "Amélioration Génétique et Adaptation des Plantes"
-}, {
-  name: "DIADE",
-  description: "Diversité, Adaptation et Développement des plantes"
-}, {
-  name: "PHIM",
-  description: "Plant Health Institute of Montpellier"
-}];
+import { Building2, FlaskConical, Users, Network, ExternalLink } from "lucide-react";
+
+const institutes = [
+  {
+    name: "Alliance Bioversity & CIAT",
+    type: "International Organisation (CGIAR)",
+    url: "https://alliancebioversityciat.org/"
+  },
+  {
+    name: "CIRAD",
+    fullName: "Centre de coopération internationale en recherche agronomique",
+    url: "https://www.cirad.fr/"
+  },
+  {
+    name: "INRAE",
+    fullName: "Institut national de recherche pour l'agriculture",
+    url: "https://www.inrae.fr/"
+  },
+  {
+    name: "IRD",
+    fullName: "Institut de Recherche pour le Développement",
+    url: "https://www.ird.fr/"
+  }
+];
+
+const researchUnits = [
+  {
+    name: "AGAP",
+    description: "Amélioration Génétique et Adaptation des Plantes",
+    url: "https://umr-agap.cirad.fr/"
+  },
+  {
+    name: "DIADE",
+    description: "Diversité, Adaptation et Développement des plantes",
+    url: "https://diade.ird.fr/"
+  },
+  {
+    name: "PHIM",
+    description: "Plant Health Institute of Montpellier",
+    url: "https://phim.cnrs.fr/"
+  }
+];
 export function AboutSection() {
   return <section id="about" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -54,14 +72,25 @@ export function AboutSection() {
               </div>
             </div>
             <div className="space-y-4">
-              {institutes.map(institute => <div key={institute.name} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+              {institutes.map(institute => (
+                <a
+                  key={institute.name}
+                  href={institute.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
+                >
                   <Users className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-foreground">{institute.name}</p>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">{institute.name}</p>
+                      <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
                     {institute.fullName && <p className="text-xs text-muted-foreground">{institute.fullName}</p>}
                     {institute.type && <span className="text-xs text-primary">{institute.type}</span>}
                   </div>
-                </div>)}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -77,13 +106,24 @@ export function AboutSection() {
               </div>
             </div>
             <div className="space-y-4">
-              {researchUnits.map(unit => <div key={unit.name} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+              {researchUnits.map(unit => (
+                <a
+                  key={unit.name}
+                  href={unit.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
+                >
                   <FlaskConical className="w-5 h-5 text-accent-foreground mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-foreground">{unit.name}</p>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">{unit.name}</p>
+                      <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
                     <p className="text-xs text-muted-foreground">{unit.description}</p>
                   </div>
-                </div>)}
+                </a>
+              ))}
             </div>
           </div>
         </div>
