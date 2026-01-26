@@ -16,7 +16,7 @@ export function DatabaseHero({ searchQuery, setSearchQuery, onSearch }: Database
   };
 
   return (
-    <section className="relative pt-32 pb-8 overflow-hidden">
+    <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-secondary/50" />
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
