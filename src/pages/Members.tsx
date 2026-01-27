@@ -128,7 +128,7 @@ export default function Members() {
           style={{
             backgroundImage: `url(${teamPhoto})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'top center',
+            backgroundPosition: 'center 20%',
             filter: 'grayscale(100%)',
           }}
         />
