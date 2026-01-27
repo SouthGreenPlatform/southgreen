@@ -124,11 +124,11 @@ export default function Members() {
       <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-b from-primary/5 to-background relative overflow-hidden">
         {/* Watermark Background */}
         <div 
-          className="absolute inset-0 z-0 opacity-[0.07]"
+          className="absolute inset-0 z-0 opacity-[0.15]"
           style={{
             backgroundImage: `url(${teamPhoto})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'top center',
             filter: 'grayscale(100%)',
           }}
         />
