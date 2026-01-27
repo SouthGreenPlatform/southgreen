@@ -4,44 +4,45 @@ const institutes = [
   {
     name: "Alliance Bioversity & CIAT",
     type: "International Organisation (CGIAR)",
-    url: "https://alliancebioversityciat.org/"
+    url: "https://alliancebioversityciat.org/",
   },
   {
     name: "CIRAD",
     fullName: "Centre de coopération internationale en recherche agronomique",
-    url: "https://www.cirad.fr/"
+    url: "https://www.cirad.fr/",
   },
   {
     name: "INRAE",
     fullName: "Institut national de recherche pour l'agriculture",
-    url: "https://www.inrae.fr/"
+    url: "https://www.inrae.fr/",
   },
   {
     name: "IRD",
     fullName: "Institut de Recherche pour le Développement",
-    url: "https://www.ird.fr/"
-  }
+    url: "https://www.ird.fr/",
+  },
 ];
 
 const researchUnits = [
   {
     name: "AGAP",
     description: "Amélioration Génétique et Adaptation des Plantes",
-    url: "https://umr-agap.cirad.fr/"
+    url: "https://umr-agap.cirad.fr/",
   },
   {
     name: "DIADE",
     description: "Diversité, Adaptation et Développement des plantes",
-    url: "https://diade.ird.fr/"
+    url: "https://diade.ird.fr/",
   },
   {
     name: "PHIM",
     description: "Plant Health Institute of Montpellier",
-    url: "https://phim.cnrs.fr/"
-  }
+    url: "https://umr-phim.cirad.fr",
+  },
 ];
 export function AboutSection() {
-  return <section id="about" className="py-24 bg-secondary/30">
+  return (
+    <section id="about" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -53,8 +54,8 @@ export function AboutSection() {
             A Collaborative <span className="text-gradient">Research Network</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            South Green is a bioinformatics platform born from the collaboration of French 
-            and international research institutions, dedicated to supporting genomic research on tropical and Mediterranean plants.
+            South Green is a bioinformatics platform born from the collaboration of French and international research
+            institutions, dedicated to supporting genomic research on tropical and Mediterranean plants.
           </p>
         </div>
 
@@ -72,7 +73,7 @@ export function AboutSection() {
               </div>
             </div>
             <div className="space-y-4">
-              {institutes.map(institute => (
+              {institutes.map((institute) => (
                 <a
                   key={institute.name}
                   href={institute.url}
@@ -83,7 +84,9 @@ export function AboutSection() {
                   <Users className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
-                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">{institute.name}</p>
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                        {institute.name}
+                      </p>
                       <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-primary transition-opacity" />
                     </div>
                     {institute.fullName && <p className="text-xs text-muted-foreground">{institute.fullName}</p>}
@@ -106,7 +109,7 @@ export function AboutSection() {
               </div>
             </div>
             <div className="space-y-4">
-              {researchUnits.map(unit => (
+              {researchUnits.map((unit) => (
                 <a
                   key={unit.name}
                   href={unit.url}
@@ -117,7 +120,9 @@ export function AboutSection() {
                   <FlaskConical className="w-5 h-5 text-accent-foreground mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
-                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">{unit.name}</p>
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                        {unit.name}
+                      </p>
                       <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-primary transition-opacity" />
                     </div>
                     <p className="text-xs text-muted-foreground">{unit.description}</p>
@@ -131,12 +136,13 @@ export function AboutSection() {
         {/* Mission Statement */}
         <div className="mt-12 text-center max-w-3xl mx-auto">
           <p className="text-muted-foreground">
-            Together, our network provides <span className="text-foreground font-medium">open-source tools</span>, 
-            {" "}<span className="text-foreground font-medium">genomic databases</span>, and 
-            {" "}<span className="text-foreground font-medium">training programs</span> to support 
-            sustainable agriculture and biodiversity conservation in the Global South and Mediterranean regions.
+            Together, our network provides <span className="text-foreground font-medium">open-source tools</span>,{" "}
+            <span className="text-foreground font-medium">genomic databases</span>, and{" "}
+            <span className="text-foreground font-medium">training programs</span> to support sustainable agriculture
+            and biodiversity conservation in the Global South and Mediterranean regions.
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
