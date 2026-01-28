@@ -251,7 +251,7 @@ export default function Members() {
                   </TooltipTrigger>
                   <TooltipContent>
                     <p className="text-xs">
-                      {scientificLeaders.length} Scientific Leaders + {technicalLeaders.length} Technical Leaders + {teamMembers.filter((m) => isCurrentMember(m.dates)).length} Team Members
+                      Scientific Leaders + Technical Leaders + Members
                     </p>
                   </TooltipContent>
                 </Tooltip>
