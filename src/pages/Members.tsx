@@ -72,14 +72,17 @@ const teamMembers = [
   { name: "David Couvin", institute: "", github: "", dates: "Past" },
   { name: "Cédric Farcy", institute: "", github: "", dates: "Past" },
   { name: "Anestis Gkanogiannis", institute: "", github: "", dates: "Past" },
+  { name: "Sandy Contreras", institute: "", github: "", dates: "Past" },
 ];
 
 const students = [
   { name: "Rayane Elmedjadji", degree: "MSc alternant", dates: "2024-" },
-  { name: "Michel Gomez", degree: "PhD", dates: "2023-" },
+  { name: "Michel Gomes", degree: "PhD", dates: "2023-" },
   { name: "Bill Happi", degree: "PhD", dates: "2021-2024" },
   { name: "Yann Pomie", degree: "MSc2", dates: "2021-2023" },
   { name: "Laurine Jaffret", degree: "MSc2", dates: "2023" },
+  { name: "Wafa Aichoune", degree: "MSc2", dates: "2023" },
+  { name: "Fadwa El Khaddar", degree: "MSc2", dates: "2023" },
   { name: "Thi-Minh Nguyet Dang", degree: "PhD", dates: "2019-2022" },
   { name: "Eloi Durant", degree: "PhD", dates: "2019-2022" },
   { name: "Marine Salson", degree: "MSc2", dates: "2021" },
@@ -90,6 +93,7 @@ const students = [
   { name: "Nastasija Mijovic", degree: "MSc2", dates: "2020" },
   { name: "Clément Agret", degree: "PhD", dates: "2017-2020" },
   { name: "Pierrick Perelle", degree: "IUT", dates: "2020" },
+  { name: "Adrien Dufour", degree: "MSc1", dates: "2019" },
   { name: "Sarah Barrière", degree: "IUT", dates: "2019" },
   { name: "Samira Younesy", degree: "IUT", dates: "2019" },
   { name: "Laura Helou", degree: "MSc1", dates: "2015-2016" },
@@ -123,13 +127,13 @@ export default function Members() {
       {/* Hero Section */}
       <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-b from-primary/5 to-background relative overflow-hidden">
         {/* Watermark Background */}
-        <div 
+        <div
           className="absolute inset-0 z-0 opacity-[0.15]"
           style={{
             backgroundImage: `url(${teamPhoto})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 20%',
-            filter: 'grayscale(100%)',
+            backgroundSize: "cover",
+            backgroundPosition: "center 20%",
+            filter: "grayscale(100%)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background z-0" />
