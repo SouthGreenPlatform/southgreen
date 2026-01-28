@@ -2,7 +2,13 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building2, Tag, GraduationCap } from "lucide-react";
+import { Users, Building2, Tag, GraduationCap, Info } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
@@ -230,14 +236,26 @@ export default function Members() {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">Team</h2>
             </div>
             <div className="flex gap-2">
-              <Button
-                variant={teamFilter === "current" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setTeamFilter("current")}
-                className={teamFilter === "current" ? "gradient-hero border-0" : ""}
-              >
-                Current ({scientificLeaders.length + technicalLeaders.length + teamMembers.filter((m) => isCurrentMember(m.dates)).length})
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant={teamFilter === "current" ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setTeamFilter("current")}
+                      className={teamFilter === "current" ? "gradient-hero border-0" : ""}
+                    >
+                      Current ({scientificLeaders.length + technicalLeaders.length + teamMembers.filter((m) => isCurrentMember(m.dates)).length})
+                      <Info className="w-3 h-3 ml-1 opacity-60" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="text-xs">
+                      {scientificLeaders.length} Scientific Leaders + {technicalLeaders.length} Technical Leaders + {teamMembers.filter((m) => isCurrentMember(m.dates)).length} Team Members
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               <Button
                 variant={teamFilter === "past" ? "default" : "outline"}
                 size="sm"
