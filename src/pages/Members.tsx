@@ -233,7 +233,7 @@ export default function Members() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <div className="flex items-center gap-3">
               <Users className="w-6 h-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">Team</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">Members</h2>
             </div>
             <div className="flex gap-2">
               <TooltipProvider>
