@@ -9,8 +9,8 @@ const hpcClusters = [{
   docUrl: "https://agap.gitlab.cirad.fr/cluster/documentation/fr/",
   showItrop: false,
   specs: {
-    cores: "2104 cores",
-    nodes: ["70 standard nodes", "2 bigmem nodes", "1 GPU node"],
+    cores: "2144 cores AMD EPYC 9654",
+    nodes: ["Standard nodes", "2 bigmem nodes", "2 GPU Nvidia A100"],
     storage: "700 To replicated storage"
   }
 }, {
