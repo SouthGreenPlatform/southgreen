@@ -236,7 +236,7 @@ export default function Members() {
                 onClick={() => setTeamFilter("current")}
                 className={teamFilter === "current" ? "gradient-hero border-0" : ""}
               >
-                Current ({teamMembers.filter((m) => isCurrentMember(m.dates)).length})
+                Current ({scientificLeaders.length + technicalLeaders.length + teamMembers.filter((m) => isCurrentMember(m.dates)).length})
               </Button>
               <Button
                 variant={teamFilter === "past" ? "default" : "outline"}
