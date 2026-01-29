@@ -100,12 +100,12 @@ export function AboutSection() {
           {/* Research Units Card */}
           <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                <FlaskConical className="w-6 h-6 text-accent-foreground" />
+              <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
+                <FlaskConical className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <h3 className="font-heading text-xl font-semibold text-foreground">3 Research Units</h3>
-                <p className="text-sm text-muted-foreground">UMR </p>
+                <p className="text-sm text-muted-foreground">UMR </p>
               </div>
             </div>
             <div className="space-y-4">
@@ -115,15 +115,15 @@ export function AboutSection() {
                   href={unit.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-accent/10 transition-colors group"
                 >
-                  <FlaskConical className="w-5 h-5 text-accent-foreground mt-0.5 flex-shrink-0" />
+                  <FlaskConical className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
-                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      <p className="font-medium text-foreground group-hover:text-accent transition-colors">
                         {unit.name}
                       </p>
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-primary transition-opacity" />
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-accent transition-opacity" />
                     </div>
                     <p className="text-xs text-muted-foreground">{unit.description}</p>
                   </div>
