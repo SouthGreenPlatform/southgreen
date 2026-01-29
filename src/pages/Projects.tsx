@@ -26,7 +26,7 @@ const projects: Project[] = [
     donor: "PEPR",
   },
   {
-    acronym: "Genebank accelarator",
+    acronym: "Genebanks accelarator",
     title: "The Genebanks Accelerator will enable smarter, more widespread use of crop diversity",
     url: "https://www.cgiar.org/cgiar-research-portfolio-2025-2030/genebanks",
     donor: "CGIAR",
