@@ -1,6 +1,8 @@
 import { Server, HardDrive, Cpu, Zap, ExternalLink } from "lucide-react";
 import itropLogo from "@/assets/itrop-logo.png";
 import iso9001Logo from "@/assets/iso9001-logo.png";
+import isdmLogo from "@/assets/isdm-logo.png";
+
 const hpcClusters = [{
   name: "Meso@LR",
   location: "CINES",
@@ -8,6 +10,8 @@ const hpcClusters = [{
   partner: "CIRAD",
   docUrl: "https://agap.gitlab.cirad.fr/cluster/documentation/fr/",
   showItrop: false,
+  showIsdm: true,
+  isdmUrl: "https://isdm.umontpellier.fr/",
   specs: {
     cores: "2144 cores AMD EPYC 9654",
     nodes: ["Standard nodes", "2 bigmem nodes", "2 GPU Nvidia A100"],
@@ -20,12 +24,15 @@ const hpcClusters = [{
   partner: "IRD",
   docUrl: "https://bioinfo.ird.fr/index.php/en/cluster-2/",
   showItrop: true,
+  showIsdm: false,
+  isdmUrl: "",
   specs: {
     cores: "1148 cores",
     nodes: ["32 standard nodes", "1 supermem node", "1 GPU node"],
     storage: "800 To (SAN) + 210 To scratch"
   }
 }];
+
 export function HPCSection() {
   return <section id="hpc" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -51,6 +58,11 @@ export function HPCSection() {
 
               {/* Partner Badge */}
               <div className="absolute -top-3 right-6 flex items-center gap-2">
+                {cluster.showIsdm && (
+                  <a href={cluster.isdmUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={isdmLogo} alt="ISDM" className="h-8 w-auto hover:opacity-80 transition-opacity" />
+                  </a>
+                )}
                 {cluster.showItrop && <>
                     <img src={iso9001Logo} alt="ISO 9001" className="h-8 w-auto" />
                     <img src={itropLogo} alt="i-Trop" className="h-8 w-auto" />
