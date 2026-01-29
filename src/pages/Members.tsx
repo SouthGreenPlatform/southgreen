@@ -299,14 +299,23 @@ export default function Members() {
                       </a>
                     )}
                     {leader.publications && (
-                      <a
-                        href={leader.publications}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <FileText className="w-4 h-4" />
-                      </a>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <a
+                              href={leader.publications}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <FileText className="w-4 h-4" />
+                            </a>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Link to publications</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     )}
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -354,14 +363,23 @@ export default function Members() {
                       </a>
                     )}
                     {leader.publications && (
-                      <a
-                        href={leader.publications}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <FileText className="w-4 h-4" />
-                      </a>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <a
+                              href={leader.publications}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <FileText className="w-4 h-4" />
+                            </a>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Link to publications</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     )}
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -443,14 +461,23 @@ export default function Members() {
                       </a>
                     )}
                     {member.publications && (
-                      <a
-                        href={member.publications}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <FileText className="w-4 h-4" />
-                      </a>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <a
+                              href={member.publications}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <FileText className="w-4 h-4" />
+                            </a>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Link to publications</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     )}
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
