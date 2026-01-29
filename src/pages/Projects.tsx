@@ -59,10 +59,19 @@ const projects: Project[] = [
   },
   {
     acronym: "BRIDGES",
-    title: "Bridging Resources for Innovation in Diversified Genomic Exploration of Species - Coffee genomics research project",
+    title:
+      "Bridging Resources for Innovation in Diversified Genomic Exploration of Species - Coffee genomics research project",
     url: "https://www.bridgescoffea.org/",
     donor: "ANR",
     years: "2024-2027",
+  },
+  {
+    acronym: "PlastiVigne",
+    title:
+      "Studies the structural plasticity of the grapevine genome, with the aim of improving knowledge of variability in gene content and isoforms, and identifying structural variations likely to modulate gene expression and traits involved in adaptation to climate change.",
+    url: "https://umr-agap.cirad.fr/en/research/main-projects/vinid-occ",
+    donor: "Vinid’Occ",
+    years: "2022-2026",
   },
 ];
 
