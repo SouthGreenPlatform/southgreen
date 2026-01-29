@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import southGreenLogo from "@/assets/south-green-logo-large.svg";
@@ -11,6 +11,7 @@ const navItems = [
   { label: "Projects", href: "/projects" },
   { label: "Members", href: "/members" },
   { label: "Publications", href: "/publications" },
+  { label: "News", href: "https://www.linkedin.com/company/south-green-bioinformatics-platform", external: true },
   { label: "About", href: "/#about" },
 ];
 
@@ -40,14 +41,30 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-full px-2 py-1.5 border border-white/10 shadow-inner">
             {navItems.map((item) => {
-              const isExternal = item.href.startsWith('#') || item.href.includes('/#');
+              const isHashLink = item.href.startsWith('#') || item.href.includes('/#');
+              const isExternalLink = item.external;
               const activeClass = isActive(item.href) 
                 ? "text-primary font-semibold bg-primary/10 shadow-[0_0_20px_rgba(41,107,68,0.3)] after:scale-x-100 after:shadow-[0_0_8px_rgba(41,107,68,0.5)]" 
                 : "text-muted-foreground hover:text-foreground hover:bg-white/5";
               
               const baseClass = "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full after:content-[''] after:absolute after:bottom-1.5 after:left-4 after:right-4 after:h-0.5 after:bg-primary after:rounded-full after:origin-left after:scale-x-0 after:transition-all after:duration-300 hover:after:scale-x-100";
               
-              if (isExternal) {
+              if (isExternalLink) {
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${baseClass} ${activeClass} inline-flex items-center gap-1 group/link`}
+                  >
+                    {item.label}
+                    <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                  </a>
+                );
+              }
+              
+              if (isHashLink) {
                 return (
                   <a
                     key={item.label}
@@ -88,6 +105,23 @@ export function Navbar() {
                 const activeClass = isActive(item.href) 
                   ? "text-primary bg-primary/15 font-semibold shadow-[0_0_15px_rgba(41,107,68,0.2)]" 
                   : "text-muted-foreground hover:text-foreground hover:bg-white/10";
+                
+                if (item.external) {
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 inline-flex items-center gap-2 ${activeClass}`}
+                    >
+                      {item.label}
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  );
+                }
+                
                 return (
                   <a
                     key={item.label}
