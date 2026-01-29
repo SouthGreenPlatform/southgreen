@@ -83,7 +83,14 @@ const teamMembers = [
     publications: "",
     dates: "2020-",
   },
-  { name: "Saliha Beddek", institute: "IFB, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2023-" },
+  {
+    name: "Saliha Beddek",
+    institute: "IFB, UMR AGAP",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/saliha-zenboudji-beddek-a84848122/",
+    publications: "",
+    dates: "2023-",
+  },
   {
     name: "Cathrine Breton",
     institute: "Alliance Bioversity and CIAT, UMR AGAP",
