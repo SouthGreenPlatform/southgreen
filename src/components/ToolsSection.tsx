@@ -2,12 +2,14 @@ import { ExternalLink, Layers, Eye } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { BananaIcon, CitrusIcon } from "@/components/icons/PlantIcons";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
 import galaxyFavicon from "@/assets/tools/galaxy-favicon.png";
 import synflowFavicon from "@/assets/tools/synflow-favicon.ico";
 import genoringFavicon from "@/assets/tools/genoring-favicon.png";
+
 interface Tool {
   name: string;
   category: string;
@@ -125,6 +127,7 @@ const tools: Tool[] = [
     internal: false,
   },
 ];
+
 export function ToolsSection() {
   return (
     <section id="tools" className="py-24 bg-secondary/30">
@@ -141,70 +144,81 @@ export function ToolsSection() {
           </p>
         </div>
 
-        {/* Tools Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tools.map((tool, index) => {
-            const cardContent = (
-              <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    {tool.favicon ? (
-                      <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
-                    ) : tool.plantIcon ? (
-                      <tool.plantIcon size={48} colored />
-                    ) : (
-                      <div
-                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
-                      >
-                        {tool.icon && <tool.icon className="w-6 h-6 text-primary-foreground" />}
+        {/* Tools Carousel */}
+        <div className="px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {tools.map((tool) => {
+                const cardContent = (
+                  <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                    <CardHeader>
+                      <div className="flex items-start justify-between mb-2">
+                        {tool.favicon ? (
+                          <img src={tool.favicon} alt={`${tool.name} icon`} className="w-12 h-12 object-contain" />
+                        ) : tool.plantIcon ? (
+                          <tool.plantIcon size={48} colored />
+                        ) : (
+                          <div
+                            className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-sm`}
+                          >
+                            {tool.icon && <tool.icon className="w-6 h-6 text-primary-foreground" />}
+                          </div>
+                        )}
+                        <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-md">
+                          {tool.category}
+                        </span>
                       </div>
-                    )}
-                    <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-md">
-                      {tool.category}
-                    </span>
-                  </div>
-                  <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
-                    {tool.name}
-                    {!tool.internal && (
-                      <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    )}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground text-sm">{tool.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <span className="text-sm text-primary font-medium group-hover:underline">
-                    {tool.internal ? "Learn More →" : "Access Tool →"}
-                  </span>
-                </CardContent>
-              </Card>
-            );
+                      <CardTitle className="font-heading text-lg group-hover:text-primary transition-colors flex items-center gap-2">
+                        {tool.name}
+                        {!tool.internal && (
+                          <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        )}
+                      </CardTitle>
+                      <CardDescription className="text-muted-foreground text-sm line-clamp-2">
+                        {tool.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <span className="text-sm text-primary font-medium group-hover:underline">
+                        {tool.internal ? "Learn More →" : "Access Tool →"}
+                      </span>
+                    </CardContent>
+                  </Card>
+                );
 
-            if (tool.internal) {
-              return (
-                <Link
-                  key={tool.name}
-                  to={tool.link}
-                  className="group block"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {cardContent}
-                </Link>
-              );
-            }
+                if (tool.internal) {
+                  return (
+                    <CarouselItem key={tool.name} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                      <Link to={tool.link} className="group block h-full">
+                        {cardContent}
+                      </Link>
+                    </CarouselItem>
+                  );
+                }
 
-            return (
-              <a
-                key={tool.name}
-                href={tool.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {cardContent}
-              </a>
-            );
-          })}
+                return (
+                  <CarouselItem key={tool.name} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                    <a
+                      href={tool.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block h-full"
+                    >
+                      {cardContent}
+                    </a>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="-left-12" />
+            <CarouselNext className="-right-12" />
+          </Carousel>
         </div>
 
         {/* More Tools Link */}
