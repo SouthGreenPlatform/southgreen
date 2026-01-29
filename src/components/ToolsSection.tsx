@@ -2,7 +2,8 @@ import { ExternalLink, Layers, Eye } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { BananaIcon, CitrusIcon } from "@/components/icons/PlantIcons";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
+import { useState, useEffect } from "react";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
 import culebrontFavicon from "@/assets/tools/culebront-favicon.png";
@@ -129,6 +130,21 @@ const tools: Tool[] = [
 ];
 
 export function ToolsSection() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section id="tools" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -151,6 +167,7 @@ export function ToolsSection() {
               align: "start",
               loop: true,
             }}
+            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
@@ -219,6 +236,22 @@ export function ToolsSection() {
             <CarouselPrevious className="-left-12" />
             <CarouselNext className="-right-12" />
           </Carousel>
+          
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {Array.from({ length: count }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === current 
+                    ? "bg-primary w-6" 
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+                aria-label={`Aller à la diapositive ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* More Tools Link */}
