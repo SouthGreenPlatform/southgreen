@@ -153,24 +153,10 @@ export default function Members() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Meet Our <span className="text-primary">Members</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground">
               The South Green Bioinformatics Platform brings together experts from multiple research institutes, working
               collaboratively to advance plant and pathogen genomics.
             </p>
-            <a
-              href="https://southgreenplatform.github.io/staff-info/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium text-sm"
-            >
-              <Info className="w-4 h-4" />
-              View detailed member profiles
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-            </a>
           </div>
         </div>
       </section>
@@ -305,6 +291,24 @@ export default function Members() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          {/* Link to detailed profiles */}
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://southgreenplatform.github.io/staff-info/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium text-sm"
+            >
+              <Info className="w-4 h-4" />
+              View detailed member profiles
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
