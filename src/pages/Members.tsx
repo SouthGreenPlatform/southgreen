@@ -44,7 +44,7 @@ const scientificLeaders = [
   {
     name: "Pierre Larmande",
     institute: "IRD, UMR DIADE",
-    github: "",
+    github: "https://github.com/pierrelarmande",
     linkedin: "",
     publications: "https://scholar.google.fr/citations?hl=fr&user=BjYnqe8AAAAJ",
   },
