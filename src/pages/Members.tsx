@@ -58,8 +58,20 @@ const scientificLeaders = [
 ];
 
 const technicalLeaders = [
-  { name: "Bertrand Pitollat", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "" },
-  { name: "Ndomassi Tando", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "" },
+  {
+    name: "Bertrand Pitollat",
+    institute: "CIRAD, UMR AGAP",
+    github: "",
+    linkedin: "https://www.umr-diade.fr/membre/tando-ndomassi/",
+    publications: "",
+  },
+  {
+    name: "Ndomassi Tando",
+    institute: "IRD, UMR DIADE",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/bertrand-pitollat-7557b714/",
+    publications: "",
+  },
 ];
 
 const teamMembers = [
@@ -80,7 +92,14 @@ const teamMembers = [
     publications: "https://scholar.google.com/citations?user=4hK7scoAAAAJ&hl=fr",
     dates: "2015-",
   },
-  { name: "Aurore Comte", institute: "IRD, UMR PHIM", github: "", linkedin: "", publications: "", dates: "2018-" },
+  {
+    name: "Aurore Comte",
+    institute: "IRD, UMR PHIM",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/aurore-comte-162953143/",
+    publications: "",
+    dates: "2018-",
+  },
   {
     name: "Jacques Dainat",
     institute: "IRD",
@@ -93,7 +112,7 @@ const teamMembers = [
     name: "Jean-François Dufayard",
     institute: "CIRAD, UMR AGAP",
     github: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jean-fran%C3%A7ois-dufayard-23263698/",
     publications: "",
     dates: "2010-",
   },
@@ -113,14 +132,28 @@ const teamMembers = [
     publications: "",
     dates: "2015-",
   },
-  { name: "David Lopez", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2020-" },
-  { name: "Julie Orjuela", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "", dates: "2017-" },
+  {
+    name: "David Lopez",
+    institute: "CIRAD, UMR AGAP",
+    github: "",
+    linkedin: "",
+    publications: "https://scholar.google.com/citations?user=3375HXkAAAAJ&hl=fr",
+    dates: "2020-",
+  },
+  {
+    name: "Julie Orjuela",
+    institute: "IRD, UMR DIADE",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/orjuelajulie/",
+    publications: "",
+    dates: "2017-",
+  },
   {
     name: "Vincent Manzanilla",
     institute: "IRD, UMR PHIM",
     github: "",
     linkedin: "",
-    publications: "",
+    publications: "https://scholar.google.com/citations?user=am1vgngAAAAJ&hl=fr",
     dates: "2022-",
   },
   {
@@ -128,7 +161,7 @@ const teamMembers = [
     institute: "CIRAD, UMR AGAP",
     github: "",
     linkedin: "",
-    publications: "",
+    publications: "https://scholar.google.com/citations?user=u5v7Al0AAAAJ&hl=fr",
     dates: "2015-",
   },
   {
