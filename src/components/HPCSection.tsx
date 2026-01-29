@@ -3,38 +3,42 @@ import itropLogo from "@/assets/itrop-logo.png";
 import iso9001Logo from "@/assets/iso9001-logo.png";
 import isdmLogo from "@/assets/isdm-logo.png";
 
-const hpcClusters = [{
-  name: "Meso@LR",
-  location: "CINES",
-  type: "RENT",
-  partner: "CIRAD",
-  docUrl: "https://agap.gitlab.cirad.fr/cluster/documentation/fr/",
-  showItrop: false,
-  showIsdm: true,
-  isdmUrl: "https://isdm.umontpellier.fr/",
-  specs: {
-    cores: "2144 cores AMD EPYC 9654",
-    nodes: ["Standard nodes", "2 bigmem nodes", "2 GPU Nvidia A100"],
-    storage: "700 To replicated storage"
-  }
-}, {
-  name: "CINES",
-  location: "IRD",
-  type: "HOSTEL",
-  partner: "IRD",
-  docUrl: "https://bioinfo.ird.fr/index.php/en/cluster-2/",
-  showItrop: true,
-  showIsdm: false,
-  isdmUrl: "",
-  specs: {
-    cores: "1148 cores",
-    nodes: ["32 standard nodes", "1 supermem node", "1 GPU node"],
-    storage: "800 To (SAN) + 210 To scratch"
-  }
-}];
+const hpcClusters = [
+  {
+    name: "Meso@LR",
+    location: "CINES",
+    type: "RENT",
+    partner: "CIRAD",
+    docUrl: "https://agap.gitlab.cirad.fr/cluster/documentation/fr/",
+    showItrop: false,
+    showIsdm: true,
+    isdmUrl: "https://isdm.umontpellier.fr/",
+    specs: {
+      cores: "2144 cores AMD EPYC 9654",
+      nodes: ["Standard nodes", "2 bigmem nodes", "2 GPU Nvidia A100"],
+      storage: "700 To replicated storage",
+    },
+  },
+  {
+    name: "IRD",
+    location: "CINES",
+    type: "HOSTEL",
+    partner: "IRD",
+    docUrl: "https://bioinfo.ird.fr/index.php/en/cluster-2/",
+    showItrop: true,
+    showIsdm: false,
+    isdmUrl: "",
+    specs: {
+      cores: "1148 cores",
+      nodes: ["32 standard nodes", "1 supermem node", "1 GPU node"],
+      storage: "800 To (SAN) + 210 To scratch",
+    },
+  },
+];
 
 export function HPCSection() {
-  return <section id="hpc" className="py-20 bg-secondary/30">
+  return (
+    <section id="hpc" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -45,16 +49,20 @@ export function HPCSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Computing <span className="text-gradient">Infrastructure</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">The platform has privileged access to two HPC clusters providing 400+ users with 500+ bioinformatics tools.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            The platform has privileged access to two HPC clusters providing 400+ users with 500+ bioinformatics tools.
+          </p>
         </div>
 
         {/* HPC Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {hpcClusters.map((cluster, index) => <div key={cluster.name} className="relative bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group">
+          {hpcClusters.map((cluster, index) => (
+            <div
+              key={cluster.name}
+              className="relative bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group"
+            >
               {/* Type Badge */}
-              <div className="absolute -top-3 left-6">
-                
-              </div>
+              <div className="absolute -top-3 left-6"></div>
 
               {/* Partner Badge */}
               <div className="absolute -top-3 right-6 flex items-center gap-2">
@@ -63,10 +71,12 @@ export function HPCSection() {
                     <img src={isdmLogo} alt="ISDM" className="h-8 w-auto hover:opacity-80 transition-opacity" />
                   </a>
                 )}
-                {cluster.showItrop && <>
+                {cluster.showItrop && (
+                  <>
                     <img src={iso9001Logo} alt="ISO 9001" className="h-8 w-auto" />
                     <img src={itropLogo} alt="i-Trop" className="h-8 w-auto" />
-                  </>}
+                  </>
+                )}
                 <span className="px-4 py-1 rounded-full text-sm font-medium bg-secondary text-muted-foreground border border-border">
                   {cluster.partner}
                 </span>
@@ -77,11 +87,15 @@ export function HPCSection() {
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="font-heading text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {cluster.name}
-                    <span className="text-muted-foreground text-lg font-normal ml-2">
-                      @ {cluster.location}
-                    </span>
+                    <span className="text-muted-foreground text-lg font-normal ml-2">@ {cluster.location}</span>
                   </h3>
-                  <a href={cluster.docUrl} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors" title="Documentation">
+                  <a
+                    href={cluster.docUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+                    title="Documentation"
+                  >
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
@@ -98,17 +112,19 @@ export function HPCSection() {
 
                   {/* Nodes */}
                   <div className="pl-13 space-y-2">
-                    {cluster.specs.nodes.map((node, i) => <div key={i} className="flex items-center gap-2 text-muted-foreground">
+                    {cluster.specs.nodes.map((node, i) => (
+                      <div key={i} className="flex items-center gap-2 text-muted-foreground">
                         <Zap className="w-4 h-4 text-primary/60" />
                         <span>{node}</span>
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
 
                   {/* Storage */}
-                  
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
 
         {/* Bottom Stats */}
@@ -127,5 +143,6 @@ export function HPCSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
