@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FileText } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.png";
 
 const keywords = [
@@ -31,54 +32,54 @@ const keywords = [
 ];
 
 const scientificLeaders = [
-  { name: "Alexis Dereeper", institute: "IRD, UMR PHIM", github: "" },
-  { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Pierre Larmande", institute: "IRD, UMR DIADE", github: "" },
-  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "" },
+  { name: "Alexis Dereeper", institute: "IRD, UMR PHIM", github: "", linkedin: "", publications: "" },
+  { name: "Gaetan Droc", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "" },
+  { name: "Pierre Larmande", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "" },
+  { name: "Mathieu Rouard", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", linkedin: "", publications: "" },
 ];
 
 const technicalLeaders = [
-  { name: "Bertrand Pitollat", institute: "CIRAD, UMR AGAP", github: "" },
-  { name: "Ndomassi Tando", institute: "IRD, UMR DIADE", github: "" },
+  { name: "Bertrand Pitollat", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "" },
+  { name: "Ndomassi Tando", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "" },
 ];
 
 const teamMembers = [
-  { name: "Alice Boizet", institute: "CIRAD, UMR AGAP", github: "https://github.com/aliceboizet", dates: "2020-" },
-  { name: "Saliha Beddek", institute: "IFB, UMR AGAP", github: "", dates: "2023-" },
-  { name: "Cathrine Breton", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", dates: "2015-" },
-  { name: "Aurore Comte", institute: "IRD, UMR PHIM", github: "", dates: "2018-" },
-  { name: "Jacques Dainat", institute: "IRD", github: "", dates: "2019-" },
-  { name: "Jean-François Dufayard", institute: "CIRAD, UMR AGAP", github: "", dates: "2010-" },
-  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", dates: "2008-" },
-  { name: "Fred de Lamotte", institute: "INRAE, UMR AGAP", github: "", dates: "2015-" },
-  { name: "David Lopez", institute: "CIRAD, UMR AGAP", github: "", dates: "2020-" },
-  { name: "Julie Orjuela", institute: "IRD, UMR DIADE", github: "", dates: "2017-" },
-  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM", github: "", dates: "2022-" },
-  { name: "Guillaume Martin", institute: "CIRAD, UMR AGAP", github: "", dates: "2015-" },
-  { name: "Julien Paul", institute: "CIRAD, UMR AGAP", github: "", dates: "2021-" },
-  { name: "Sébastien Ravel", institute: "CIRAD, UMR PHIM", github: "", dates: "2012-" },
-  { name: "Manuel Ruiz", institute: "CIRAD, UMR AGAP", github: "", dates: "2005-" },
-  { name: "François Sabot", institute: "IRD, UMR DIADE", github: "", dates: "2010-" },
-  { name: "Gautier Sarah", institute: "INRAE, UMR AGAP", github: "", dates: "2015-" },
-  { name: "Guilhem Sempéré", institute: "CIRAD", github: "", dates: "2012-" },
-  { name: "Stéphanie Sidibe-Bocs", institute: "CIRAD, UMR AGAP", github: "", dates: "2008-" },
-  { name: "Alexandre Soriano", institute: "CIRAD, UMR AGAP", github: "", dates: "2020-" },
-  { name: "Marilyne Summo", institute: "CIRAD, UMR AGAP", github: "", dates: "2018-" },
-  { name: "Christine Tranchant-Dubreuil", institute: "IRD, UMR DIADE", github: "", dates: "2010-" },
+  { name: "Alice Boizet", institute: "CIRAD, UMR AGAP", github: "https://github.com/aliceboizet", linkedin: "", publications: "", dates: "2020-" },
+  { name: "Saliha Beddek", institute: "IFB, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2023-" },
+  { name: "Cathrine Breton", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2015-" },
+  { name: "Aurore Comte", institute: "IRD, UMR PHIM", github: "", linkedin: "", publications: "", dates: "2018-" },
+  { name: "Jacques Dainat", institute: "IRD", github: "", linkedin: "", publications: "", dates: "2019-" },
+  { name: "Jean-François Dufayard", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2010-" },
+  { name: "Valentin Guignon", institute: "Alliance Bioversity and CIAT, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2008-" },
+  { name: "Fred de Lamotte", institute: "INRAE, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2015-" },
+  { name: "David Lopez", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2020-" },
+  { name: "Julie Orjuela", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "", dates: "2017-" },
+  { name: "Vincent Manzanilla", institute: "IRD, UMR PHIM", github: "", linkedin: "", publications: "", dates: "2022-" },
+  { name: "Guillaume Martin", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2015-" },
+  { name: "Julien Paul", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2021-" },
+  { name: "Sébastien Ravel", institute: "CIRAD, UMR PHIM", github: "", linkedin: "", publications: "", dates: "2012-" },
+  { name: "Manuel Ruiz", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2005-" },
+  { name: "François Sabot", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "", dates: "2010-" },
+  { name: "Gautier Sarah", institute: "INRAE, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2015-" },
+  { name: "Guilhem Sempéré", institute: "CIRAD", github: "", linkedin: "", publications: "", dates: "2012-" },
+  { name: "Stéphanie Sidibe-Bocs", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2008-" },
+  { name: "Alexandre Soriano", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2020-" },
+  { name: "Marilyne Summo", institute: "CIRAD, UMR AGAP", github: "", linkedin: "", publications: "", dates: "2018-" },
+  { name: "Christine Tranchant-Dubreuil", institute: "IRD, UMR DIADE", github: "", linkedin: "", publications: "", dates: "2010-" },
   // Previous members
-  { name: "Cecile Fleury", institute: "", github: "", dates: "Past" },
-  { name: "Yann Hueber", institute: "", github: "", dates: "Past" },
-  { name: "Chantal Hamelin", institute: "", github: "", dates: "Past" },
-  { name: "Felix Homa", institute: "", github: "", dates: "Past" },
-  { name: "Dominique This", institute: "", github: "", dates: "Past" },
-  { name: "Stéphanie Pointet", institute: "", github: "", dates: "Past" },
-  { name: "Xavier Argout", institute: "", github: "", dates: "Past" },
-  { name: "Enrique Ortega", institute: "", github: "", dates: "Past" },
-  { name: "Nordine El Hassouni", institute: "", github: "", dates: "Past" },
-  { name: "David Couvin", institute: "", github: "", dates: "Past" },
-  { name: "Cédric Farcy", institute: "", github: "", dates: "Past" },
-  { name: "Anestis Gkanogiannis", institute: "", github: "", dates: "Past" },
-  { name: "Sandy Contreras", institute: "", github: "", dates: "Past" },
+  { name: "Cecile Fleury", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Yann Hueber", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Chantal Hamelin", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Felix Homa", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Dominique This", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Stéphanie Pointet", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Xavier Argout", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Enrique Ortega", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Nordine El Hassouni", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "David Couvin", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Cédric Farcy", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Anestis Gkanogiannis", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Sandy Contreras", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
 ];
 
 const students = [
@@ -193,7 +194,24 @@ export default function Members() {
             {scientificLeaders.map((leader) => (
               <Card key={leader.name} className="border-border hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground mb-3">{leader.name}</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="font-semibold text-foreground">{leader.name}</h3>
+                    {leader.github && (
+                      <a href={leader.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FaGithub className="w-4 h-4" />
+                      </a>
+                    )}
+                    {leader.linkedin && (
+                      <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FaLinkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                    {leader.publications && (
+                      <a href={leader.publications} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FileText className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
                     <span className="text-sm italic">{leader.institute || "Institute placeholder"}</span>
@@ -216,7 +234,24 @@ export default function Members() {
             {technicalLeaders.map((leader) => (
               <Card key={leader.name} className="border-border hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground mb-3">{leader.name}</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="font-semibold text-foreground">{leader.name}</h3>
+                    {leader.github && (
+                      <a href={leader.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FaGithub className="w-4 h-4" />
+                      </a>
+                    )}
+                    {leader.linkedin && (
+                      <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FaLinkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                    {leader.publications && (
+                      <a href={leader.publications} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FileText className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
                     <span className="text-sm italic">{leader.institute || "Institute placeholder"}</span>
@@ -274,13 +309,18 @@ export default function Members() {
                   <div className="flex items-center gap-2 mb-3">
                     <h3 className="font-semibold text-foreground">{member.name}</h3>
                     {member.github && (
-                      <a
-                        href={member.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
+                      <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                         <FaGithub className="w-4 h-4" />
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FaLinkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                    {member.publications && (
+                      <a href={member.publications} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <FileText className="w-4 h-4" />
                       </a>
                     )}
                   </div>
