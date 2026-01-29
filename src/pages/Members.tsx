@@ -85,7 +85,7 @@ const students = [
   { name: "Rayane Elmedjadji", degree: "MSc alternant", dates: "2024-" },
   { name: "Michel Gomes", degree: "PhD", dates: "2023-" },
   { name: "Bill Happi", degree: "PhD", dates: "2021-2024" },
-  { name: "Romain Vicens", degree: "MSc2", dates: "2024" }
+  { name: "Romain Vicens", degree: "MSc2", dates: "2024" },
   { name: "Yann Pomie", degree: "MSc2", dates: "2021-2023" },
   { name: "Laurine Jaffret", degree: "MSc2", dates: "2023" },
   { name: "Wafa Aichoune", degree: "MSc2", dates: "2023" },
