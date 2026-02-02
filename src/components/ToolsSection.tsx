@@ -2,7 +2,14 @@ import { ExternalLink, Layers, Eye } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { BananaIcon, CitrusIcon } from "@/components/icons/PlantIcons";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { useState, useEffect } from "react";
 import agroldFavicon from "@/assets/tools/agrold-favicon.png";
 import gigwaFavicon from "@/assets/tools/gigwa-favicon.png";
@@ -57,7 +64,7 @@ const tools: Tool[] = [
     name: "Culebront",
     category: "Assembly",
     description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
-    link: "https://github.com/SouthGreenPlatform/culebront",
+    link: "https://forge.ird.fr/diade/culebront_pipeline",
     favicon: culebrontFavicon,
     color: "from-emerald-500 to-green-500",
     internal: false,
@@ -221,12 +228,7 @@ export function ToolsSection() {
 
                 return (
                   <CarouselItem key={tool.name} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                    <a
-                      href={tool.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group block h-full"
-                    >
+                    <a href={tool.link} target="_blank" rel="noopener noreferrer" className="group block h-full">
                       {cardContent}
                     </a>
                   </CarouselItem>
@@ -236,7 +238,7 @@ export function ToolsSection() {
             <CarouselPrevious className="-left-12" />
             <CarouselNext className="-right-12" />
           </Carousel>
-          
+
           {/* Pagination Dots */}
           <div className="flex justify-center gap-2 mt-6">
             {Array.from({ length: count }).map((_, index) => (
@@ -244,9 +246,7 @@ export function ToolsSection() {
                 key={index}
                 onClick={() => api?.scrollTo(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === current 
-                    ? "bg-primary w-6" 
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  index === current ? "bg-primary w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Aller à la diapositive ${index + 1}`}
               />
