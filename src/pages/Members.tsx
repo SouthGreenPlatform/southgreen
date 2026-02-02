@@ -92,6 +92,14 @@ const teamMembers = [
     dates: "2023-",
   },
   {
+    name: "Stéphanie Bocs",
+    institute: "CIRAD, UMR AGAP",
+    github: "",
+    linkedin: "",
+    publications: "https://scholar.google.com/citations?user=Z7sKwTwAAAAJ&hl=en",
+    dates: "2008-",
+  },
+  {
     name: "Cathrine Breton",
     institute: "Alliance Bioversity and CIAT, UMR AGAP",
     github: "https://github.com/CathyBreton",
