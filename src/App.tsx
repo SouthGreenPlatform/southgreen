@@ -11,6 +11,7 @@ import Members from "./pages/Members";
 import Publications from "./pages/Publications";
 import Projects from "./pages/Projects";
 import TermsOfUse from "./pages/TermsOfUse";
+import OpenScience from "./pages/OpenScience";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/publications" element={<Publications />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/open-science" element={<OpenScience />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
