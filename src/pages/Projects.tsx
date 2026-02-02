@@ -90,7 +90,7 @@ const projects: Project[] = [
   },
   {
     acronym: "Bana+",
-    title: "",
+    title: "https://bananaplus.org/",
     url: "Ministère",
     donor: "ANR",
     years: "2024-2029",
