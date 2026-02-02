@@ -201,7 +201,7 @@ const toolCategories: ToolCategory[] = [
       {
         name: "Culebront",
         description: "Snakemake-based pipeline for genome assembly from long-read sequencing data.",
-        link: "https://github.com/SouthGreenPlatform/culebront",
+        link: "https://forge.ird.fr/diade/culebront_pipeline",
         favicon: culebrontFavicon,
         color: "from-yellow-500 to-amber-500",
         tags: ["Snakemake", "Assembly", "Long-read"],
