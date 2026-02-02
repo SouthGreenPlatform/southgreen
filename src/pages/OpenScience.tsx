@@ -92,6 +92,18 @@ const fairResources = [
     url: "https://www.go-fair.org/fair-principles/",
     icon: FileCheck,
   },
+  {
+    name: "bio.tools",
+    description: "Registry where our bioinformatics tools are documented and discoverable",
+    url: "https://bio.tools/",
+    icon: Database,
+  },
+  {
+    name: "FAIRsharing",
+    description: "Registry of standards, databases and policies - our tools are listed here",
+    url: "https://fairsharing.org/",
+    icon: FileCheck,
+  },
 ];
 
 export default function OpenScience() {
