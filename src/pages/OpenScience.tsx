@@ -8,19 +8,19 @@ import { FaGithub, FaGitlab } from "react-icons/fa";
 const dataManagementResources = [
   {
     name: "Recherche Data Gouv",
-    description: "L'écosystème national pour le partage et l'ouverture des données de recherche françaises",
+    description: "French national ecosystem for sharing and opening research data",
     url: "https://recherche.data.gouv.fr/fr",
     icon: Database,
   },
   {
-    name: "Guide Données de Recherche",
-    description: "Nouveau guide pour la gestion des données de recherche",
+    name: "Research Data Guide",
+    description: "New guide for research data management",
     url: "https://recherche.data.gouv.fr/fr/actualite/donnees-de-recherche-le-nouveau-guide",
     icon: BookOpen,
   },
   {
     name: "RDMkit",
-    description: "Research Data Management toolkit - ressources et bonnes pratiques pour la gestion des données",
+    description: "Research Data Management toolkit - resources and best practices for data management",
     url: "https://rdmkit.elixir-europe.org/",
     icon: FileCheck,
   },
@@ -28,14 +28,14 @@ const dataManagementResources = [
 
 const softwareResources = [
   {
-    name: "Ouvrir la Science - Codes et Logiciels",
-    description: "Guide national sur l'ouverture des codes sources et logiciels de recherche",
+    name: "Open Science - Codes & Software",
+    description: "French national guide on opening source codes and research software",
     url: "https://www.ouvrirlascience.fr/science-ouverte-codes-et-logiciels/",
     icon: Code2,
   },
   {
     name: "Software Heritage",
-    description: "Archive universelle des codes sources logiciels",
+    description: "Universal archive of software source codes",
     url: "https://www.softwareheritage.org/",
     icon: GitBranch,
   },
@@ -44,35 +44,35 @@ const softwareResources = [
 const gitRepositories = [
   {
     name: "GitLab CIRAD",
-    description: "Forge logicielle du CIRAD pour le développement collaboratif",
+    description: "CIRAD software forge for collaborative development",
     url: "https://gitlab.cirad.fr/",
     icon: FaGitlab,
     color: "text-orange-500",
   },
   {
     name: "GitLab IRD",
-    description: "Plateforme de gestion de code source de l'IRD",
+    description: "IRD source code management platform",
     url: "https://gitlab.ird.fr/",
     icon: FaGitlab,
     color: "text-orange-500",
   },
   {
     name: "Forge INRAE",
-    description: "Forge logicielle de l'INRAE pour les projets de recherche",
+    description: "INRAE software forge for research projects",
     url: "https://forge.inrae.fr/",
     icon: FaGitlab,
     color: "text-orange-500",
   },
   {
     name: "GitHub South Green",
-    description: "Organisation GitHub de la plateforme South Green",
+    description: "South Green platform GitHub organization",
     url: "https://github.com/SouthGreenPlatform",
     icon: FaGithub,
     color: "text-foreground",
   },
   {
     name: "GitHub Training",
-    description: "Ressources de formation et tutoriels",
+    description: "Training resources and tutorials",
     url: "https://southgreenplatform.github.io/",
     icon: FaGithub,
     color: "text-foreground",
@@ -82,13 +82,13 @@ const gitRepositories = [
 const fairResources = [
   {
     name: "FAIR-Checker",
-    description: "Outil pour vérifier la conformité FAIR de vos ressources numériques",
+    description: "Tool to verify the FAIR compliance of your digital resources",
     url: "https://fair-checker.france-bioinformatique.fr/",
     icon: Shield,
   },
   {
     name: "GO FAIR",
-    description: "Initiative internationale pour l'implémentation des principes FAIR",
+    description: "International initiative for implementing FAIR principles",
     url: "https://www.go-fair.org/fair-principles/",
     icon: FileCheck,
   },
@@ -117,8 +117,8 @@ export default function OpenScience() {
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Notre engagement pour une science ouverte, reproductible et collaborative. 
-                Découvrez nos ressources pour la gestion des données, le partage de code et les bonnes pratiques FAIR.
+                Our commitment to open, reproducible, and collaborative science. 
+                Discover our resources for data management, code sharing, and FAIR best practices.
               </p>
             </div>
           </div>
@@ -133,8 +133,8 @@ export default function OpenScience() {
                   <Database className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Gestion des Données</h2>
-                  <p className="text-muted-foreground">Ressources pour gérer et partager vos données de recherche</p>
+                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Data Management</h2>
+                  <p className="text-muted-foreground">Resources for managing and sharing your research data</p>
                 </div>
               </div>
               
@@ -153,7 +153,7 @@ export default function OpenScience() {
                     <CardContent>
                       <Button variant="outline" size="sm" className="w-full group/btn" asChild>
                         <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                          Accéder
+                          Access
                           <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                         </a>
                       </Button>
@@ -174,8 +174,8 @@ export default function OpenScience() {
                   <Workflow className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Logiciels & Workflows</h2>
-                  <p className="text-muted-foreground">Bonnes pratiques pour le développement et le partage de code</p>
+                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Software & Workflows</h2>
+                  <p className="text-muted-foreground">Best practices for development and code sharing</p>
                 </div>
               </div>
               
@@ -194,7 +194,7 @@ export default function OpenScience() {
                     <CardContent>
                       <Button variant="outline" size="sm" className="w-full group/btn hover:border-accent hover:text-accent" asChild>
                         <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                          Accéder
+                          Access
                           <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                         </a>
                       </Button>
@@ -215,8 +215,8 @@ export default function OpenScience() {
                   <GitBranch className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Nos Dépôts de Code</h2>
-                  <p className="text-muted-foreground">Accédez aux codes sources de nos outils et projets</p>
+                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Our Code Repositories</h2>
+                  <p className="text-muted-foreground">Access the source codes of our tools and projects</p>
                 </div>
               </div>
               
@@ -243,7 +243,7 @@ export default function OpenScience() {
                       </CardHeader>
                       <CardContent>
                         <div className="flex items-center text-sm text-muted-foreground group-hover:text-primary transition-colors">
-                          <span>Visiter</span>
+                          <span>Visit</span>
                           <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </div>
                       </CardContent>
@@ -264,7 +264,7 @@ export default function OpenScience() {
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Principes FAIR</h2>
+                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">FAIR Principles</h2>
                   <p className="text-muted-foreground">Findable, Accessible, Interoperable, Reusable</p>
                 </div>
               </div>
@@ -276,7 +276,7 @@ export default function OpenScience() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Les données doivent être faciles à trouver avec des métadonnées riches et des identifiants persistants.
+                      Data should be easy to find with rich metadata and persistent identifiers.
                     </p>
                   </CardContent>
                 </Card>
@@ -287,7 +287,7 @@ export default function OpenScience() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Les données doivent être accessibles via des protocoles standardisés et ouverts.
+                      Data should be accessible via standardized and open protocols.
                     </p>
                   </CardContent>
                 </Card>
@@ -298,7 +298,7 @@ export default function OpenScience() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Les données doivent utiliser des vocabulaires et formats standards pour être combinables.
+                      Data should use standard vocabularies and formats to be combinable.
                     </p>
                   </CardContent>
                 </Card>
@@ -309,7 +309,7 @@ export default function OpenScience() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Les données doivent avoir des licences claires et une provenance documentée.
+                      Data should have clear licenses and documented provenance.
                     </p>
                   </CardContent>
                 </Card>
@@ -330,7 +330,7 @@ export default function OpenScience() {
                     <CardContent>
                       <Button variant="outline" size="sm" className="w-full group/btn" asChild>
                         <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                          Vérifier vos données
+                          Check your data
                           <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                         </a>
                       </Button>
@@ -348,10 +348,10 @@ export default function OpenScience() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-4">
-                  Conseils pour la Gestion des Données
+                  Data Management Tips
                 </h2>
                 <p className="text-muted-foreground">
-                  Bonnes pratiques pour une recherche reproductible et ouverte
+                  Best practices for reproducible and open research
                 </p>
               </div>
               
@@ -360,13 +360,13 @@ export default function OpenScience() {
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
                       <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">1</span>
-                      Planifiez dès le début
+                      Plan from the start
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Rédigez un Plan de Gestion des Données (DMP) avant de commencer votre projet. 
-                      Utilisez des outils comme DMP OPIDoR.
+                      Write a Data Management Plan (DMP) before starting your project. 
+                      Use tools like DMP OPIDoR.
                     </p>
                   </CardContent>
                 </Card>
@@ -375,13 +375,13 @@ export default function OpenScience() {
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
                       <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">2</span>
-                      Utilisez des formats ouverts
+                      Use open formats
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Privilégiez les formats standards et non propriétaires pour garantir 
-                      l'accessibilité à long terme de vos données.
+                      Prefer standard and non-proprietary formats to ensure 
+                      long-term accessibility of your data.
                     </p>
                   </CardContent>
                 </Card>
@@ -390,13 +390,13 @@ export default function OpenScience() {
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
                       <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">3</span>
-                      Documentez vos workflows
+                      Document your workflows
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Utilisez des outils comme Snakemake ou Nextflow pour créer des workflows 
-                      reproductibles et documentés.
+                      Use tools like Snakemake or Nextflow to create 
+                      reproducible and documented workflows.
                     </p>
                   </CardContent>
                 </Card>
@@ -405,13 +405,13 @@ export default function OpenScience() {
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
                       <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">4</span>
-                      Versionez votre code
+                      Version your code
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Utilisez Git pour versionner votre code et déposez-le sur une forge 
-                      institutionnelle ou GitHub avec une licence appropriée.
+                      Use Git to version your code and deposit it on an 
+                      institutional forge or GitHub with an appropriate license.
                     </p>
                   </CardContent>
                 </Card>
