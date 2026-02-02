@@ -415,6 +415,36 @@ export default function OpenScience() {
                     </p>
                   </CardContent>
                 </Card>
+                
+                <Card className="bg-card/80 backdrop-blur">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">5</span>
+                      Deposit to repositories
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Archive your datasets in general repositories like Zenodo or 
+                      Dataverse to ensure long-term preservation and citability.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-card/80 backdrop-blur">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">6</span>
+                      Use thematic repositories
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      At South Green, we deposit genome data to our Genome Hubs 
+                      and genetic variants in GIGWA for community access.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
