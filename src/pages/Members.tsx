@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FileText } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.png";
+import orcidLogo from "@/assets/orcid-logo.svg";
 
 const keywords = [
   "NGS Data Analysis",
@@ -33,6 +34,7 @@ const scientificLeaders = [
     github: "https://github.com/dereeper",
     linkedin: "",
     publications: "https://scholar.google.fr/citations?hl=fr&user=AdM83yUAAAAJ",
+    orcid: "",
   },
   {
     name: "Gaetan Droc",
@@ -40,6 +42,7 @@ const scientificLeaders = [
     github: "https://github.com/gdroc",
     linkedin: "",
     publications: "https://scholar.google.fr/citations?hl=fr&user=WejXtmAAAAAJ",
+    orcid: "",
   },
   {
     name: "Pierre Larmande",
@@ -47,6 +50,7 @@ const scientificLeaders = [
     github: "https://github.com/pierrelarmande",
     linkedin: "",
     publications: "https://scholar.google.fr/citations?hl=fr&user=BjYnqe8AAAAJ",
+    orcid: "",
   },
   {
     name: "Mathieu Rouard",
@@ -54,6 +58,7 @@ const scientificLeaders = [
     github: "",
     linkedin: "https://www.linkedin.com/in/mrouard",
     publications: "https://scholar.google.fr/citations?hl=fr&user=Hjdw95wAAAAJ&view_op=list_works&sortby=pubdate",
+    orcid: "",
   },
 ];
 
@@ -64,6 +69,7 @@ const technicalLeaders = [
     github: "",
     linkedin: "https://www.umr-diade.fr/membre/tando-ndomassi/",
     publications: "",
+    orcid: "",
   },
   {
     name: "Ndomassi Tando",
@@ -71,6 +77,7 @@ const technicalLeaders = [
     github: "",
     linkedin: "https://www.linkedin.com/in/bertrand-pitollat-7557b714/",
     publications: "",
+    orcid: "",
   },
 ];
 
@@ -81,6 +88,7 @@ const teamMembers = [
     github: "https://github.com/aliceboizet",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2020-",
   },
   {
@@ -89,6 +97,7 @@ const teamMembers = [
     github: "",
     linkedin: "https://www.linkedin.com/in/saliha-zenboudji-beddek-a84848122/",
     publications: "",
+    orcid: "",
     dates: "2023-",
   },
   {
@@ -97,6 +106,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=Z7sKwTwAAAAJ&hl=en",
+    orcid: "https://orcid.org/0000-0001-7850-4426",
     dates: "2008-",
   },
   {
@@ -105,6 +115,7 @@ const teamMembers = [
     github: "https://github.com/CathyBreton",
     linkedin: "https://www.linkedin.com/in/catherine-breton-a5986828/",
     publications: "https://scholar.google.com/citations?user=4hK7scoAAAAJ&hl=fr",
+    orcid: "",
     dates: "2015-",
   },
   {
@@ -113,6 +124,7 @@ const teamMembers = [
     github: "",
     linkedin: "https://www.linkedin.com/in/aurore-comte-162953143/",
     publications: "",
+    orcid: "",
     dates: "2018-",
   },
   {
@@ -121,6 +133,7 @@ const teamMembers = [
     github: "https://github.com/Juke34",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2019-",
   },
   {
@@ -129,6 +142,7 @@ const teamMembers = [
     github: "",
     linkedin: "https://www.linkedin.com/in/jean-fran%C3%A7ois-dufayard-23263698/",
     publications: "",
+    orcid: "",
     dates: "2010-",
   },
   {
@@ -137,6 +151,7 @@ const teamMembers = [
     github: "https://github.com/guignonv",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2008-",
   },
   {
@@ -145,6 +160,7 @@ const teamMembers = [
     github: "",
     linkedin: "https://www.linkedin.com/in/fred-de-lamotte-819478a/",
     publications: "",
+    orcid: "",
     dates: "2015-",
   },
   {
@@ -153,6 +169,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=3375HXkAAAAJ&hl=fr",
+    orcid: "",
     dates: "2020-",
   },
   {
@@ -161,6 +178,7 @@ const teamMembers = [
     github: "",
     linkedin: "https://www.linkedin.com/in/orjuelajulie/",
     publications: "",
+    orcid: "",
     dates: "2017-",
   },
   {
@@ -169,6 +187,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=am1vgngAAAAJ&hl=fr",
+    orcid: "",
     dates: "2022-",
   },
   {
@@ -177,6 +196,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=u5v7Al0AAAAJ&hl=fr",
+    orcid: "",
     dates: "2015-",
   },
   {
@@ -185,6 +205,7 @@ const teamMembers = [
     github: "",
     linkedin: "https://www.linkedin.com/in/julien-paul-ab3b94185/",
     publications: "",
+    orcid: "",
     dates: "2021-",
   },
   {
@@ -193,6 +214,7 @@ const teamMembers = [
     github: "https://github.com/sravel",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2012-",
   },
   {
@@ -201,6 +223,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=aq2dUfcAAAAJ&hl=en",
+    orcid: "",
     dates: "2005-",
   },
   {
@@ -209,6 +232,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?hl=en&user=d9fC3cIAAAAJ",
+    orcid: "",
     dates: "2010-",
   },
   {
@@ -217,6 +241,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=ssCwZrwAAAAJ&hl=en",
+    orcid: "",
     dates: "2015-",
   },
   {
@@ -225,6 +250,7 @@ const teamMembers = [
     github: "https://github.com/GuilhemSempere",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2012-",
   },
   {
@@ -233,6 +259,7 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?user=Z7sKwTwAAAAJ&hl=en",
+    orcid: "",
     dates: "2008-",
   },
   {
@@ -241,6 +268,7 @@ const teamMembers = [
     github: "https://github.com/Alexandre-So",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2020-",
   },
   {
@@ -249,6 +277,7 @@ const teamMembers = [
     github: "https://github.com/MarilyneSummo",
     linkedin: "",
     publications: "",
+    orcid: "",
     dates: "2018-",
   },
   {
@@ -257,22 +286,23 @@ const teamMembers = [
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?hl=fr&user=L4_MDcYAAAAJ",
+    orcid: "",
     dates: "2010-",
   },
   // Previous members
-  { name: "Cecile Fleury", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Yann Hueber", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Chantal Hamelin", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Felix Homa", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Dominique This", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Stéphanie Pointet", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Xavier Argout", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Enrique Ortega", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Nordine El Hassouni", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "David Couvin", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Cédric Farcy", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Anestis Gkanogiannis", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
-  { name: "Sandy Contreras", institute: "", github: "", linkedin: "", publications: "", dates: "Past" },
+  { name: "Cecile Fleury", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Yann Hueber", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Chantal Hamelin", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Felix Homa", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Dominique This", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Stéphanie Pointet", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Xavier Argout", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Enrique Ortega", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Nordine El Hassouni", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "David Couvin", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Cédric Farcy", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Anestis Gkanogiannis", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
+  { name: "Sandy Contreras", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
 ];
 
 const students = [
@@ -428,6 +458,25 @@ export default function Members() {
                         </Tooltip>
                       </TooltipProvider>
                     )}
+                    {leader.orcid && (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <a
+                              href={leader.orcid}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <img src={orcidLogo} alt="ORCID" className="w-4 h-4" />
+                            </a>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>ORCID profile</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    )}
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Building2 className="w-4 h-4" />
@@ -488,6 +537,25 @@ export default function Members() {
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>Link to publications</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    )}
+                    {leader.orcid && (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <a
+                              href={leader.orcid}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <img src={orcidLogo} alt="ORCID" className="w-4 h-4" />
+                            </a>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>ORCID profile</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -586,6 +654,25 @@ export default function Members() {
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>Link to publications</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    )}
+                    {member.orcid && (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <a
+                              href={member.orcid}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <img src={orcidLogo} alt="ORCID" className="w-4 h-4" />
+                            </a>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>ORCID profile</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
