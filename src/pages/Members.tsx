@@ -254,15 +254,6 @@ const teamMembers = [
     dates: "2012-",
   },
   {
-    name: "Stéphanie Sidibe-Bocs",
-    institute: "CIRAD, UMR AGAP",
-    github: "",
-    linkedin: "",
-    publications: "https://scholar.google.com/citations?user=Z7sKwTwAAAAJ&hl=en",
-    orcid: "",
-    dates: "2008-",
-  },
-  {
     name: "Alexandre Soriano",
     institute: "CIRAD, UMR AGAP",
     github: "https://github.com/Alexandre-So",
