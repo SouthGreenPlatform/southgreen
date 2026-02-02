@@ -461,6 +461,21 @@ export default function OpenScience() {
                     </p>
                   </CardContent>
                 </Card>
+                
+                <Card className="bg-card/80 backdrop-blur md:col-span-2">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">7</span>
+                      Consider ABS for DSI
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Keep traceability of sample metadata including sample identifiers 
+                      and country of origin to comply with Access and Benefit Sharing regulations for Digital Sequence Information.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
