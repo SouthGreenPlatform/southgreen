@@ -441,8 +441,8 @@ export default function OpenScience() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Archive your datasets in general repositories like Zenodo or 
-                      Dataverse to ensure long-term preservation and citability.
+                      Archive your datasets in repositories like Zenodo, Dataverse, 
+                      or sequence archives (ENA, SRA) for long-term preservation and citability.
                     </p>
                   </CardContent>
                 </Card>
