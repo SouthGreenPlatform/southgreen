@@ -64,6 +64,13 @@ const gitRepositories = [
     color: "text-orange-500",
   },
   {
+    name: "GitLab Alliance",
+    description: "Alliance of Bioversity & CIAT code repository",
+    url: "https://ciatgit.ciat.cgiar.org/",
+    icon: FaGitlab,
+    color: "text-orange-500",
+  },
+  {
     name: "GitHub South Green",
     description: "South Green platform GitHub organization",
     url: "https://github.com/SouthGreenPlatform",
