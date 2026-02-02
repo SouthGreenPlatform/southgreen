@@ -85,24 +85,28 @@ const fairResources = [
     description: "Tool to verify the FAIR compliance of your digital resources",
     url: "https://fair-checker.france-bioinformatique.fr/",
     icon: Shield,
+    buttonLabel: "Check your data",
   },
   {
     name: "GO FAIR",
     description: "International initiative for implementing FAIR principles",
     url: "https://www.go-fair.org/fair-principles/",
     icon: FileCheck,
+    buttonLabel: "Learn more",
   },
   {
     name: "bio.tools",
     description: "Registry where our bioinformatics tools are documented and discoverable",
-    url: "https://bio.tools/",
+    url: "https://bio.tools/southgreen",
     icon: Database,
+    buttonLabel: "View our tools",
   },
   {
     name: "FAIRsharing",
     description: "Registry of standards, databases and policies - our tools are listed here",
-    url: "https://fairsharing.org/",
+    url: "https://fairsharing.org/search?fairsharingRegistry=Database&subjects=genomics&status=ready",
     icon: FileCheck,
+    buttonLabel: "Explore registry",
   },
 ];
 
@@ -342,7 +346,7 @@ export default function OpenScience() {
                     <CardContent>
                       <Button variant="outline" size="sm" className="w-full group/btn" asChild>
                         <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                          Check your data
+                          {resource.buttonLabel}
                           <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                         </a>
                       </Button>
