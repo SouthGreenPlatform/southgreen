@@ -73,6 +73,14 @@ const projects: Project[] = [
     donor: "Vinid’Occ",
     years: "2022-2026",
   },
+  {
+    acronym: "EPIS",
+    title:
+      "The objective of the EPIS project is to decipher how demographic and environmental changes impact the evolution of the plant immune system",
+    url: "https://umr-agap.cirad.fr/en/research/main-projects/vinid-occ",
+    donor: "ANR",
+    years: "2025-2028",
+  },
 ];
 
 const Projects = () => {
