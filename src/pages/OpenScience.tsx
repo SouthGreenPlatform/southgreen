@@ -473,13 +473,14 @@ export default function OpenScience() {
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
                       <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">7</span>
-                      Consider ABS for DSI
+                      Consider ABS for DSI (CBD)
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Keep traceability of sample metadata including sample identifiers 
-                      and country of origin to comply with Access and Benefit Sharing regulations for Digital Sequence Information.
+                      Under the Convention on Biological Diversity (CBD), Access and Benefit Sharing (ABS) 
+                      now applies to Digital Sequence Information (DSI). Keep traceability of sample metadata 
+                      including sample identifiers and country of origin to ensure compliance.
                     </p>
                   </CardContent>
                 </Card>
