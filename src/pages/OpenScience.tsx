@@ -403,8 +403,8 @@ export default function OpenScience() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Prefer standard and non-proprietary formats to ensure 
-                      long-term accessibility of your data.
+                      We use standard formats like GFF3 and VCF, and actively 
+                      participate in BrAPI to ensure interoperability.
                     </p>
                   </CardContent>
                 </Card>
