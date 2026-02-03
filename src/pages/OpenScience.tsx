@@ -21,7 +21,13 @@ const dataManagementResources = [
   {
     name: "Research Data Guide",
     description: "New guide for research data management",
-    url: "https://recherche.data.gouv.fr/fr/actualite/donnees-de-recherche-le-nouveau-guide",
+    url: "https://hal.inrae.fr/hal-05094925",
+    icon: BookOpen,
+  },
+  {
+    name: "IFB Moodle",
+    description: "Training materials and courses for bioinformatics",
+    url: "https://moodle.france-bioinformatique.fr/",
     icon: BookOpen,
   },
   {
@@ -167,7 +173,7 @@ export default function OpenScience() {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {dataManagementResources.map((resource) => (
                   <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
                     <CardHeader>
