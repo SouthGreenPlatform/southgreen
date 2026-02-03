@@ -322,6 +322,10 @@ const students = [
   { name: "Cecile Monat", degree: "PhD", dates: "2013-2016" },
   { name: "Adrien Petel", degree: "MSc2", dates: "2016" },
   { name: "Delphine Lariviere", degree: "PhD", dates: "2012-2015" },
+  { name: "Paco Derouault", degree: "MSc2", dates: "2015" },
+  { name: "Nicolas Pompidor", degree: "MSc2", dates: "2018" },
+  { name: "Benjamin Penaud", degree: "MSc2", dates: "2016" },
+  { name: "Dorcas Tognifode", degree: "MSc2", dates: "2019" },
 ];
 
 type MemberFilter = "current" | "past";
