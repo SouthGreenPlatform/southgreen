@@ -13,7 +13,7 @@ const institutes = [
   },
   {
     name: "INRAE",
-    fullName: "Institut national de recherche pour l'agriculture",
+    fullName: "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
     url: "https://www.inrae.fr/",
   },
   {
