@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Database, GitBranch, FileCheck, BookOpen, Code2, Workflow, Shield, Users } from "lucide-react";
+import { ExternalLink, Database, GitBranch, FileCheck, BookOpen, Code2, Workflow, Shield, Users, GraduationCap } from "lucide-react";
 import { FaGithub, FaGitlab } from "react-icons/fa";
 
 const dataManagementResources = [
@@ -22,12 +22,6 @@ const dataManagementResources = [
     name: "Research Data Guide",
     description: "New guide for research data management",
     url: "https://hal.inrae.fr/hal-05094925",
-    icon: BookOpen,
-  },
-  {
-    name: "IFB Moodle",
-    description: "Training materials and courses for bioinformatics",
-    url: "https://moodle.france-bioinformatique.fr/",
     icon: BookOpen,
   },
   {
@@ -89,12 +83,20 @@ const gitRepositories = [
     icon: FaGithub,
     color: "text-foreground",
   },
+];
+
+const trainingResources = [
   {
-    name: "GitHub Training",
-    description: "Training resources and tutorials",
+    name: "IFB Moodle",
+    description: "Training materials and courses for bioinformatics from IFB",
+    url: "https://moodle.france-bioinformatique.fr/",
+    icon: GraduationCap,
+  },
+  {
+    name: "South Green Training",
+    description: "Training resources and tutorials from South Green platform",
     url: "https://southgreenplatform.github.io/",
     icon: FaGithub,
-    color: "text-foreground",
   },
 ];
 
@@ -173,7 +175,7 @@ export default function OpenScience() {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {dataManagementResources.map((resource) => (
                   <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
                     <CardHeader>
@@ -290,8 +292,49 @@ export default function OpenScience() {
           </div>
         </section>
 
-        {/* FAIR Principles Section */}
+        {/* Training Section */}
         <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <GraduationCap className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Training Resources</h2>
+                  <p className="text-muted-foreground">Learn bioinformatics with our training materials</p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                {trainingResources.map((resource) => (
+                  <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
+                    <CardHeader>
+                      <div className="flex items-start justify-between">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                          <resource.icon className="w-5 h-5 text-primary" />
+                        </div>
+                      </div>
+                      <CardTitle className="text-lg">{resource.name}</CardTitle>
+                      <CardDescription>{resource.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Button variant="outline" size="sm" className="w-full group/btn" asChild>
+                        <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                          Access
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAIR Principles Section */}
+        <section className="py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-8">
