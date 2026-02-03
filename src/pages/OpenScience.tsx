@@ -13,6 +13,12 @@ const dataManagementResources = [
     icon: Database,
   },
   {
+    name: "Trusted Repositories (CoSO)",
+    description: "List of trusted repositories recommended by the CoSO for research data",
+    url: "https://recherche.data.gouv.fr/fr/entrepots",
+    icon: Shield,
+  },
+  {
     name: "Research Data Guide",
     description: "New guide for research data management",
     url: "https://recherche.data.gouv.fr/fr/actualite/donnees-de-recherche-le-nouveau-guide",
@@ -161,7 +167,7 @@ export default function OpenScience() {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {dataManagementResources.map((resource) => (
                   <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
                     <CardHeader>
