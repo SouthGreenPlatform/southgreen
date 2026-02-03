@@ -326,6 +326,7 @@ const students = [
   { name: "Nicolas Pompidor", degree: "MSc2", dates: "2018" },
   { name: "Benjamin Penaud", degree: "MSc2", dates: "2016" },
   { name: "Dorcas Tognifode", degree: "MSc2", dates: "2019" },
+  { name: "Kevin Raguette", degree: "MSc2", dates: "2019" },
 ];
 
 type MemberFilter = "current" | "past";
