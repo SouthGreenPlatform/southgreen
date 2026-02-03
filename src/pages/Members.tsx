@@ -388,7 +388,7 @@ export default function Members() {
               collaboratively to advance plant and pathogen genomics.
             </p>
             <Button asChild className="gap-2">
-              <a href="mailto:contact@southgreen.fr">
+              <a href="mailto:pf-southgreen@groupes.france-bioinformatique.fr">
                 <Mail className="w-4 h-4" />
                 Interested to join?
               </a>
