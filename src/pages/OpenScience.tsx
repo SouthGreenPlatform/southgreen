@@ -136,7 +136,7 @@ export default function OpenScience() {
               </div>
               
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">
-                Open Science & <span className="text-gradient">Source Codes</span>
+                <span className="text-gradient">Open Science</span>
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
