@@ -332,14 +332,24 @@ type MemberFilter = "current" | "past";
 
 const isCurrentMember = (dates: string) => dates.endsWith("-");
 
+const getLatestYear = (dates: string): number => {
+  // Extract all years from the dates string
+  const years = dates.match(/\d{4}/g);
+  if (!years) return 0;
+  // Return the highest (most recent) year
+  return Math.max(...years.map(Number));
+};
+
 export default function Members() {
   const [studentFilter, setStudentFilter] = useState<MemberFilter>("current");
   const [teamFilter, setTeamFilter] = useState<MemberFilter>("current");
 
-  const filteredStudents = students.filter((student) => {
-    if (studentFilter === "current") return isCurrentMember(student.dates);
-    return !isCurrentMember(student.dates);
-  });
+  const filteredStudents = students
+    .filter((student) => {
+      if (studentFilter === "current") return isCurrentMember(student.dates);
+      return !isCurrentMember(student.dates);
+    })
+    .sort((a, b) => getLatestYear(b.dates) - getLatestYear(a.dates));
 
   const filteredTeamMembers = teamMembers.filter((member) => {
     if (teamFilter === "current") return isCurrentMember(member.dates);
