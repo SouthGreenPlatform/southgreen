@@ -558,15 +558,19 @@ export default function OpenScience() {
                       <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
                         7
                       </span>
-                      Consider ABS for DSI (CBD)
+                      Consider ABS for DSI (CBD) - COP16 Decision 16/2
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-4">
                     <p className="text-muted-foreground">
-                      Under the Convention on Biological Diversity (CBD), Access and Benefit Sharing (ABS) now applies
-                      to Digital Sequence Information (DSI). Keep traceability of sample metadata including sample
-                      identifiers and country of origin to ensure compliance.
+                      At COP16 (2024), the Convention on Biological Diversity (CBD) adopted Decision 16/2 establishing a multilateral mechanism for benefit-sharing from Digital Sequence Information (DSI). Keep traceability of sample metadata including sample identifiers and country of origin to ensure compliance with Access and Benefit Sharing (ABS) requirements.
                     </p>
+                    <Button variant="outline" size="sm" className="group/btn" asChild>
+                      <a href="https://doi.org/10.1016/j.tig.2025.03.004" target="_blank" rel="noopener noreferrer">
+                        Read more about Decision 16/2
+                        <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
