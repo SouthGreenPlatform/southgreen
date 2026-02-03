@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building2, Tag, GraduationCap, Info } from "lucide-react";
+import { Users, Building2, Tag, GraduationCap, Info, Mail } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -368,10 +368,16 @@ export default function Members() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Meet Our <span className="text-primary">Members</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-6">
               The South Green Bioinformatics Platform brings together experts from multiple research institutes, working
               collaboratively to advance plant and pathogen genomics.
             </p>
+            <Button asChild className="gap-2">
+              <a href="mailto:contact@southgreen.fr">
+                <Mail className="w-4 h-4" />
+                Interested to join?
+              </a>
+            </Button>
           </div>
         </div>
       </section>
