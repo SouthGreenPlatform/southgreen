@@ -2,7 +2,18 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Database, GitBranch, FileCheck, BookOpen, Code2, Workflow, Shield, Users, GraduationCap } from "lucide-react";
+import {
+  ExternalLink,
+  Database,
+  GitBranch,
+  FileCheck,
+  BookOpen,
+  Code2,
+  Workflow,
+  Shield,
+  Users,
+  GraduationCap,
+} from "lucide-react";
 import { FaGithub, FaGitlab } from "react-icons/fa";
 
 const dataManagementResources = [
@@ -89,7 +100,7 @@ const trainingResources = [
   {
     name: "IFB Moodle",
     description: "Training materials and courses for bioinformatics from IFB",
-    url: "https://moodle.france-bioinformatique.fr/",
+    url: "https://moodle.france-bioinformatique.fr/?lang=en",
     icon: GraduationCap,
   },
   {
@@ -141,21 +152,21 @@ export default function OpenScience() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background" />
           <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
           <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
                 <Users className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-muted-foreground">Collaborative Research</span>
               </div>
-              
+
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">
                 <span className="text-gradient">Open Science</span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our commitment to open, reproducible, and collaborative science. 
-                Discover our resources for data management, code sharing, and FAIR best practices.
+                Our commitment to open, reproducible, and collaborative science. Discover our resources for data
+                management, code sharing, and FAIR best practices.
               </p>
             </div>
           </div>
@@ -174,10 +185,13 @@ export default function OpenScience() {
                   <p className="text-muted-foreground">Resources for managing and sharing your research data</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {dataManagementResources.map((resource) => (
-                  <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
+                  <Card
+                    key={resource.name}
+                    className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30"
+                  >
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -215,10 +229,13 @@ export default function OpenScience() {
                   <p className="text-muted-foreground">Best practices for development and code sharing</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {softwareResources.map((resource) => (
-                  <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-accent/30">
+                  <Card
+                    key={resource.name}
+                    className="group hover:shadow-lg transition-all duration-300 hover:border-accent/30"
+                  >
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
@@ -229,7 +246,12 @@ export default function OpenScience() {
                       <CardDescription>{resource.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <Button variant="outline" size="sm" className="w-full group/btn hover:border-accent hover:text-accent" asChild>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full group/btn hover:border-accent hover:text-accent"
+                        asChild
+                      >
                         <a href={resource.url} target="_blank" rel="noopener noreferrer">
                           Access
                           <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
@@ -256,16 +278,10 @@ export default function OpenScience() {
                   <p className="text-muted-foreground">Access the source codes of our tools and projects</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {gitRepositories.map((repo) => (
-                  <a
-                    key={repo.name}
-                    href={repo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
+                  <a key={repo.name} href={repo.url} target="_blank" rel="noopener noreferrer" className="group">
                     <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/30 group-hover:scale-[1.02]">
                       <CardHeader>
                         <div className="flex items-center gap-3">
@@ -305,10 +321,13 @@ export default function OpenScience() {
                   <p className="text-muted-foreground">Learn bioinformatics with our training materials</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 {trainingResources.map((resource) => (
-                  <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
+                  <Card
+                    key={resource.name}
+                    className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30"
+                  >
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -358,7 +377,7 @@ export default function OpenScience() {
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-accent/5 border-accent/20">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-accent text-lg">Accessible</CardTitle>
@@ -369,7 +388,7 @@ export default function OpenScience() {
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-primary/5 border-primary/20">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-primary text-lg">Interoperable</CardTitle>
@@ -380,7 +399,7 @@ export default function OpenScience() {
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-accent/5 border-accent/20">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-accent text-lg">Reusable</CardTitle>
@@ -392,10 +411,13 @@ export default function OpenScience() {
                   </CardContent>
                 </Card>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 {fairResources.map((resource) => (
-                  <Card key={resource.name} className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30">
+                  <Card
+                    key={resource.name}
+                    className="group hover:shadow-lg transition-all duration-300 hover:border-primary/30"
+                  >
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -425,117 +447,125 @@ export default function OpenScience() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-4">
-                  Data Management Tips
-                </h2>
-                <p className="text-muted-foreground">
-                  Best practices for reproducible and open research
-                </p>
+                <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-4">Data Management Tips</h2>
+                <p className="text-muted-foreground">Best practices for reproducible and open research</p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="bg-card/80 backdrop-blur">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">1</span>
+                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                        1
+                      </span>
                       Plan from the start
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Write a Data Management Plan (DMP) before starting your project. 
-                      Use tools like DMP OPIDoR.
+                      Write a Data Management Plan (DMP) before starting your project. Use tools like DMP OPIDoR.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card/80 backdrop-blur">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">2</span>
+                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                        2
+                      </span>
                       Use open formats
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      We use standard formats like GFF3 and VCF, and actively 
-                      participate in BrAPI to ensure interoperability.
+                      We use standard formats like GFF3 and VCF, and actively participate in BrAPI to ensure
+                      interoperability.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card/80 backdrop-blur">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">3</span>
+                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
+                        3
+                      </span>
                       Document your workflows
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Use tools like Snakemake or Nextflow to create 
-                      reproducible and documented workflows.
+                      Use tools like Snakemake or Nextflow to create reproducible and documented workflows.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card/80 backdrop-blur">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">4</span>
+                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
+                        4
+                      </span>
                       Version your code
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Use Git to version your code and deposit it on an 
-                      institutional forge or GitHub with an appropriate license.
+                      Use Git to version your code and deposit it on an institutional forge or GitHub with an
+                      appropriate license.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card/80 backdrop-blur">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">5</span>
+                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                        5
+                      </span>
                       Deposit to repositories
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Archive your datasets in repositories like Zenodo, Dataverse, 
-                      or sequence archives (ENA, SRA) for long-term preservation and citability.
+                      Archive your datasets in repositories like Zenodo, Dataverse, or sequence archives (ENA, SRA) for
+                      long-term preservation and citability.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card/80 backdrop-blur">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">6</span>
+                      <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                        6
+                      </span>
                       Use thematic repositories
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      At South Green, we deposit genome data to our Genome Hubs 
-                      and genetic variants in GIGWA for community access.
+                      At South Green, we deposit genome data to our Genome Hubs and genetic variants in GIGWA for
+                      community access.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="bg-card/80 backdrop-blur md:col-span-2">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">7</span>
+                      <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
+                        7
+                      </span>
                       Consider ABS for DSI (CBD)
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Under the Convention on Biological Diversity (CBD), Access and Benefit Sharing (ABS) 
-                      now applies to Digital Sequence Information (DSI). Keep traceability of sample metadata 
-                      including sample identifiers and country of origin to ensure compliance.
+                      Under the Convention on Biological Diversity (CBD), Access and Benefit Sharing (ABS) now applies
+                      to Digital Sequence Information (DSI). Keep traceability of sample metadata including sample
+                      identifiers and country of origin to ensure compliance.
                     </p>
                   </CardContent>
                 </Card>
