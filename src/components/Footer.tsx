@@ -34,6 +34,10 @@ const quickLinks = [
     href: "./databases",
   },
   {
+    label: "Open Science",
+    href: "./open-science",
+  },
+  {
     label: "Training",
     href: "./training",
   },
