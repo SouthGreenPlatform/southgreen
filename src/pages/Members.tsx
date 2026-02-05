@@ -228,12 +228,12 @@ const teamMembers = [
   },
   {
     name: "François Sabot",
-    institute: "IRD, UMR DIADE",
+    institute: "IRD, UMR DIADE (past member of the steering committee)",
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?hl=en&user=d9fC3cIAAAAJ",
     orcid: "",
-    dates: "2010-",
+    dates: "Past",
   },
   {
     name: "Gautier Sarah",
