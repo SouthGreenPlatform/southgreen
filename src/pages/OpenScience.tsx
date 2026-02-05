@@ -15,6 +15,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { FaGithub, FaGitlab } from "react-icons/fa";
+import { RiceIcon } from "@/components/icons/PlantIcons";
 
 const dataManagementResources = [
   {
@@ -155,6 +156,9 @@ export default function OpenScience() {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
+              <div className="flex justify-center mb-6">
+                <RiceIcon size={64} colored={true} />
+              </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
                 <Users className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-muted-foreground">Collaborative Research</span>
@@ -461,10 +465,16 @@ export default function OpenScience() {
                       Plan from the start
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-3">
                     <p className="text-muted-foreground">
                       Write a Data Management Plan (DMP) before starting your project. Use tools like DMP OPIDoR.
                     </p>
+                    <Button variant="outline" size="sm" className="group/btn" asChild>
+                      <a href="https://dmp.opidor.fr/" target="_blank" rel="noopener noreferrer">
+                        DMP OPIDoR
+                        <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -477,11 +487,25 @@ export default function OpenScience() {
                       Use open formats
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-3">
                     <p className="text-muted-foreground">
                       We use standard formats like GFF3 and VCF, and actively participate in BrAPI to ensure
                       interoperability.
                     </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Button variant="outline" size="sm" className="group/btn" asChild>
+                        <a href="https://www.re3data.org/" target="_blank" rel="noopener noreferrer">
+                          Re3data
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="sm" className="group/btn" asChild>
+                        <a href="https://www.researchobject.org/ro-crate/" target="_blank" rel="noopener noreferrer">
+                          RO-Crate
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
 
