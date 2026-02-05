@@ -19,9 +19,9 @@ import { RiceIcon } from "@/components/icons/PlantIcons";
 
 const dataManagementResources = [
   {
-    name: "Recherche Data Gouv",
-    description: "French national ecosystem for sharing and opening research data",
-    url: "https://recherche.data.gouv.fr/fr",
+    name: "MaDBot",
+    description: "IFB-ELIXIR tool for research data management and sharing",
+    url: "https://www.ifb-elixir.fr/outils-services/science-ouverte/madbot-loutil-pour-la-gestion-et-le-partage-des-donnees/",
     icon: Database,
   },
   {
