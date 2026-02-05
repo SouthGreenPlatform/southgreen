@@ -110,7 +110,7 @@ const teamMembers = [
     dates: "2008-",
   },
   {
-    name: "Cathrine Breton",
+    name: "Catherine Breton",
     institute: "Alliance Bioversity and CIAT, UMR AGAP",
     github: "https://github.com/CathyBreton",
     linkedin: "https://www.linkedin.com/in/catherine-breton-a5986828/",
