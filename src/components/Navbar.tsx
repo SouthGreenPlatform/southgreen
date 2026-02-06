@@ -7,8 +7,8 @@ import southGreenLogo from "@/assets/south-green-logo-large.svg";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Databases & Tools", href: "/databases" },
-  { label: "Open Science", href: "/open-science" },
   { label: "Training", href: "/training" },
+  { label: "Open Science", href: "/open-science" },
   { label: "Projects", href: "/projects" },
   { label: "Members", href: "/members" },
   { label: "Publications", href: "/publications" },
