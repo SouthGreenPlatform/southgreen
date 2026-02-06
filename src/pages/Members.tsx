@@ -273,7 +273,7 @@ const teamMembers = [
   },
   {
     name: "Christine Tranchant-Dubreuil",
-    institute: "IRD, UMR DIADE",
+    institute: "IRD, UMR DIADE (past member of the steering committee)",
     github: "",
     linkedin: "",
     publications: "https://scholar.google.com/citations?hl=fr&user=L4_MDcYAAAAJ",
