@@ -10,6 +10,7 @@ import {
   BookOpen,
   Code2,
   Workflow,
+  FileText,
   Shield,
   Users,
   GraduationCap,
@@ -109,6 +110,27 @@ const trainingResources = [
     description: "Training resources and tutorials from South Green platform",
     url: "https://southgreenplatform.github.io/",
     icon: FaGithub,
+  },
+];
+
+const openAccessResources = [
+  {
+    name: "HAL",
+    description: "French open archive for scientific publications",
+    url: "https://hal.science/",
+    icon: FileText,
+  },
+  {
+    name: "BioRxiv",
+    description: "Preprint server for biology research",
+    url: "https://www.biorxiv.org/",
+    icon: FileText,
+  },
+  {
+    name: "Peer Community In",
+    description: "Free recommendation and review of scientific articles",
+    url: "https://peercommunityin.org/pc-journal/",
+    icon: FileText,
   },
 ];
 
@@ -356,8 +378,57 @@ export default function OpenScience() {
           </div>
         </section>
 
-        {/* FAIR Principles Section */}
+        {/* Open Access Section */}
         <section className="py-16 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-2xl md:text-3xl font-semibold">Open Access Publications</h2>
+                  <p className="text-muted-foreground">Publish and share your research openly</p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {openAccessResources.map((resource) => (
+                  <Card
+                    key={resource.name}
+                    className="group hover:shadow-lg transition-all duration-300 hover:border-accent/30"
+                  >
+                    <CardHeader>
+                      <div className="flex items-start justify-between">
+                        <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                          <resource.icon className="w-5 h-5 text-accent" />
+                        </div>
+                      </div>
+                      <CardTitle className="text-lg">{resource.name}</CardTitle>
+                      <CardDescription>{resource.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full group/btn hover:border-accent hover:text-accent"
+                        asChild
+                      >
+                        <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                          Access
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAIR Principles Section */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-8">
