@@ -278,7 +278,7 @@ const teamMembers = [
     linkedin: "",
     publications: "https://scholar.google.com/citations?hl=fr&user=L4_MDcYAAAAJ",
     orcid: "",
-    dates: "2010-",
+    dates: "Past",
   },
   // Previous members
   { name: "Cecile Fleury", institute: "", github: "", linkedin: "", publications: "", orcid: "", dates: "Past" },
