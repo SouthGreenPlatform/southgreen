@@ -206,13 +206,19 @@ const toolCategories: ToolCategory[] = [
         color: "from-yellow-500 to-amber-500",
         tags: ["Snakemake", "Assembly", "Long-read"],
       },
+    ],
+  },
+  {
+    name: "Training & Education",
+    description: "Platforms for training and capacity building in bioinformatics",
+    tools: [
       {
         name: "Galaxy",
         description: "Web-based platform for accessible, reproducible, and transparent computational research.",
         link: "https://plants-pathogens.usegalaxy.fr/",
         favicon: galaxyFavicon,
         color: "from-blue-500 to-cyan-500",
-        tags: ["Galaxy", "Pipeline", "Reproducibility"],
+        tags: ["Galaxy", "Training", "Reproducibility"],
       },
       {
         name: "Toggle",
