@@ -2,6 +2,8 @@ import { ArrowRight, Database, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
+import { genomeHubs } from "@/components/databases/GenomeHubsSection";
+import { toolCategories } from "@/components/databases/AnalysisToolsSection";
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
@@ -80,7 +82,7 @@ export function Hero() {
                 <Database className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold text-foreground">11+</p>
+                <p className="text-2xl font-semibold text-foreground">{genomeHubs.length}</p>
                 <p className="text-sm text-muted-foreground">Genome Hubs</p>
               </div>
             </div>
@@ -89,7 +91,7 @@ export function Hero() {
                 <FlaskConical className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold text-foreground">15+</p>
+                <p className="text-2xl font-semibold text-foreground">{toolCategories.reduce((acc, cat) => acc + cat.tools.length, 0)}</p>
                 <p className="text-sm text-muted-foreground">Analysis Tools</p>
               </div>
             </div>
