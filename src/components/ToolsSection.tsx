@@ -71,7 +71,7 @@ const tools: Tool[] = [
   },
   {
     name: "Galaxy",
-    category: "Workflow Platform",
+    category: "Training & Education",
     description:
       "Web-based platform for accessible, reproducible, and transparent computational research with thousands of tools.",
     link: "https://plants-pathogens.usegalaxy.fr/",
