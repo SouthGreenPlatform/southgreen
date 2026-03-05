@@ -14,6 +14,19 @@
       content="bioinformatics, genomics, plant science, Mediterranean plants, tropical plants, research, databases, tools"
     />
     <link rel="canonical" href="https://www.southgreen.fr" />
+    <script>
+      // Handle GitHub Pages SPA redirect
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
 
     <meta property="og:title" content="South Green | Bioinformatics Platform" />
     <meta
@@ -29,7 +42,7 @@
       name="twitter:description"
       content="Advancing plant & pathogen research with open-source bioinformatics solutions"
     />
-    <script type="module" crossorigin src="/southgreen/assets/index-DUc3dUer.js"></script>
+    <script type="module" crossorigin src="/southgreen/assets/index-BreGfuA3.js"></script>
     <link rel="stylesheet" crossorigin href="/southgreen/assets/index-eUGOOFvX.css">
   </head>
 
