@@ -26,5 +26,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: src/dist
           cname: www.southgreen.fr            # crée le fichier CNAME automatiquement
