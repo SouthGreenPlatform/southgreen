@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Apache server
 
 on:
   push:
@@ -19,8 +19,12 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          switches: -avzr --delete
+          path: dist/
+          remote_path: /var/www/southgreen/
+          remote_host: ${{ secrets.SERVER_HOST }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
