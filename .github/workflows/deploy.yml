@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy
         run: |
-          rsync -avzr --delete dist/ /var/www/southgreen/
+          rsync -avzr --delete --exclude 'logs/' dist/ /var/www/southgreen/
