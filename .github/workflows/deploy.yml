@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
 
@@ -19,19 +19,6 @@ jobs:
           npm ci
           npm run build
 
-      - name: Debug secrets
+      - name: Deploy
         run: |
-          echo "HOST is set: ${{ secrets.SERVER_HOST != '' }}"
-          echo "USER is set: ${{ secrets.SERVER_USER != '' }}"
-          echo "KEY is set: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
-
-      - name: Setup SSH key
-        run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 -d > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
-
-      - name: Deploy via rsync
-        run: |
-          rsync -avzr --delete \
-            -e "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no" \
-            dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/southgreen/
+          rsync -avzr --delete dist/ /var/www/southgreen/
