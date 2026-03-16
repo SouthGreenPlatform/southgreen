@@ -609,13 +609,13 @@ export default function Gigwa() {
                         SNPClust
                         <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </CardTitle>
-                      <CardDescription>SNP Clustering Tool</CardDescription>
+                      <CardDescription>Genotype verification/edition tool</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    A tool for clustering and analyzing SNP data retrieved from Gigwa.
+                    A Shiny BrAPP for plot visualization of fluorescence values on Intertek data, allowing genotype correction into Gigwa.
                   </p>
                 </CardContent>
               </Card>
