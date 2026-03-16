@@ -73,7 +73,7 @@ const features = [
   {
     icon: FileSearch,
     title: "Data Exploration",
-    description: "Embedded Flapjack-Bytes and IGV.js viewers",
+    description: "Powerful filtering on molecular markers and genotypes",
   },
   {
     icon: Database,
@@ -83,7 +83,7 @@ const features = [
   {
     icon: Share2,
     title: "Interoperability",
-    description: "BrAPI, GA4GH, SNiPlay, Galaxy & Flapjack connectivity",
+    description: "BrAPI, GA4GH, SNiPlay, Galaxy & Flapjack connectivity. Embedded Flapjack-Bytes and IGV.js viewers",
   },
 ];
 
