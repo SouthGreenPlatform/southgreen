@@ -309,6 +309,11 @@ export default function Gigwa() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     {
+                      version: "v2.12-RELEASE",
+                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.12-RELEASE/Gigwa_V2.12-RELEASE_bundle_creation_windows.ps1",
+                      isScript: true,
+                    },
+                    {
                       version: "v2.11-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.11-RELEASE/Gigwa_V2.11-RELEASE_bundle_creation_windows.ps1",
                       isScript: true,
@@ -321,11 +326,6 @@ export default function Gigwa() {
                     {
                       version: "v2.9-RELEASE",
                       url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.9-RELEASE/Gigwa_V2.9-RELEASE_bundle_creation_windows.ps1",
-                      isScript: true,
-                    },
-                    {
-                      version: "v2.8-RELEASE",
-                      url: "https://github.com/SouthGreenPlatform/Gigwa2/releases/download/2.8-RELEASE/Gigwa_V2.8-RELEASE_bundle_creation_windows.ps1",
                       isScript: true,
                     },
                   ].map((item, index) => (
