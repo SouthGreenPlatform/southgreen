@@ -20,6 +20,7 @@ import {
   Users,
   Zap,
   Globe,
+  FileText,
 } from "lucide-react";
 import ebsLogo from "@/assets/ebs-logo.png";
 import bmsLogo from "@/assets/bms-logo.png";
