@@ -486,13 +486,13 @@ export default function Gigwa() {
                   <span>Release Notes</span>
                 </a>
                 <a
-                  href="https://github.com/SouthGreenPlatform/gigwa/blob/master/README.md#administration-guide"
+                  href="https://gigwa.southgreen.fr/gigwa/docs/gigwa_docs.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
                 >
                   <ExternalLink className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span>Administration Guide (v1)</span>
+                  <span>Documentation</span>
                 </a>
                 <a
                   href="https://github.com/SouthGreenPlatform/Gigwa2"
