@@ -82,7 +82,7 @@ const features = [
   },
   {
     icon: Share2,
-    title: "Multiple Standards",
+    title: "Interoperability",
     description: "BrAPI, GA4GH, SNiPlay, Galaxy & Flapjack connectivity",
   },
 ];
