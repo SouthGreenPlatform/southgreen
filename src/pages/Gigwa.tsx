@@ -566,7 +566,7 @@ export default function Gigwa() {
         <div className="container mx-auto px-4">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 flex items-center justify-center gap-3">
             <Users className="w-8 h-8 text-primary" />
-            Community Gigwa Related Tools
+            Gigwa-Related Tools
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Tools developed by the community that integrate with or complement Gigwa
