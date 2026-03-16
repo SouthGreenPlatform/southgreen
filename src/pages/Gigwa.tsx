@@ -98,7 +98,7 @@ const downloads = [
 
 const teamMembers = {
   referents: ["Guilhem Sempéré"],
-  members: ["Alice Boizet", "Mathieu Rouard", "Pierre Larmande", "Valentin Guignon", "Catherine Breton"],
+  members: ["Alice Boizet", "Rayane Elmedjadji", "Mathieu Rouard", "Pierre Larmande", "Valentin Guignon", "Catherine Breton"],
 };
 
 export default function Gigwa() {
