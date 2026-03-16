@@ -633,13 +633,13 @@ export default function Gigwa() {
                         GWAS Pipeline
                         <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </CardTitle>
-                      <CardDescription>Galaxy Workflow</CardDescription>
+                      <CardDescription>Public Galaxy Workflow</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-3">
-                    A published Galaxy workflow for Genome-Wide Association Studies using Gigwa data.
+                    An online, Gigwa-compatible GWAS pipeline based on PLINK, Beagle and GEMMA.
                   </p>
                   <a
                     href="/docs/running-gwas-gigwa-galaxy.pdf"
