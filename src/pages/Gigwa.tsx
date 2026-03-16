@@ -155,7 +155,7 @@ export default function Gigwa() {
       {/* Features Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">Recent Features</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">Main Features</h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Powerful capabilities for managing and exploring high-density genotyping data
           </p>
