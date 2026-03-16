@@ -88,11 +88,11 @@ const features = [
 ];
 
 const downloads = [
-  { version: "v2.11-RELEASE", isLatest: true },
+  { version: "v2.12-RELEASE", isLatest: true },
+  { version: "v2.11-RELEASE" },
   { version: "v2.10-RELEASE" },
   { version: "v2.9-RELEASE" },
   { version: "v2.8-RELEASE" },
-  { version: "v2.7-RELEASE" },
 ];
 
 const teamMembers = {
