@@ -560,6 +560,93 @@ export default function Gigwa() {
         </div>
       </section>
 
+      {/* Community Gigwa Related Tools Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 flex items-center justify-center gap-3">
+            <Users className="w-8 h-8 text-primary" />
+            Community Gigwa Related Tools
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Tools developed by the community that integrate with or complement Gigwa
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <a href="https://github.com/icarda/QBMS" target="_blank" rel="noopener noreferrer" className="group block">
+              <Card className="h-full bg-card border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Github className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors flex items-center gap-2">
+                        QBMS
+                        <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </CardTitle>
+                      <CardDescription>Query Breeding Management Systems</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    R package to query and retrieve data from BMS and related databases including Gigwa.
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="https://github.com/jframi/snpclust" target="_blank" rel="noopener noreferrer" className="group block">
+              <Card className="h-full bg-card border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Github className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors flex items-center gap-2">
+                        SNPClust
+                        <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </CardTitle>
+                      <CardDescription>SNP Clustering Tool</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    A tool for clustering and analyzing SNP data retrieved from Gigwa.
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="https://usegalaxy.eu/published/workflow?id=cb668e99970b21c7" target="_blank" rel="noopener noreferrer" className="group block">
+              <Card className="h-full bg-card border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors flex items-center gap-2">
+                        GWAS Pipeline
+                        <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </CardTitle>
+                      <CardDescription>Galaxy Workflow</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    A published Galaxy workflow for Genome-Wide Association Studies using Gigwa data.
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Powered by Gigwa Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
