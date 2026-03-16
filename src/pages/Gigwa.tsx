@@ -637,9 +637,19 @@ export default function Gigwa() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground mb-3">
                     A published Galaxy workflow for Genome-Wide Association Studies using Gigwa data.
                   </p>
+                  <a
+                    href="/docs/running-gwas-gigwa-galaxy.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FileText className="w-4 h-4" />
+                    Running a GWAS via Gigwa & Galaxy
+                  </a>
                 </CardContent>
               </Card>
             </a>
