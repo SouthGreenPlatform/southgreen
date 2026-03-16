@@ -503,6 +503,15 @@ export default function Gigwa() {
                   <Github className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
                   <span>Gigwa v2 Source Code</span>
                 </a>
+                <a
+                  href="/docs/running-gwas-gigwa-galaxy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/50 hover:bg-secondary/50 transition-all group"
+                >
+                  <ExternalLink className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                  <span>Running a GWAS via Gigwa & Galaxy</span>
+                </a>
               </div>
             </div>
 
