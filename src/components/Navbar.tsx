@@ -8,12 +8,12 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Databases & Tools", href: "/databases" },
   { label: "Training", href: "/training" },
-  { label: "Open Science", href: "/open-science" },
   { label: "Projects", href: "/projects" },
   { label: "Members", href: "/members" },
   { label: "Publications", href: "/publications" },
   { label: "News", href: "https://www.linkedin.com/company/south-green-bioinformatics-platform", external: true },
   { label: "About", href: "/#about" },
+  { label: "Resources", href: "/open-science" },
 ];
 
 export function Navbar() {
