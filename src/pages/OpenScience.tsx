@@ -71,7 +71,7 @@ const gitRepositories = [
   {
     name: "GitLab IRD",
     description: "IRD source code management platform",
-    url: "https://gitlab.ird.fr/",
+    url: "https://forge.ird.fr/",
     icon: FaGitlab,
     color: "text-orange-500",
   },
