@@ -573,7 +573,7 @@ export default function Gigwa() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <a href="https://github.com/icarda/QBMS" target="_blank" rel="noopener noreferrer" className="group block">
+            <a href="https://icarda.github.io/QBMS/" target="_blank" rel="noopener noreferrer" className="group block">
               <Card className="h-full bg-card border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex items-center gap-3">
