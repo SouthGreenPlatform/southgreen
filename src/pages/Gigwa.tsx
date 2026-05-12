@@ -591,7 +591,7 @@ export default function Gigwa() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    R package to query and retrieve data from BMS and related databases including Gigwa.
+                    R package to query and retrieve phenotypic and genotypic data using BrAPI calls, including integration with GIGWA.
                   </p>
                 </CardContent>
               </Card>
