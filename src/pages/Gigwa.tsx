@@ -26,6 +26,7 @@ import ebsLogo from "@/assets/ebs-logo.png";
 import bmsLogo from "@/assets/bms-logo.png";
 import cgiarLogo from "@/assets/cgiar-logo.jpg";
 import mainlabLogo from "@/assets/mainlab-logo.png";
+import qbmsLogo from "@/assets/qbms-logo.png";
 
 const liveInstances = [
   {
