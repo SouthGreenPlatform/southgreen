@@ -578,8 +578,8 @@ export default function Gigwa() {
               <Card className="h-full bg-card border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Github className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 flex items-center justify-center">
+                      <img src={qbmsLogo} alt="QBMS logo" className="w-12 h-12 object-contain" />
                     </div>
                     <div>
                       <CardTitle className="text-xl group-hover:text-primary transition-colors flex items-center gap-2">
