@@ -221,13 +221,6 @@ const contributionsPublications: Publication[] = [
     doi: "10.1111/pbi.70553",
   },
   {
-    authors: "Martin, G., Istace, B., Baurens, F. C., Belser, C., Hervouet, C., Labadie, K., et al.",
-    year: 2025,
-    title: "Unravelling genomic drivers of speciation in Musa through genome assemblies of wild banana ancestors",
-    journal: "NATURE COMMUNICATIONS 16, 961",
-    doi: "10.1038/s41467-025-56329-4",
-  },
-  {
     authors: "Liu, X., Fu, N., Li, J., Xiao, T. W., Zeng, S., Jiang, R., et al.",
     year: 2026,
     title: "Going wild in banana breeding enables Fusarium-resistant hybrids with improved fruit quality",
@@ -249,6 +242,13 @@ const contributionsPublications: Publication[] = [
       "Haplotype-resolved genome assembly of Musella lasiocarpa reveals the critical role of structural variations in chromosomal and genome evolution",
     journal: "GENOMICS 118, 111210",
     doi: "10.1016/j.ygeno.2026.111210",
+  },
+  {
+    authors: "Martin, G., Istace, B., Baurens, F. C., Belser, C., Hervouet, C., Labadie, K., et al.",
+    year: 2025,
+    title: "Unravelling genomic drivers of speciation in Musa through genome assemblies of wild banana ancestors",
+    journal: "NATURE COMMUNICATIONS 16, 961",
+    doi: "10.1038/s41467-025-56329-4",
   },
   {
     authors: "Bocs, S., Carrette, C., Confais, J., Dubois, S., Duvaux, L., Klopp, C., et al.",
@@ -486,9 +486,7 @@ const Publications = () => {
               >
                 <BookOpen className="w-4 h-4" />
                 Tools & Databases
-                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20">
-                  {toolsPublications.length}
-                </span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20">{toolsPublications.length}</span>
               </a>
               <a
                 href="#contributions"
