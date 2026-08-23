@@ -30,6 +30,14 @@ const toolsPublications: Publication[] = [
     doi: "10.1186/s44342-025-00058-z",
   },
   {
+    authors: "Soriano, A., Bes, M., Meunier, A. C., Georget, C., Saengram, P., Navarro-Sanz, S., et al.",
+    year: 2026,
+    title:
+      "PlasmiDB: an open-source and customizable database for plasmid lifecycle management in multi-user, multi-project plant molecular biology laboratories",
+    journal: "PLANT METHODS",
+    doi: "10.1186/s13007-026-01555-0",
+  },
+  {
     authors: "Pierre, L., Bertrand, P., Ndomassi, T., Yann, P., Bill Gates, H. H., Valentin, G., et al.",
     year: 2025,
     title: "AgroLD: a knowledge graph for the plant sciences",
