@@ -479,12 +479,34 @@ const Publications = () => {
               Peer-reviewed publications describing South Green tools, databases, and selected contributions from
               platform members.
             </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#tools-databases"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-medium transition-colors"
+              >
+                <BookOpen className="w-4 h-4" />
+                Tools & Databases
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20">
+                  {toolsPublications.length}
+                </span>
+              </a>
+              <a
+                href="#contributions"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-medium transition-colors"
+              >
+                <BookOpen className="w-4 h-4" />
+                Contributions
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20">
+                  {contributionsPublications.length}
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Tools & Databases Publications */}
-      <section className="py-16">
+      <section id="tools-databases" className="py-16 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-10">
@@ -506,7 +528,7 @@ const Publications = () => {
       </section>
 
       {/* Selected Contributions */}
-      <section className="py-16 bg-muted/30">
+      <section id="contributions" className="py-16 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-10">
