@@ -158,6 +158,19 @@ const Projects = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed">{project.title}</p>
+                  {project.umrs && project.umrs.length > 0 && (
+                    <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                      <span className="text-xs font-medium text-accent-foreground/60">UMR:</span>
+                      {project.umrs.map((umr) => (
+                        <span
+                          key={umr}
+                          className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-accent/15 text-accent border border-accent/30"
+                        >
+                          {umr}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   {!project.donor && (
                     <div className="mt-3 flex items-center text-xs text-muted-foreground/60">
                       <Building2 className="w-3 h-3 mr-1" />
