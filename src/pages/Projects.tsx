@@ -33,6 +33,7 @@ const projects: Project[] = [
     title: "The Genebanks Accelerator will enable smarter, more widespread use of crop diversity",
     url: "https://www.cgiar.org/cgiar-research-portfolio-2025-2030/genebanks",
     donor: "CGIAR",
+    umrs: ["AGAP"],
   },
   {
     acronym: "AgroDiv",
@@ -40,12 +41,14 @@ const projects: Project[] = [
       "Genomic and Functional Characterization of the Diversity of Crop Plants and Domestic Animals as a Cornerstone of Agroecology: From Genome to Phenotype",
     url: "https://www.pepr-agroeconum.fr/les-projets-finances/ressources-genetiques/projets-cibles/agrodiv",
     donor: "PEPR",
+    umrs: ["AGAP", "DIADE"],
   },
   {
     acronym: "DIG-AI",
     title: "Deciphering plant genotype-phenotype Interactions using knowledge Graphs and AI",
     url: "https://anr-dig-ai.github.io/content/",
     donor: "ANR",
+    umrs: ["DIADE"],
   },
   {
     acronym: "ClimOliveMed",
@@ -60,6 +63,7 @@ const projects: Project[] = [
     title: "Breeding for cOffee and cocoa root resiLiEnce in low input farming systems based on improved ROotstock",
     url: "https://www.bolero-project.eu/project/bolero-project",
     donor: "EU",
+    umrs: ["AGAP", "DIADE"],
   },
   {
     acronym: "BRIDGES",
@@ -77,6 +81,7 @@ const projects: Project[] = [
     url: "https://umr-agap.cirad.fr/en/research/main-projects/vinid-occ",
     donor: "Vinid’Occ",
     years: "2022-2026",
+    umrs: ["AGAP"],
   },
   {
     acronym: "EPIS",
@@ -89,15 +94,18 @@ const projects: Project[] = [
   },
   {
     acronym: "EpiHLB",
-    title: "",
-    url: "",
+    title:
+      "Deciphering (epi)genetic resistance mechanisms to HLB disease between Oceanian and Asian citrus intergeneric-hybrids",
+    url: "https://anr.fr/Project-ANR-23-CE20-0038",
     donor: "ANR",
     years: "2024-2028",
+    umrs: ["AGAP"],
   },
   {
     acronym: "Bana+",
-    title: "https://bananaplus.org/",
-    url: "Ministère",
+    title:
+      "Accelerating the development of banana varieties resistant to fungal diseases as an alternative to the use of fungicides in the West Indies and other overseas departments and regions",
+    url: "https://bananaplus.org/",
     donor: "ANR",
     years: "2024-2029",
     umrs: ["AGAP", "PHIM"],
