@@ -19,12 +19,14 @@ const projects: Project[] = [
     title: "Mutualized Digital Spaces for FAIR Life Sciences",
     url: "https://anr.fr/ProjetIA-21-ESRE-0048",
     donor: "ANR",
+    umrs: ["AGAP", "DIADE"],
   },
   {
     acronym: "BReIF",
     title: "Infrastructure to boost the use of diversified biological resources",
     url: "https://www.pepr-agroeconum.fr/les-projets-finances/traitement-de-donnees-et-modelisation/infrastructures/breif",
     donor: "PEPR",
+    umrs: ["AGAP", "DIADE"],
   },
   {
     acronym: "Genebanks accelarator",
@@ -96,6 +98,7 @@ const projects: Project[] = [
     url: "Ministère",
     donor: "ANR",
     years: "2024-2029",
+    umrs: ["AGAP", "PHIM"],
   },
 ];
 
