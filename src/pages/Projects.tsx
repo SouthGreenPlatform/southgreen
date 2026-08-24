@@ -106,7 +106,7 @@ const projects: Project[] = [
     title:
       "Accelerating the development of banana varieties resistant to fungal diseases as an alternative to the use of fungicides in the West Indies and other overseas departments and regions",
     url: "https://bananaplus.org/",
-    donor: "ANR",
+    donor: "French Ministry of Agriculture and Food Sovereignty",
     years: "2024-2029",
     umrs: ["AGAP", "PHIM"],
   },
