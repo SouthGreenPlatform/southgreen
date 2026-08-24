@@ -10,6 +10,7 @@ interface Project {
   url?: string;
   donor?: string;
   years?: string;
+  umrs?: string[]; // e.g. ['AGAP', 'PhiM', 'DIADE']
 }
 
 const projects: Project[] = [
