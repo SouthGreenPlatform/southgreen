@@ -23,19 +23,19 @@ const toolsPublications: Publication[] = [
     link: "https://doi.org/10.1093/bioinformatics/btag567",
   },
   {
-    authors: "Ahmad, J. M., Liu, Y., Kim, J. D., Yao, X., Larmande, P., Xia, J.",
-    year: 2025,
-    title: "A curation system of rice trait ontology with reliable interoperation by LLM and PubAnnotation",
-    journal: "GENOMICS & INFORMATICS 23, 24",
-    doi: "10.1186/s44342-025-00058-z",
-  },
-  {
     authors: "Soriano, A., Bes, M., Meunier, A. C., Georget, C., Saengram, P., Navarro-Sanz, S., et al.",
     year: 2026,
     title:
       "PlasmiDB: an open-source and customizable database for plasmid lifecycle management in multi-user, multi-project plant molecular biology laboratories",
     journal: "PLANT METHODS",
     doi: "10.1186/s13007-026-01555-0",
+  },
+  {
+    authors: "Ahmad, J. M., Liu, Y., Kim, J. D., Yao, X., Larmande, P., Xia, J.",
+    year: 2025,
+    title: "A curation system of rice trait ontology with reliable interoperation by LLM and PubAnnotation",
+    journal: "GENOMICS & INFORMATICS 23, 24",
+    doi: "10.1186/s44342-025-00058-z",
   },
   {
     authors: "Pierre, L., Bertrand, P., Ndomassi, T., Yann, P., Bill Gates, H. H., Valentin, G., et al.",
