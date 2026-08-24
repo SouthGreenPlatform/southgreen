@@ -65,6 +65,7 @@ const projects: Project[] = [
     url: "https://www.bridgescoffea.org/",
     donor: "ANR",
     years: "2024-2027",
+    umrs: ["AGAP", "DIADE"],
   },
   {
     acronym: "PlastiVigne",
