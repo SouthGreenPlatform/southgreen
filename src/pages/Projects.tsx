@@ -53,6 +53,7 @@ const projects: Project[] = [
       "Diversity of varieties and farming systems as an asset of Mediterranean oleiculture in a global change setting",
     url: "https://www.climolivemed.com/",
     donor: "Multi",
+    umrs: ["AGAP", "DIADE"],
   },
   {
     acronym: "Bolero",
