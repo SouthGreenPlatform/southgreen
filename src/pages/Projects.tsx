@@ -85,6 +85,7 @@ const projects: Project[] = [
     url: "",
     donor: "ANR",
     years: "2025-2028",
+    umrs: ["AGAP", "DIADE", "PHIM"],
   },
   {
     acronym: "EpiHLB",
