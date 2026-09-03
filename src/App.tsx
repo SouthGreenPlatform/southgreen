@@ -34,16 +34,6 @@ const RouteTracker = () => {
   return null;
 };
 
-import Databases from "./pages/Databases";
-import Training from "./pages/Training";
-import Gigwa from "./pages/Gigwa";
-import Members from "./pages/Members";
-import Publications from "./pages/Publications";
-import Projects from "./pages/Projects";
-import TermsOfUse from "./pages/TermsOfUse";
-import OpenScience from "./pages/OpenScience";
-import NotFound from "./pages/NotFound";
-
 const queryClient = new QueryClient();
 
 const App = () => (
