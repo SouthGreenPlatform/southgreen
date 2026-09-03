@@ -2,7 +2,27 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
+const GA_MEASUREMENT_ID = "G-EHDCMK9PF5";
+
+const RouteTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("config", GA_MEASUREMENT_ID, { page_path: location.pathname + location.search });
+    }
+  }, [location.pathname, location.search]);
+  return null;
+};
 import Index from "./pages/Index";
 import Databases from "./pages/Databases";
 import Training from "./pages/Training";
