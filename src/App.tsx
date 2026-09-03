@@ -4,6 +4,16 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Index from "./pages/Index";
+import Databases from "./pages/Databases";
+import Training from "./pages/Training";
+import Gigwa from "./pages/Gigwa";
+import Members from "./pages/Members";
+import Publications from "./pages/Publications";
+import Projects from "./pages/Projects";
+import TermsOfUse from "./pages/TermsOfUse";
+import OpenScience from "./pages/OpenScience";
+import NotFound from "./pages/NotFound";
 
 declare global {
   interface Window {
@@ -23,7 +33,7 @@ const RouteTracker = () => {
   }, [location.pathname, location.search]);
   return null;
 };
-import Index from "./pages/Index";
+
 import Databases from "./pages/Databases";
 import Training from "./pages/Training";
 import Gigwa from "./pages/Gigwa";
