@@ -25,6 +25,8 @@ declare global {
 
 const GA_MEASUREMENT_ID = "G-EHDCMK9PF5";
 
+const SITE_URL = "https://www.southgreen.fr";
+
 const RouteTracker = () => {
   const location = useLocation();
   useEffect(() => {
@@ -32,7 +34,11 @@ const RouteTracker = () => {
       window.gtag("config", GA_MEASUREMENT_ID, { page_path: location.pathname + location.search });
     }
   }, [location.pathname, location.search]);
-  return null;
+  return (
+    <Helmet>
+      <link rel="canonical" href={`${SITE_URL}${location.pathname}`} />
+    </Helmet>
+  );
 };
 
 const queryClient = new QueryClient();
@@ -43,9 +49,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Helmet>
-          <link rel="canonical" href="https://www.southgreen.fr/" />
-        </Helmet>
         <RouteTracker />
         <Routes>
           <Route path="/" element={<Index />} />
