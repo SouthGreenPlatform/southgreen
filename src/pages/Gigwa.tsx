@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -105,6 +106,44 @@ const teamMembers = {
 export default function Gigwa() {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Gigwa | Online Genotype & VCF Data Management Platform</title>
+        <meta
+          name="description"
+          content="Discover Gigwa: The open-source genomic platform to import, filter, and share billions of genotypes. Explore live instances and Galaxy GWAS pipelines."
+        />
+        <link rel="canonical" href="https://www.southgreen.fr/gigwa" />
+        <meta property="og:title" content="Gigwa | Online Genotype & VCF Data Management Platform" />
+        <meta
+          property="og:description"
+          content="Discover Gigwa: The open-source genomic platform to import, filter, and share billions of genotypes. Explore live instances and Galaxy GWAS pipelines."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.southgreen.fr/gigwa" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Gigwa",
+            alternateName: "Genotype Investigator for Genome-Wide Analyses",
+            description:
+              "A web-based genomic platform optimized for importing, filtering, and managing billions of genotypes and VCF variant data using a MongoDB backend.",
+            applicationCategory: "BioinformaticsApplication",
+            operatingSystem: "Linux, Windows, macOS",
+            downloadUrl: "https://github.com",
+            featureList: [
+              "VCF and HapMap data import",
+              "Real-time genotype filtering",
+              "BrAPI and GA4GH compatibility",
+              "Galaxy workflow integration",
+            ],
+            author: {
+              "@type": "Organization",
+              name: "South Green Bioinformatics Platform",
+            },
+          })}
+        </script>
+      </Helmet>
       <Navbar />
 
       {/* Hero Section */}
