@@ -112,7 +112,6 @@ export default function Gigwa() {
           name="description"
           content="Discover Gigwa: The open-source genomic platform to import, filter, and share billions of genotypes. Explore live instances and Galaxy GWAS pipelines."
         />
-        <link rel="canonical" href="https://www.southgreen.fr/gigwa" />
         <meta property="og:title" content="Gigwa | Online Genotype & VCF Data Management Platform" />
         <meta
           property="og:description"
