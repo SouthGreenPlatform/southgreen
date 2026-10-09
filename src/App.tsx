@@ -43,6 +43,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Helmet>
+          <link rel="canonical" href="https://www.southgreen.fr/" />
+        </Helmet>
         <RouteTracker />
         <Routes>
           <Route path="/" element={<Index />} />
