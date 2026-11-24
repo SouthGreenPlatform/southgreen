@@ -1,8 +1,25 @@
 import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ExternalLink, BookOpen, GraduationCap, Users } from "lucide-react";
+import { ExternalLink, BookOpen, GraduationCap, Users, MapPin, Calendar, Archive } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+type PastTraining = {
+  title: string;
+  location: string;
+  date: string;
+  materialUrl?: string;
+};
+
+// Add past trainings here: title, location, date, and a link to the material
+const pastTrainings: PastTraining[] = [
+  {
+    title: "Example — Genomic Data Analysis with GIGWA",
+    location: "Montpellier, France",
+    date: "2025-06-12",
+    materialUrl: "https://southgreenplatform.github.io/trainings/",
+  },
+];
 
 const Training = () => {
   const externalUrl = "https://southgreenplatform.github.io/trainings/";
@@ -109,6 +126,55 @@ const Training = () => {
             </div>
           </div>
         </section>
+
+        {/* Past Trainings Section */}
+        {pastTrainings.length > 0 && (
+          <section className="py-16 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Archive className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">Past Trainings</h2>
+                </div>
+
+                <div className="space-y-4">
+                  {pastTrainings.map((training, index) => (
+                    <div
+                      key={index}
+                      className="bg-card border border-border rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4"
+                    >
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{training.title}</h3>
+                        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                          <span className="inline-flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-primary" />
+                            {training.location}
+                          </span>
+                          <span className="inline-flex items-center gap-2">
+                            <Calendar className="w-4 h-4 text-primary" />
+                            {training.date}
+                          </span>
+                        </div>
+                      </div>
+                      {training.materialUrl && (
+                        <Button
+                          variant="outline"
+                          className="shrink-0 gap-2"
+                          onClick={() => window.open(training.materialUrl, "_blank")}
+                        >
+                          <span>Material</span>
+                          <ExternalLink className="w-4 h-4" />
+                        </Button>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
     </div>
